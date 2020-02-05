@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="960px" height="540px" viewBox="0 0 960 540" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Slice</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4977">
+            <g stroke="#FFFFFF">
+                <g id="Group" transform="translate(256.000000, 64.000000)">
+                    <path d="M248,128 L376,128 L376,256 L248,256 L248,128 Z" id="Rectangle" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="16"></path>
+                    <path d="M120,256 L184,256 L184,320 L120,320 L120,256 Z" id="Rectangle" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8"></path>
+                    <path d="M56,224 L88,224 L88,256 L56,256 L56,224 Z" id="Rectangle" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4"></path>
+                    <path d="M8,248 L16,248 L16,256 L8,256 L8,248 Z" id="Rectangle" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1"></path>
+                    <path d="M24,256 L40,256 L40,272 L24,272 L24,256 Z" id="Rectangle" stroke-width="0.5" stroke-linecap="round" stroke-dasharray="2"></path>
+                    <rect id="Rectangle" x="0" y="256" width="8" height="8"></rect>
+                    <rect id="Rectangle" x="8" y="240" width="16" height="16"></rect>
+                    <rect id="Rectangle" x="24" y="256" width="32" height="32"></rect>
+                    <rect id="Rectangle" x="56" y="192" width="64" height="64"></rect>
+                    <rect id="Rectangle" x="120" y="256" width="128" height="128"></rect>
+                    <rect id="Rectangle" x="248" y="0" width="256" height="256"></rect>
+                </g>
+                <path d="M256,312 L256,540" id="Path" stroke-width="0.25"></path>
+                <path d="M264,312 L264,540" id="Path" stroke-width="0.25"></path>
+                <path d="M280,312 L280,540" id="Path" stroke-width="0.25"></path>
+                <path d="M312,312 L312,540" id="Path" stroke-width="0.25"></path>
+                <path d="M376,312 L376,540" id="Path" stroke-width="0.25"></path>
+                <path d="M504,312 L504,540" id="Path" stroke-width="0.25"></path>
+                <path d="M760,304 L760,540" id="Path" stroke-width="0.25"></path>
+            </g>
+            <text id="2" fill="#FFFFFF" font-family="CorporateS-Regular, CorpoS" font-size="14" font-weight="normal">
+                <tspan x="256.535156" y="502">2</tspan>
+            </text>
+            <text id="4" fill="#FFFFFF" font-family="CorporateS-Regular, CorpoS" font-size="14" font-weight="normal">
+                <tspan x="272.535156" y="502">4</tspan>
+            </text>
+            <text id="8" fill="#FFFFFF" font-family="CorporateS-Regular, CorpoS" font-size="14" font-weight="normal">
+                <tspan x="304.535156" y="502">8</tspan>
+            </text>
+            <text id="16" fill="#FFFFFF" font-family="CorporateS-Regular, CorpoS" font-size="14" font-weight="normal">
+                <tspan x="361.070312" y="502">16</tspan>
+            </text>
+            <text id="32" fill="#FFFFFF" font-family="CorporateS-Regular, CorpoS" font-size="14" font-weight="normal">
+                <tspan x="489.070312" y="502">32</tspan>
+            </text>
+            <text id="64" fill="#FFFFFF" font-family="CorporateS-Regular, CorpoS" font-size="14" font-weight="normal">
+                <tspan x="745.070312" y="502">64</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

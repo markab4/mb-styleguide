@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="960px" height="540px" viewBox="0 0 960 540" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Slice</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4978">
+            <g id="Group" transform="translate(64.000000, 83.000000)" fill="#FFFFFF" font-family="CorporateS-Regular, CorpoS" font-size="16" font-weight="normal">
+                <text id="16-pt">
+                    <tspan x="0" y="15">16 pt</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(64.000000, 149.000000)" fill="#FFFFFF" font-family="CorporateS-Regular, CorpoS" font-size="16" font-weight="normal">
+                <text id="32-pt">
+                    <tspan x="0" y="15">32 pt</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(64.000000, 247.000000)" fill="#FFFFFF" font-family="CorporateS-Regular, CorpoS" font-size="16" font-weight="normal">
+                <text id="64-pt">
+                    <tspan x="0" y="15">64 pt</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(64.000000, 401.000000)" fill="#FFFFFF" font-family="CorporateS-Regular, CorpoS" font-size="16" font-weight="normal">
+                <text id="128-pt">
+                    <tspan x="0" y="15">128 pt</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(191.940000, 79.890000)">
+                <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="21.92 21.96 8.06 13.96 24.06 4.73 37.92 12.73"></polygon>
+                <path d="M32.06,0.11 L0.06,18.58" id="Path" stroke="#FFFFFF" stroke-width="0.25"></path>
+                <path d="M45.92,8.11 L13.92,26.58" id="Path" stroke="#FFFFFF" stroke-width="0.25"></path>
+            </g>
+            <g id="Group" transform="translate(296.090000, 126.940000)">
+                <path d="M36.85,39.82 L22.99,31.82 C19.16,29.61 19.64,25.75 24.06,23.2 L40.06,13.96 C44.48,11.41 51.16,11.13 54.99,13.34 L68.85,21.34 C72.68,23.55 72.2,27.41 67.78,29.96 L51.78,39.2 C47.36,41.75 40.67,42.03 36.85,39.82 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <path d="M64.06,0.11 L0.06,37.06" id="Path" stroke="#FFFFFF" stroke-width="0.25"></path>
+                <path d="M91.78,16.11 L27.78,53.06" id="Path" stroke="#FFFFFF" stroke-width="0.25"></path>
+            </g>
+            <g id="Group" transform="translate(432.940000, 168.890000)">
+                <path d="M128.06,0.11 L0.06,74.01" id="Path" stroke="#FFFFFF" stroke-width="0.25"></path>
+                <path d="M183.49,32.11 L55.49,106.01" id="Path" stroke="#FFFFFF" stroke-width="0.25"></path>
+                <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="133.05 45.22 105.34 29.22 63.77 37.22 49.91 61.22 77.62 77.22 119.19 69.22"></polygon>
+            </g>
+            <g id="Group" transform="translate(600.515000, 224.090000)">
+                <path d="M234.985,0.41 L0.06,135.91" id="Path" stroke="#FFFFFF" stroke-width="0.25"></path>
+                <path d="M335.485,71.91 L107.41,203.41" id="Path" stroke="#FFFFFF" stroke-width="0.25"></path>
+                <ellipse id="Oval" fill="#FFFFFF" fill-rule="nonzero" transform="translate(183.525310, 94.026130) rotate(-6.947411) translate(-183.525310, -94.026130) " cx="183.52531" cy="94.02613" rx="85.119351" ry="48.1566054"></ellipse>
+            </g>
+            <path d="M180,105 L696,440" id="Path" stroke="#FFFFFF" stroke-width="0.5"></path>
+        </g>
+    </g>
+</svg>
