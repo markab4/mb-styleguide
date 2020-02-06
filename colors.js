@@ -102,14 +102,14 @@ function selectFg(fgElement) {
         "                    <div class=\"greyline\"></div>\n" +
         "                    <div class=\"corpo20px\">Contrast Results</div>\n" +
         "                </div>\n" +
-        "                <div class=\"color-sujessionselector\" onclick=\"copyStringToClipboard(this.innerText)\">\n" +
+        "                <div class=\"color-sujessionselector grab\" onclick=\"copyStringToClipboard(this.innerText)\">\n" +
         "                    <div class=\"color_suggesion_wrapper\">\n" +
         "                        <div class=\"color_suggesion_label\">Foreground</div>\n" +
         `                        <div class=\"color_suggesion_hex\">${selectedFg}</div>\n` +
         "                    </div>\n" +
         "                    <div class=\"w-clearfix\"><img src=\"images/Icon_copycode-1.svg\" alt=\"\" class=\"white-arrow-down\"></div>\n" +
         "                </div>\n" +
-        "                <div class=\"color-sujessionselector\" id='background-display' onclick=\"copyStringToClipboard(this.innerText)\">\n" +
+        "                <div class=\"color-sujessionselector grab\" id='background-display' onclick=\"copyStringToClipboard(this.innerText)\">\n" +
         "                    <div class=\"color_suggesion_wrapper\">\n" +
         "                        <div class=\"color_suggesion_label\">Background</div>\n" +
         "                        <div class=\"color_suggesion_hex\">???</div>\n" +

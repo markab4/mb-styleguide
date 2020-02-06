@@ -157,6 +157,18 @@
                 line-height: 42pt;
             }
 
+            .grab {
+                cursor: grab;
+            }
+
+            .grab:active {
+                opacity: .5;
+            }
+
+            .color-selector-module, .font-selector-module {
+                background-image: url('./images/Seamless_Stripe.svg');
+            }
+
 
         </style>
         <script>
@@ -221,25 +233,25 @@
                             <div class="div-block-37">
                                 <div class="white colorsect-copy white">
                                     <div class="text-block-7-copy blck">White</div>
-                                    <div class="w-clearfix" onclick="copyStringToClipboard(this.innerText)">
+                                    <div class="w-clearfix grab" onclick="copyStringToClipboard(this.innerText)">
                                         <div class="text-block-8 blacktext">#111111</div>
                                         <img src="images/Icon_copycode-1.svg" alt="" class="white-arrow-down"></div>
                                 </div>
                                 <div class="colorsect-copy blue">
                                     <div class="text-block-7-copy">Blue</div>
-                                    <div class="w-clearfix" onclick="copyStringToClipboard(this.innerText)">
+                                    <div class="w-clearfix grab" onclick="copyStringToClipboard(this.innerText)">
                                         <div class="text-block-8">#176DB7</div>
                                         <img src="images/Icon_copycode.svg" alt="" class="white-arrow-down"></div>
                                 </div>
                                 <div id="w-node-5ece2e183b75-8a82d08f" class="colorsect-copy black">
                                     <div class="text-block-7-copy">Black</div>
-                                    <div class="w-clearfix" onclick="copyStringToClipboard(this.innerText)">
+                                    <div class="w-clearfix grab" onclick="copyStringToClipboard(this.innerText)">
                                         <div class="text-block-8">#000000</div>
                                         <img src="images/Icon_copycode.svg" alt="" class="white-arrow-down"></div>
                                 </div>
                                 <div class="colorsect-copy red">
                                     <div class="text-block-7-copy">AMG-Red</div>
-                                    <div class="w-clearfix" onclick="copyStringToClipboard(this.innerText)">
+                                    <div class="w-clearfix grab" onclick="copyStringToClipboard(this.innerText)">
                                         <div class="text-block-8">#EB0000</div>
                                         <img src="images/Icon_copycode.svg" alt="" class="white-arrow-down"></div>
                                 </div>
@@ -295,7 +307,7 @@
             <div class="div-block-47" id="platforms">
                 <div class="colorsel-header">
                     <div class="greyline"></div>
-                    <div class="corpo20px">Palette</div>
+                    <div class="corpo20px">Platforms</div>
                 </div>
                 <div class="div-block-50">
                     <div class="palette-selector passive" onclick="selectPalette(this)">
