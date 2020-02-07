@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Fri Feb 07 2020 15:31:19 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Fri Feb 07 2020 18:46:46 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="5e2f577194e2db6e8a82d08f" data-wf-site="5dd45997b98acbf1482572e4">
 <head>
   <meta charset="utf-8">
@@ -17,12 +17,6 @@
   <link href="images/webclip.png" rel="apple-touch-icon">
 </head>
 <body data-w-id="5dd83650b66d23d92aa28df9" class="body-2">
-  <div class="left-side"><a href="index.html" class="w-inline-block"><img src="images/Logo-png.png" width="40" height="40" alt="" class="image"></a>
-    <div class="scroll-indicator">
-      <div class="indicator-itself"></div>
-      <div class="indicator-line"></div>
-    </div>
-  </div>
   <div class="right-navigation">
     <div class="saerch-wrapper">
       <form action="/search" class="search w-clearfix w-form"><input type="search" maxlength="256" name="query" required="" id="search" class="search-input w-input"><a href="#" class="link-block-3 w-inline-block"><img src="images/ion-ios-search-strong---Ionicons.svg" width="25" alt=""></a><input type="submit" class="search-button w-button"></form>
@@ -84,33 +78,6 @@
       <a href="#" class="menu_link w-inline-block">
         <div>Support</div>
       </a>
-    </div>
-  </div>
-  <div>
-    <div class="w-embed w-script">
-      <style>
-    .white-arrow-down:hover {
-        opacity: 0.5;
-    }
-</style>
-      <script>
-    function copyStringToClipboard (str) {
-        // Create new element
-        let el = document.createElement('textarea');
-        // Set value (string to be copied)
-        el.value = str;
-        // Set non-editable to avoid focus and move outside of view
-        el.setAttribute('readonly', '');
-        el.style = {position: 'absolute', left: '-9999px'};
-        document.body.appendChild(el);
-        // Select text inside element
-        el.select();
-        // Copy text to clipboard
-        document.execCommand('copy');
-        // Remove temporary element
-        document.body.removeChild(el);
-    }
-</script>
     </div>
   </div>
   <div class="logo">
@@ -206,7 +173,7 @@
       </div>
       <div class="color-selector-module">
         <div class="div-block-47">
-          <div class="colorsel-header">
+          <div class="colorsel-header palette">
             <div class="greyline"></div>
             <div class="corpo20px">Palette</div>
           </div>
@@ -268,7 +235,7 @@
       </div>
       <div class="font-selector-module">
         <div class="div-block-47">
-          <div class="colorsel-header">
+          <div class="colorsel-header result">
             <div class="greyline"></div>
             <div class="corpo20px">Contrast Results</div>
           </div>
