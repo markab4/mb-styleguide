@@ -33,23 +33,6 @@ function selectPalette(paletteElement) {
                 </div>
 `);
     $(".type-selector-row._1").after($typefaceSelector);
-
-    let $sampleDesign = $(`
-                <div class="sample-page-wrapper">
-                    <div class="div-block-75"><img src="images/Image-682x.png"
-                                                   srcset="images/Image-682x-p-500.png 500w, images/Image-682x-p-800.png 800w, images/Image-682x-p-1080.png 1080w, images/Image-682x-p-1600.png 1600w, images/Image-682x.png 2000w"
-                                                   sizes="(max-width: 479px) 75vw, (max-width: 767px) 81vw, (max-width: 991px) 83vw, 69vw"
-                                                   alt=""></div>
-                    <div><img src="images/Image-692x.png"
-                              srcset="images/Image-692x-p-500.png 500w, images/Image-692x-p-800.png 800w, images/Image-692x-p-1080.png 1080w, images/Image-692x-p-1600.png 1600w, images/Image-692x.png 2000w"
-                              sizes="(max-width: 479px) 75vw, (max-width: 767px) 81vw, (max-width: 991px) 83vw, 69vw"
-                              alt=""></div>
-                    <div><img src="images/Image-702x.png"
-                              srcset="images/Image-702x-p-500.png 500w, images/Image-702x-p-800.png 800w, images/Image-702x-p-1080.png 1080w, images/Image-702x-p-1600.png 1600w, images/Image-702x.png 2000w"
-                              sizes="(max-width: 479px) 75vw, (max-width: 767px) 81vw, (max-width: 991px) 83vw, 69vw"
-                              alt=""></div>
-                </div>`)
-    $("#design-sample-header").after($sampleDesign);
 }
 
 function selectTypeface(typefaceElement) {
@@ -124,4 +107,21 @@ function selectStyle(styleElement){
                     </div>
                 </div>
 `))
+
+    let $sampleDesign = $(`
+                <div class="sample-page-wrapper">
+                    <div class="div-block-75"><img src="images/Image-682x.png"
+                                                   srcset="images/Image-682x-p-500.png 500w, images/Image-682x-p-800.png 800w, images/Image-682x-p-1080.png 1080w, images/Image-682x-p-1600.png 1600w, images/Image-682x.png 2000w"
+                                                   sizes="(max-width: 479px) 75vw, (max-width: 767px) 81vw, (max-width: 991px) 83vw, 69vw"
+                                                   alt=""></div>
+                    <div><img src="images/Image-692x.png"
+                              srcset="images/Image-692x-p-500.png 500w, images/Image-692x-p-800.png 800w, images/Image-692x-p-1080.png 1080w, images/Image-692x-p-1600.png 1600w, images/Image-692x.png 2000w"
+                              sizes="(max-width: 479px) 75vw, (max-width: 767px) 81vw, (max-width: 991px) 83vw, 69vw"
+                              alt=""></div>
+                    <div><img src="images/Image-702x.png"
+                              srcset="images/Image-702x-p-500.png 500w, images/Image-702x-p-800.png 800w, images/Image-702x-p-1080.png 1080w, images/Image-702x-p-1600.png 1600w, images/Image-702x.png 2000w"
+                              sizes="(max-width: 479px) 75vw, (max-width: 767px) 81vw, (max-width: 991px) 83vw, 69vw"
+                              alt=""></div>
+                </div>`);
+    $("#design-sample-header").after($sampleDesign);
 }
