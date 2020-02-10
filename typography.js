@@ -58,38 +58,38 @@ function selectStyle(styleElement) {
     $("#size-selector").remove();
     $("#style-selector").after(
         $(`
-                <div class="type-selector-row _2" id="size-selector">
-                    <div class="typesel-header-with-toggle">
-                        <div class="greyline"></div>
-                        <div class="corpo20px">Size</div>
-                        <div class="div-block-58">
-                            <div class="text-block-27">Desktop</div>
-                            <div class="toggle _1">
-                                <div class="toggle-dot"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="div-block-76">
-                        <a href="#master-heading" class="typeface-selector-result selector passive" onclick="selectSize(this)">
-                            <div>
-                                <div class="text-block-23">Master heading</div>
-                            </div>
-                        </a>
-                        <a href="#module-heading"class="typeface-selector-result selector passive" onclick="selectSize(this)">
-                            <div class="text-block-25">Module heading</div>
-                        </a>
-                        <a href="#paragraph-heading" class="typeface-selector-result selector passive" onclick="selectSize(this)">
-                            <div class="text-block-26">Paragraph heading</div>
-                        </a>
-                        <a href="#paragraph-heading" class="typeface-selector-result selector passive" onclick="selectSize(this)">
-                            <div class="text-block-26">Paragraph heading</div>
-                        </a>
-                    </div>
-                </div>
-`));
+<div class="type-selector-row _2" id="size-selector">
+    <div class="typesel-header-with-toggle">
+        <div class="greyline"></div>
+        <div class="corpo20px">Size</div>
+        <div class="div-block-58">
+            <div class="toggle-image"><img src="images/Mobile.svg" alt=""></div>
+            <div class="toggle _1">
+                <div class="toggle-dot"></div>
+            </div>
+        </div>
+    </div>
+    <div class="div-block-76">
+        <a href="#master-heading" class="typeface-selector-result selector passive" onclick="selectSize(this)">
+            <div>
+                <div class="text-block-23">Master heading</div>
+            </div>
+        </a>
+        <a href="#module-heading" class="typeface-selector-result selector passive" onclick="selectSize(this)">
+            <div class="text-block-25">Module heading</div>
+        </a>
+        <a href="#paragraph-heading" class="typeface-selector-result selector passive" onclick="selectSize(this)">
+            <div class="text-block-26">Paragraph heading</div>
+        </a>
+        <a href="#paragraph-heading" class="typeface-selector-result selector passive" onclick="selectSize(this)">
+            <div class="text-block-26">Paragraph heading</div>
+        </a>
+    </div>
+</div>
+        `));
     $("#sample-design").remove();
     let $sampleDesign = $(`
-                <div class="sample-page-wrapper" id="sample-design">
+                <div class="sample-page-wrapper" >
                     <div class="div-block-75"><img src="images/Image-682x.png"
                                                    srcset="images/Image-682x-p-500.png 500w, images/Image-682x-p-800.png 800w, images/Image-682x-p-1080.png 1080w, images/Image-682x-p-1600.png 1600w, images/Image-682x.png 2000w"
                                                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 968px, 98vw"

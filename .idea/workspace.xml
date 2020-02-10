@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcaabf09-e1a7-419e-9445-50a87c462c46" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/colors.html" beforeDir="false" afterPath="$PROJECT_DIR$/colors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/mbusa-styleguide.webflow.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/mbusa-styleguide.webflow.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/typography.html" beforeDir="false" afterPath="$PROJECT_DIR$/typography.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typography.js" beforeDir="false" afterPath="$PROJECT_DIR$/typography.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zzzz-main-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/zzzz-main-page.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,46 +18,34 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.54713005">
+    <splitter split-orientation="horizontal" split-proportion="0.28306404">
       <split-first>
-        <splitter split-orientation="vertical" split-proportion="0.3575">
+        <splitter split-orientation="vertical" split-proportion="0.25375">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="false">
+              <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/typography.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="71">
-                      <caret line="371" column="53" selection-start-line="371" selection-start-column="53" selection-end-line="371" selection-end-column="53" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/index.html">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="5166">
-                      <caret line="246" column="16" selection-start-line="246" selection-start-column="16" selection-end-line="246" selection-end-column="16" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/js/webflow.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="1848">
-                      <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+                    <state relative-caret-position="83">
+                      <caret line="83" column="11" lean-forward="true" selection-start-line="83" selection-start-column="11" selection-end-line="83" selection-end-column="11" />
                       <folding>
-                        <element signature="n#!!doc" expanded="true" />
+                        <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                        <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                        <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                        <element signature="e#8192#8197#0" expanded="true" />
+                        <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                        <element signature="e#8521#8526#0" expanded="true" />
+                        <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                        <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                        <element signature="e#9820#9825#0" expanded="true" />
+                        <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                        <element signature="e#10149#10154#0" expanded="true" />
+                        <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                        <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                        <element signature="e#11379#11384#0" expanded="true" />
+                        <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                        <element signature="e#11727#11732#0" expanded="true" />
                       </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/css/mbusa-styleguide.webflow.css">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="60">
-                      <caret line="3583" column="19" selection-start-line="3583" selection-start-column="19" selection-end-line="3583" selection-end-column="19" />
                     </state>
                   </provider>
                 </entry>
@@ -67,25 +57,26 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/typography.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="297">
-                      <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+                    <state relative-caret-position="610">
+                      <caret line="322" lean-forward="true" selection-start-line="322" selection-end-line="322" />
                     </state>
                   </provider>
                 </entry>
               </file>
               <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/colors.js">
+                <entry file="file://$PROJECT_DIR$/zzzz-main-page.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="204">
-                      <caret line="59" column="18" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="18" />
-                      <folding>
-                        <element signature="n#!!doc" expanded="true" />
-                        <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                        <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                        <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                        <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                        <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                      </folding>
+                    <state relative-caret-position="210">
+                      <caret line="10" column="6" selection-end-line="10" selection-end-column="6" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/.gitignore">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state>
+                      <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
                     </state>
                   </provider>
                 </entry>
@@ -95,14 +86,14 @@
         </splitter>
       </split-first>
       <split-second>
-        <splitter split-orientation="vertical" split-proportion="0.4257703">
+        <splitter split-orientation="vertical" split-proportion="0.42549372">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/typography.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="273">
-                      <caret line="116" column="1" lean-forward="true" selection-start-line="116" selection-start-column="1" selection-end-line="116" selection-end-column="1" />
+                    <state relative-caret-position="81">
+                      <caret line="101" column="85" lean-forward="true" selection-start-line="101" selection-start-column="85" selection-end-line="101" selection-end-column="85" />
                     </state>
                   </provider>
                 </entry>
@@ -112,19 +103,10 @@
           <split-second>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/colors.html">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="357">
-                      <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/css/mbusa-styleguide.webflow.css">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="73">
-                      <caret line="6062" selection-start-line="6062" selection-end-line="6062" />
+                    <state relative-caret-position="242">
+                      <caret line="7423" column="1" lean-forward="true" selection-start-line="7423" selection-start-column="1" selection-end-line="7423" selection-end-column="1" />
                     </state>
                   </provider>
                 </entry>
@@ -189,9 +171,10 @@
       <list>
         <option value="$PROJECT_DIR$/js/webflow.js" />
         <option value="$PROJECT_DIR$/colors.js" />
-        <option value="$PROJECT_DIR$/typography.js" />
-        <option value="$PROJECT_DIR$/typography.html" />
         <option value="$PROJECT_DIR$/colors.html" />
+        <option value="$PROJECT_DIR$/typography.html" />
+        <option value="$PROJECT_DIR$/zzzz-main-page.html" />
+        <option value="$PROJECT_DIR$/typography.js" />
         <option value="$PROJECT_DIR$/css/mbusa-styleguide.webflow.css" />
       </list>
     </option>
@@ -214,6 +197,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,11 +205,19 @@
               <item name="mbusa-styleguide030220-3" type="b2602c69:ProjectViewProjectNode" />
               <item name="mbusa-styleguide030220-3" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="mbusa-styleguide030220-3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mbusa-styleguide030220-3" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mbusa-styleguide030220-3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -347,13 +339,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55811000" />
+    <option name="totallyTimeSpent" value="59802000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-640" y="-1200" width="1920" height="1200" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1938046" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.12006319" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -365,7 +356,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32944345" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.21095152" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.21095152" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -431,27 +422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/typography.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="371" column="53" selection-start-line="371" selection-start-column="53" selection-end-line="371" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/typography.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="116" column="1" lean-forward="true" selection-start-line="116" selection-start-column="1" selection-end-line="116" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/mbusa-styleguide.webflow.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="6062" selection-start-line="6062" selection-end-line="6062" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/colors.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -471,6 +441,59 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typography.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="83" column="11" lean-forward="true" selection-start-line="83" selection-start-column="11" selection-end-line="83" selection-end-column="11" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#8192#8197#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#8521#8526#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#9820#9825#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#10149#10154#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#11379#11384#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#11727#11732#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zzzz-main-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/mbusa-styleguide.webflow.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="7423" column="1" lean-forward="true" selection-start-line="7423" selection-start-column="1" selection-end-line="7423" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typography.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="101" column="85" lean-forward="true" selection-start-line="101" selection-start-column="85" selection-end-line="101" selection-end-column="85" />
         </state>
       </provider>
     </entry>
