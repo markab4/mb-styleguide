@@ -10,6 +10,13 @@
   grid-column-gap: 16px;
 }
 
+body {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+}
+
 .hero-section {
   display: block;
   width: 95%;
@@ -1809,7 +1816,7 @@
   display: -ms-flexbox;
   display: flex;
   height: 128px;
-  padding: 24px;
+  padding: 16px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -2355,6 +2362,10 @@
   background-color: #e6e6e6;
 }
 
+.greyline.transp {
+  opacity: 0.3;
+}
+
 .div-block-7 {
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
@@ -2489,6 +2500,14 @@
   margin-left: 0px;
   background-color: #fff;
   background-image: linear-gradient(277deg, #f4f4f4, #f4f4f4 50%, #fff 59%, #fff);
+}
+
+.content-sect.fullwhite {
+  background-color: #fff;
+}
+
+.content-sect.fullbl {
+  background-color: #000;
 }
 
 .contraw {
@@ -2698,6 +2717,11 @@
 .link-block-3 {
   width: 20%;
   padding: 8px 8px 8px 11px;
+}
+
+.navigation-wrapper {
+  overflow: scroll;
+  height: 900px;
 }
 
 .nav-button {
@@ -3233,7 +3257,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 28px;
+  margin-top: 32px;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -3604,6 +3628,10 @@
 .heading-slider {
   margin-top: 95px;
   margin-bottom: 20px;
+}
+
+.heading-slider.logpage {
+  margin-top: 16px;
 }
 
 .white-full-wrapper {
@@ -5191,6 +5219,7 @@
 }
 
 .colorsect-copy.red {
+  padding: 16px;
   background-color: #eb0000;
 }
 
@@ -5251,12 +5280,15 @@
 
 .colorsect-copy.white {
   height: 180px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   border: 1px solid #ededed;
   background-color: #fff;
 }
 
 .colorsect-copy.blue {
   height: 180px;
+  padding: 16px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -5271,6 +5303,7 @@
 
 .colorsect-copy.black {
   height: 180px;
+  padding: 16px;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -5289,6 +5322,7 @@
 
 .colorsect-copy.gold-copy {
   height: 180px;
+  padding: 16px;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -5298,6 +5332,7 @@
 
 .colorsect-copy.blue-copy {
   height: 180px;
+  padding: 16px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -5643,6 +5678,7 @@
 }
 
 .icono-grid {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5877,6 +5913,10 @@
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
+}
+
+.homepage_image.typ {
+  z-index: 2;
 }
 
 .typophoto {
@@ -6847,12 +6887,11 @@
 }
 
 .colortints-2 {
-  padding: 40px;
+  padding: 48px 48px 56px;
   background-color: #fff;
 }
 
 .colorsblock-2 {
-  padding: 40px;
   background-color: #fff;
 }
 
@@ -7805,10 +7844,23 @@
   grid-auto-columns: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-areas: "Area Area-2 Area-2";
+  -ms-grid-columns: 1fr 0px 1fr 0px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: auto;
   grid-template-rows: auto;
+}
+
+.logo-raws._2 {
+  grid-column-gap: 0px;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
+
+.logo-raws.two {
+  grid-auto-columns: minmax(1px, 1fr);
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
 }
 
 .logoblacksect {
@@ -7816,6 +7868,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   height: 360px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -7876,6 +7929,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   height: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -7992,6 +8046,30 @@
 .cta-block._3 {
   height: 600px;
   background-color: #b3d8f8;
+}
+
+.div-block-84 {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  -ms-grid-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+
+.div-block-85 {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
 }
 
 @media screen and (max-width: 991px) {

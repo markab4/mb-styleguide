@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Thu Feb 06 2020 16:03:43 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Tue Feb 11 2020 17:38:48 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="5e2f577194e2db77aa82d08e" data-wf-site="5dd45997b98acbf1482572e4">
 <head>
     <meta charset="utf-8">
@@ -22,57 +22,6 @@
     <link href="images/webclip.png" rel="apple-touch-icon">
 </head>
 <body data-w-id="5dd83650b66d23d92aa28df9" class="body-2">
-<style>
-    .white-arrow-down:hover {
-        opacity: 0.5;
-        cursor: pointer;
-    }
-
-    .selector, .div-block-49, input {
-        cursor: pointer;
-    }
-
-    .text-block-17 {
-        font-weight: normal;
-        margin-bottom: unset;
-        margin-left: 8px;
-        margin-right: 16px;
-        cursor: pointer;
-    }
-
-    .big-font {
-        font-family: Corporateacondpro, sans-serif;
-        font-size: 24pt;
-    }
-
-    .medium-font {
-        font-family: Corpos, sans-serif;
-        font-size: 16pt;
-    }
-
-    .small-font {
-        font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-        font-size: 12pt;
-    }
-
-    .grab {
-        cursor: grab;
-    }
-
-    .grab:active {
-        opacity: .5;
-    }
-
-    .type-selector-module, .font-selector-module {
-        background-image: url('./images/Seamless_Stripe.svg');
-    }
-
-    a.typeface-selector-result {
-        color: inherit;
-        text-decoration: none;
-    }
-
-</style>
 <div class="right-navigation">
     <div class="saerch-wrapper">
         <form action="/search" class="search w-clearfix w-form"><input type="search" maxlength="256" name="query"
@@ -92,6 +41,9 @@
                 <div>Foundation</div>
             </a>
             <div class="sublinks-wrapper_found">
+                <a href="logo.html" class="menu_sublink w-inline-block">
+                    <div>Logo</div>
+                </a>
                 <a href="grid-main.html" class="menu_sublink w-inline-block">
                     <div>Grid</div>
                 </a>
@@ -264,8 +216,7 @@
                 your platform and typeface.
             </div>
         </div>
-        <script src="typography.js"></script>
-        <div class="type-selector-wrapper">
+        <div>
             <div class="type-selector-module">
                 <div class="type-selector-row _1">
                     <div class="typesel-header">
@@ -273,23 +224,79 @@
                         <div class="corpo20px">Platform</div>
                     </div>
                     <div class="div-block-76">
-                        <div class="palette-selector passive" onclick="selectPalette(this)">
-                            <div class="coprobold selector">MBUSA</div>
+                        <div class="palette-selector active">
+                            <div class="coprobold">Common</div>
                         </div>
-                        <div class="palette-selector passive" onclick="selectPalette(this)">
-                            <div class="coprobold selector">VANS</div>
+                        <div class="palette-selector passive">
+                            <div class="coprobold">AMG</div>
                         </div>
-                        <div class="palette-selector passive" onclick="selectPalette(this)">
-                            <div class="coprobold selector">AMG</div>
+                        <div class="palette-selector passive">
+                            <div class="coprobold">MBUSA+VAN</div>
                         </div>
-                        <div class="palette-selector passive" onclick="selectPalette(this)">
-                            <div class="coprobold selector">MAYBACH</div>
+                        <div class="palette-selector passive">
+                            <div class="coprobold">Common</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="type-selector-row _3">
+                    <div class="typesel-header">
+                        <div class="greyline"></div>
+                        <div class="corpo20px">Typeface</div>
+                    </div>
+                    <div class="typeface-selector">
+                        <div class="text-block-18">Corporate A</div>
+                    </div>
+                    <div class="typeface-selector">
+                        <div class="text-block-19">CorpoS</div>
+                    </div>
+                    <div class="typeface-selector">
+                        <div class="text-block-19">Arial</div>
+                    </div>
+                </div>
+                <div class="type-selector-row _3">
+                    <div class="typesel-header">
+                        <div class="greyline"></div>
+                        <div class="corpo20px">Style</div>
+                    </div>
+                    <div class="typeface-selector">
+                        <div class="text-block-20">Regular</div>
+                    </div>
+                    <div class="typeface-selector">
+                        <div class="text-block-21">Regular Italic</div>
+                    </div>
+                    <div class="typeface-selector"></div>
+                </div>
+                <div class="type-selector-row _2">
+                    <div class="typesel-header-with-toggle">
+                        <div class="greyline"></div>
+                        <div class="corpo20px">Size</div>
+                        <div class="div-block-58">
+                            <div class="toggle-image"><img src="images/Mobile.svg" alt=""></div>
+                            <div class="toggle _1">
+                                <div class="toggle-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div-block-76">
+                        <div class="typeface-selector-result active">
+                            <div>
+                                <div class="text-block-23">Master heading</div>
+                            </div>
+                        </div>
+                        <div class="typeface-selector-result passive">
+                            <div class="text-block-25">Module heading</div>
+                        </div>
+                        <div class="typeface-selector-result passive">
+                            <div class="text-block-26">Paragraph heading</div>
+                        </div>
+                        <div class="typeface-selector-result passive">
+                            <div class="text-block-26">Paragraph heading</div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="design-example-section">
-                <div class="typesel-header" id="design-sample-header">
+                <div class="typesel-header">
                     <div class="div-block-78">
                         <div class="corpo20px">Design sample</div>
                         <div class="div-block-80">
@@ -302,11 +309,19 @@
                     </div>
                     <div class="greyline"></div>
                 </div>
-<!--          <div class="sample-page-wrapper">-->
-<!--            <div class="div-block-75"><img src="images/Image-682x.png" srcset="images/Image-682x.png 500w, images/Image-682x.png 800w, images/Image-682x.png 1080w, images/Image-682x.png 1600w, images/Image-682x.png 2000w" sizes="(max-width: 479px) 75vw, (max-width: 767px) 81vw, (max-width: 991px) 83vw, 69vw" alt=""></div>-->
-<!--            <div><img src="images/Image-692x.png" srcset="images/Image-692x.png 500w, images/Image-692x.png 800w, images/Image-692x.png 1080w, images/Image-692x.png 1600w, images/Image-692x.png 2000w" sizes="(max-width: 479px) 75vw, (max-width: 767px) 81vw, (max-width: 991px) 83vw, 69vw" alt=""></div>-->
-<!--            <div><img src="images/Image-702x.png" srcset="images/Image-702x.png 500w, images/Image-702x.png 800w, images/Image-702x.png 1080w, images/Image-702x.png 1600w, images/Image-702x.png 2000w" sizes="(max-width: 479px) 75vw, (max-width: 767px) 81vw, (max-width: 991px) 83vw, 69vw" alt=""></div>-->
-<!--            </div>-->
+                <div class="sample-page-wrapper">
+                    <div id="33" class="div-block-75"><img src="images/Image-682x.png"
+                                                           srcset="images/Image-682x-p-500.png 500w, images/Image-682x-p-800.png 800w, images/Image-682x-p-1080.png 1080w, images/Image-682x-p-1600.png 1600w, images/Image-682x.png 2000w"
+                                                           sizes="(max-width: 767px) 100vw, (max-width: 991px) 968px, 98vw"
+                                                           alt=""></div>
+                    <div id="11"><img src="images/Image-692x.png"
+                                      srcset="images/Image-692x-p-500.png 500w, images/Image-692x-p-800.png 800w, images/Image-692x-p-1080.png 1080w, images/Image-692x-p-1600.png 1600w, images/Image-692x.png 2000w"
+                                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 968px, 98vw" alt=""></div>
+                    <div id="22"><img src="images/Image-702x.png"
+                                      srcset="images/Image-702x-p-500.png 500w, images/Image-702x-p-800.png 800w, images/Image-702x-p-1080.png 1080w, images/Image-702x-p-1600.png 1600w, images/Image-702x.png 2000w"
+                                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 968px, 98vw" alt=""></div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -317,4 +332,3 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>
-
