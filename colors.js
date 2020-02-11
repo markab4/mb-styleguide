@@ -85,31 +85,30 @@ function selectFg(fgElement) {
     }
 
     let $fgColor = $(".fg-color");
-    $fgColor.after(
-        $("            <div class=\"bg-color\" style='background-color: #fff'>\n" +
-            "                <div class=\"colorsel-header\">\n" +
-            "                    <div class=\"greyline\"></div>\n" +
-            "                    <div class=\"corpo20px\">Background Color</div>\n" +
-            "                </div>\n" +
-            "                <div class=\"div-block-48-copy\">\n" + colors +
-            "                </div>\n" +
-            "            </div>"));
+    $fgColor.after($(
+        `<div class="bg-color" style='background-color: #fff'>
+                <div class="colorsel-header">
+                    <div class="greyline"></div>
+                    <div class="corpo20px">Background Color</div>
+                </div>
+                <div class="div-block-48-copy">${colors}</div>
+            </div>`));
 
     let fontSelector = $(".font-selector-module");
-    fontSelector.replaceWith("        <div class=\"font-selector-module\" style='margin-bottom: 0'>\n" +
-        "            <div class=\"div-block-47\">\n" +
-        "                <div class=\"colorsel-header\" id=\"contrast-results\">\n" +
-        "                    <div class=\"greyline\"></div>\n" +
-        "                    <div class=\"corpo20px\">Contrast Results</div>\n" +
-        "                </div>\n" +
-        "                <div class=\"color-sujessionselector grab\" onclick=\"copyStringToClipboard(this.innerText)\">\n" +
-        "                    <div class=\"color_suggesion_wrapper\">\n" +
-        "                        <div class=\"color_suggesion_label\">Foreground</div>\n" +
-        `                        <div class=\"color_suggesion_hex\">${selectedFg}</div>\n` +
+    fontSelector.replaceWith(
+        "<div class=\"font-selector-module\" style='margin-bottom: 0'>\n    <div class=\"div-block-47\">\n" +
+        "        <div class=\"colorsel-header\" id=\"contrast-results\">\n" +
+        "            <div class=\"greyline\"></div>\n" +
+        "            <div class=\"corpo20px\">Contrast Results</div>\n" +
+        "        </div>\n" +
+        "        <div class=\"color-sujessionselector grab\" onclick=\"copyStringToClipboard(this.innerText)\">\n" +
+        "            <div class=\"color_suggesion_wrapper\">\n" +
+        "                <div class=\"color_suggesion_label\">Foreground</div>\n" +
+        `                        <div class="color_suggesion_hex">${selectedFg}</div>` +
         "                    </div>\n" +
         "                    <div class=\"w-clearfix\"><img src=\"images/Icon_copycode-1.svg\" alt=\"\" class=\"white-arrow-down\"></div>\n" +
         "                </div>\n" +
-        "                <div class=\"color-sujessionselector grab\" id='background-display' onclick=\"copyStringToClipboard(this.innerText)\">\n" +
+        "                <div class=\"color-sujessionselector grab\" id=\'background-display\' onclick=\"copyStringToClipboard(this.innerText)\">\n" +
         "                    <div class=\"color_suggesion_wrapper\">\n" +
         "                        <div class=\"color_suggesion_label\">Background</div>\n" +
         "                        <div class=\"color_suggesion_hex\">???</div>\n" +
@@ -143,39 +142,37 @@ function selectBg(bgElement) {
         "                    </div>\n" +
         "                    <div class=\"w-clearfix\"><img src=\"images/Icon_copycode-1.svg\" alt=\"\" class=\"white-arrow-down\"></div>\n"));
 
-    let $fontDisplay = $(" <div class=\"div-block-56\" id='font-display'>\n" +
-        "                <div class=\"font1\">\n" +
-        "                    <div class=\"font_verion_wrapper\">\n" +
-        "                        <div class=\"big-font\">Corporate A Regular 24pt</div>\n" +
-        "                        <div class=\"div-block-54 selector\">\n" +
-        "                            <div class=\"div-block-53 w-clearfix\">\n" +
-        createFontButtons(['24pt', '30pt', '36pt', '42pt'], 'big-font') +
-        "                            </div>\n" +
-        "                        </div>\n" +
-        "                    </div>\n" +
-        "                </div>\n" +
-        "                <div class=\"font2\">\n" +
-        "                    <div class=\"font_verion_wrapper\">\n" +
-        "                        <div class=\"medium-font\">CorpoS Regular 18pt</div>\n" +
-        "                        <div class=\"div-block-54\">\n" +
-        "                            <div class=\"div-block-53 w-clearfix\">\n" +
-        createFontButtons(['18pt', '32pt'], 'medium-font') +
-
-        "                            </div>\n" +
-        "                        </div>\n" +
-        "                    </div>\n" +
-        "                </div>\n" +
-        "                <div class=\"font3\">\n" +
-        "                    <div class=\"font_verion_wrapper\">\n" +
-        "                        <div class=\"small-font\">Arial Regular 14pt</div>\n" +
-        "                        <div class=\"div-block-54\">\n" +
-        "                            <div class=\"div-block-53 w-clearfix\">\n" +
-        createFontButtons(['12pt', '14pt'], 'small-font') +
-        "                            </div>\n" +
-        "                        </div>\n" +
-        "                    </div>\n" +
-        "                </div>\n" +
-        "            </div>");
+    let $fontDisplay = $(`
+ <div class="div-block-56" id='font-display'>
+                <div class="font1">
+                    <div class="font_verion_wrapper">
+                        <div class="big-font">Corporate A Regular 24pt</div>
+                        <div class="div-block-54 selector">
+                            <div class="div-block-53 w-clearfix">
+${createFontButtons(['24pt', '30pt', '36pt', '42pt'], 'big-font')}                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="font2">
+                    <div class="font_verion_wrapper">
+                        <div class="medium-font">CorpoS Regular 18pt</div>
+                        <div class="div-block-54">
+                            <div class="div-block-53 w-clearfix">
+${createFontButtons(['18pt', '32pt'], 'medium-font')}                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="font3">
+                    <div class="font_verion_wrapper">
+                        <div class="small-font">Arial Regular 14pt</div>
+                        <div class="div-block-54">
+                            <div class="div-block-53 w-clearfix">
+${createFontButtons(['12pt', '14pt'], 'small-font')}                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+`);
 
     let $fontSelector = $(".font-selector-module");
     $('#font-display').remove();
@@ -190,21 +187,21 @@ function selectBg(bgElement) {
         $mediumFont = $(".medium-font"),
         $smallFont = $(".small-font");
 
-    $("input[name='big-font']").click(function(){
+    $("input[name='big-font']").click(function () {
         let radioValue = $("input[name='big-font']:checked").val();
         let text = $bigFont.text();
         $bigFont.text(text.replace(/\d\dpt/, radioValue));
         $bigFont.css("font-size", radioValue);
     });
 
-    $("input[name='medium-font']").click(function(){
+    $("input[name='medium-font']").click(function () {
         let radioValue = $("input[name='medium-font']:checked").val();
         let text = $bigFont.text();
         $mediumFont.text(text.replace(/\d\dpt/, radioValue));
         $mediumFont.css("font-size", radioValue);
     });
 
-    $("input[name='small-font']").click(function(){
+    $("input[name='small-font']").click(function () {
         let radioValue = $("input[name='small-font']:checked").val();
         let text = $smallFont.text();
         $smallFont.text(text.replace(/\d\dpt/, radioValue));
