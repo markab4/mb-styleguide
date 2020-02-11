@@ -6330,8 +6330,6 @@ body {
   display: flex;
   overflow: scroll;
   height: 192px;
-  max-width: 320px;
-  min-width: 240px;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
