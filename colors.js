@@ -16,7 +16,7 @@ function copyStringToClipboard(str) {
     document.body.removeChild(el);
 }
 
-let selectedFg, selectedBg;
+let selectedFg, selectedBg, selectedPlatform;
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
@@ -44,7 +44,7 @@ function removeActive($el) {
 }
 
 let rgbToHex = function (rgb) {
-    let hexDigits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
+    let hexDigits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
     const hex = x => isNaN(x) ? "00" : hexDigits[(x - x % 16) / 16] + hexDigits[x % 16];
     rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
     return `#${hex(rgb[1])}${hex(rgb[2])}${hex(rgb[3])}`;
@@ -52,40 +52,48 @@ let rgbToHex = function (rgb) {
 
 
 function selectPalette(paletteElement) {
-    let $paletteSelector = $(".palette-selector");
-    removeActive($paletteSelector);
+    try {
+        let $paletteSelector = $(".palette-selector");
+        removeActive($paletteSelector);
+        selectedPlatform = paletteElement.innerText;
+        console.log(selectedPlatform);
+        console.log(compliantColors);
 
-    toggleClasses(paletteElement, "active", "passive");
+        toggleClasses(paletteElement, "active", "passive");
 
-    let $platforms = $("#platforms");
-    let $fgColor = $(".fg-color");
-    $fgColor.remove();
-    $(".bg-color").remove();
+        let $platforms = $("#platforms");
+        let $fgColor = $(".fg-color");
+        $fgColor.remove();
+        $(".bg-color").remove();
 
-    let colors = ``;
-    for (let i = 0; i <= getRandomInt(12) + 3; i++)
-        colors += `<div class="div-block-49" onclick="selectFg(this)" style="background-color: ${getRandomColor()}"></div>\n`;
+        let colors = ``;
+        let fgColors = Object.keys(compliantColors[selectedPlatform]);
+        for (let i = 0; i < fgColors.length; i++)
+            colors += `<div class="div-block-49 fg-block" onclick="selectFg(this)" style="background-color: ${fgColors[i]}"></div>\n`;
 
-    $(`<div class="fg-color" style='background-color: #fff'>
-                <div class="colorsel-header">
-                    <div class="greyline"></div>
-                    <div class="corpo20px">Foreground Color</div>
-                </div>
-                <div class="div-block-48">
-                    ${colors}
-                </div>
-            </div>`);
+        $(`<div class="fg-color" style='background-color: #fff'>
+                    <div class="colorsel-header">
+                        <div class="greyline"></div>
+                        <div class="corpo20px">Foreground Color</div>
+                    </div>
+                    <div class="div-block-48">
+                        ${colors}
+                    </div>
+                </div>`);
 
 
-    $platforms.after(
-        $("     <div class=\"fg-color\" style='background-color: #fff'>\n" +
-            "                <div class=\"colorsel-header\">\n" +
-            "                    <div class=\"greyline\"></div>\n" +
-            "                    <div class=\"corpo20px\">Foreground Color</div>\n" +
-            "                </div>\n" +
-            "                <div class=\"div-block-48\">\n" + colors +
-            "                </div>\n" +
-            "            </div>"));
+        $platforms.after(
+            $("     <div class=\"fg-color\" style='background-color: #fff'>\n" +
+                "                <div class=\"colorsel-header\">\n" +
+                "                    <div class=\"greyline\"></div>\n" +
+                "                    <div class=\"corpo20px\">Foreground Color</div>\n" +
+                "                </div>\n" +
+                "                <div class=\"div-block-48\">\n" + colors +
+                "                </div>\n" +
+                "            </div>"));
+    } catch (TypeError) {
+        console.log(`${selectedPlatform} does not have a list of compliant colors yet. :-(`)
+    }
 }
 
 function selectFg(fgElement) {
@@ -95,11 +103,16 @@ function selectFg(fgElement) {
     fgElement.classList.add("selected");
 
     $(".bg-color").remove();
+    console.log("selected fg", selectedFg);
+
+    let bgColors = compliantColors[selectedPlatform][selectedFg];
+    console.log(bgColors);
+
 
     let colors = "";
-    for (let i = 0; i <= getRandomInt(36) + 8; i++) {
+    for (let i = 0; i < bgColors.length; i++) {
         colors += "<div class=\"bg-block div-block-49\" onclick='selectBg(this)' " +
-            "style='background-color: " + getRandomColor() + "'></div>\n"
+            "style='background-color: " + bgColors[i] + "'></div>\n"
     }
 
     let $fgColor = $(".fg-color");

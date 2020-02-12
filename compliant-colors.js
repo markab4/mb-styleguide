@@ -3,6 +3,8 @@ let compliantColors = {
     // For the rows that follow, the first column is the foreground color, and the columns that follow are compliant
     // background colors to match each foreground color
 
+    // ENTER ONLY UPPERCASE CHARACTERS
+
     "MBUSA": {
         "#FFFFFF": ["#717171", "#393939", "#000000"],
         "#F1F1F1": ["#393939", "#000000"],
@@ -18,7 +20,7 @@ let compliantColors = {
         "#E5EFF7": ["#393939", "#000000"],
     },
 
-    "AMG Red": {
+    "AMG RED": {
         "#FFFFFF": ["#717171", "#393939", "#000000", "#EB0000"],
         "#F1F1F1": ["#393939", "#000000"],
         "#E3E3E3": ["#393939", "#000000"],
@@ -33,7 +35,7 @@ let compliantColors = {
         "#FDE3E3": ["#393939", "#000000"],
     },
 
-    "Maybach": {
+    "MAYBACH": {
         "#FFFFFF": ["#717171", "#393939", "#000000", "#986F32", "#2E2E4D"],
         "#F1F1F1": ["#393939", "#000000", "#2E2E4D"],
         "#E3E3E3": ["#393939", "#000000", "#2E2E4D"],
@@ -42,7 +44,7 @@ let compliantColors = {
         "#393939": ["#FFFFFF", "#F1F1F1", "#E3E3E3", "#C6C6C6", "#C1A880", "#D6C5AB", "#EAE2D5", "#F5F0E9"],
         "#000000": ["#FFFFFF", "#F1F1F1", "#E3E3E3", "#C6C6C6", "#986F32", "#AC8B56", "#C1A880", "#D6C5AB", "#EAE2D5", "#F5F0E9"],
         "#986F32": ["#FFFFFF", "#000000"],
-        "#2e2e4d": ["#FFFFFF", "#F1F1F1", "#E3E3E3", "#C6C6C6"],
+        "#2E2E4D": ["#FFFFFF", "#F1F1F1", "#E3E3E3", "#C6C6C6"],
         "#AC8B56": ["#000000"],
         "#C1A880": ["#393939", "#000000"],
         "#D6C5AB": ["#393939", "#000000"],
