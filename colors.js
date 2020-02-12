@@ -225,5 +225,19 @@ ${createFontButtons(['12pt', '14pt'], 'small-font')}                            
 
 }
 
+function webRequest() {
+    let url = "https://www.contoso.com/NumberOfPeopleInSpace";
+    return new Promise(function (resolve, reject) {
+        fetch(url)
+            .then(function (response){
+                    return response.json();
+                }
+            )
+            .then(function (json) {
+                resolve(JSON.stringify(json.names));
+            })
+    })
+}
+
 
 // });
