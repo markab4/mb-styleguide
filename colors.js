@@ -1,8 +1,20 @@
-// $(function () {
-// $.fn.hasId = function(id) {
-//     return this.attr('id') == id;
-// };
-//
+function copyStringToClipboard(str) {
+    if (str.includes("#")) str = str.substring(str.indexOf("#")).trim();
+    // Create new element
+    let el = document.createElement('textarea');
+    // Set value (string to be copied)
+    el.value = str;
+    // Set non-editable to avoid focus and move outside of view
+    el.setAttribute('readonly', '');
+    el.style = {position: 'absolute', left: '-9999px'};
+    document.body.appendChild(el);
+    // Select text inside element
+    el.select();
+    // Copy text to clipboard
+    document.execCommand('copy');
+    // Remove temporary element
+    document.body.removeChild(el);
+}
 
 let selectedFg, selectedBg;
 
@@ -33,13 +45,9 @@ function removeActive($el) {
 
 let rgbToHex = function (rgb) {
     let hexDigits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
-
-    function hex(x) {
-        return isNaN(x) ? "00" : hexDigits[(x - x % 16) / 16] + hexDigits[x % 16];
-    }
-
+    const hex = x => isNaN(x) ? "00" : hexDigits[(x - x % 16) / 16] + hexDigits[x % 16];
     rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
-    return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+    return `#${hex(rgb[1])}${hex(rgb[2])}${hex(rgb[3])}`;
 };
 
 
@@ -54,11 +62,21 @@ function selectPalette(paletteElement) {
     $fgColor.remove();
     $(".bg-color").remove();
 
-    let colors = "";
-    for (let i = 0; i <= getRandomInt(12) + 3; i++) {
-        colors += "<div class=\"fg-block div-block-49\" onclick='selectFg(this)' " +
-            "style='background-color: " + getRandomColor() + "'></div>\n"
-    }
+    let colors = ``;
+    for (let i = 0; i <= getRandomInt(12) + 3; i++)
+        colors += `<div class="div-block-49" onclick="selectFg(this)" style="background-color: ${getRandomColor()}"></div>\n`;
+
+    $(`<div class="fg-color" style='background-color: #fff'>
+                <div class="colorsel-header">
+                    <div class="greyline"></div>
+                    <div class="corpo20px">Foreground Color</div>
+                </div>
+                <div class="div-block-48">
+                    ${colors}
+                </div>
+            </div>`);
+
+
     $platforms.after(
         $("     <div class=\"fg-color\" style='background-color: #fff'>\n" +
             "                <div class=\"colorsel-header\">\n" +
@@ -118,13 +136,12 @@ function selectFg(fgElement) {
         "        </div>\n");
 }
 
-function createFontButtons(sizes, name) {
+const createFontButtons = (sizes, name) => {
     let html = "";
-    for (let i = 0; i < sizes.length; i++) {
-        html += `<label><input ${i === 0 ? "checked" : ""} type="radio" name="${name}" value="${sizes[i]}"><div class=\"text-block-17\">${sizes[i]}</div></label>`
-    }
+    for (let i = 0; i < sizes.length; i++)
+        html += `<label><input ${i === 0 ? "checked" : ""} type="radio" name="${name}" value="${sizes[i]}"><div class="text-block-17">${sizes[i]}</div></label>`;
     return html;
-}
+};
 
 function selectBg(bgElement) {
     selectedBg = rgbToHex(bgElement.style.backgroundColor);
@@ -143,8 +160,7 @@ function selectBg(bgElement) {
         "                    <div class=\"w-clearfix\"><img src=\"images/Icon_copycode-1.svg\" alt=\"\" class=\"white-arrow-down\"></div>\n"));
 
     let $fontDisplay = $(`
- <div class="div-block-56" id='font-display'>
-                <div class="font1">
+                <div class="font1 font-display">
                     <div class="font_verion_wrapper">
                         <div class="big-font">Corporate A Regular 24pt</div>
                         <div class="div-block-54 selector">
@@ -153,7 +169,7 @@ ${createFontButtons(['24pt', '30pt', '36pt', '42pt'], 'big-font')}              
                         </div>
                     </div>
                 </div>
-                <div class="font2">
+                <div class="font2 font-display">
                     <div class="font_verion_wrapper">
                         <div class="medium-font">CorpoS Regular 18pt</div>
                         <div class="div-block-54">
@@ -162,7 +178,7 @@ ${createFontButtons(['18pt', '32pt'], 'medium-font')}                           
                         </div>
                     </div>
                 </div>
-                <div class="font3">
+                <div class="font3 font-display">
                     <div class="font_verion_wrapper">
                         <div class="small-font">Arial Regular 14pt</div>
                         <div class="div-block-54">
@@ -171,11 +187,10 @@ ${createFontButtons(['12pt', '14pt'], 'small-font')}                            
                         </div>
                     </div>
                 </div>
-            </div>
 `);
 
     let $fontSelector = $(".font-selector-module");
-    $('#font-display').remove();
+    $('.font-display').remove();
     $fontSelector.append($fontDisplay);
     let $fontBoxes = $(".font_verion_wrapper");
     $fontBoxes.css({
