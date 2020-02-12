@@ -14,7 +14,7 @@ function selectPalette(paletteElement) {
     let $paletteSelector = $(".palette-selector");
     removeActive($paletteSelector);
     toggleClasses(paletteElement, "active", "passive");
-    $("#size-selector, #style-selector, #typeface-selector").remove();
+    $("#size-selector, #style-selector, #typeface-selector, #specs").remove();
     let $typefaceSelector = $(`
                 <div class="type-selector-row _3" id="typeface-selector">
                     <div class="typesel-header">
@@ -41,7 +41,7 @@ function selectTypeface(typefaceElement) {
     $typefaceBlocks.removeClass("active");
     typefaceElement.classList.add("active");
 
-    $("#size-selector, #style-selector").remove();
+    $("#size-selector, #style-selector, #specs").remove();
     $("#typeface-selector").after(
         $(`
                 <div class="type-selector-row _3" id="style-selector">
@@ -65,7 +65,7 @@ function selectStyle(styleElement) {
     styleElement.classList.add("active");
 
 
-    $("#size-selector").remove();
+    $("#size-selector, #specs").remove();
     $("#style-selector").after(
         $(`
 <div class="type-selector-row _2" id="size-selector">
@@ -98,7 +98,7 @@ function selectStyle(styleElement) {
     </div>
 </div>
         `));
-    $("#sample-design").remove();
+    $("#sample-design, #specs").remove();
     let $sampleDesign = $(`
                 <div class="sample-page-wrapper" id="sample-design">
                     <div class="div-block-75"><img src="images/Image-682x.png"
@@ -120,4 +120,17 @@ function selectSize(sizeElement) {
     let $sizeSelector = $(".typeface-selector-result");
     removeActive($sizeSelector);
     toggleClasses(sizeElement, "active", "passive");
+
+    let $specs = $(`
+                        <div class="div-block-80" id="specs">
+                            <div class="div-block-79">
+                                <div class="text-block-31">size <span class="specs">32</span></div>
+                                <div class="text-block-31">leading <span class="specs">56</span></div>
+                                <div class="text-block-31">tracking <span class="specs">-10</span></div>
+                            </div>
+                        </div>
+    `);
+    $("#specs").remove();
+
+    $('#specs-wrapper').append($specs);
 }
