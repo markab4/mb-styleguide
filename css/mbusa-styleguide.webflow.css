@@ -8110,6 +8110,18 @@ body {
   width: 100%;
 }
 
+.text-block-arial {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+.text-block-2-bold {
+  font-family: Corporateacondpro, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+}
+
 @media screen and (max-width: 991px) {
   .left-side {
     width: 10%;
