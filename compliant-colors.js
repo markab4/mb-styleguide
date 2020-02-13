@@ -5,6 +5,17 @@ let compliantColors = {
 
     // ENTER ONLY UPPERCASE CHARACTERS
 
+    /* EXAMPLE FORMAT:
+
+    "BRAND": {
+        "#<FOREGROUNDCOLOR1>": ["#<BACKGROUNDCOLOR>", "#<BACKGROUNDCOLOR>", "#<BACKGROUNDCOLOR>"],
+        "#<FOREGROUNDCOLOR2>": ["#<BACKGROUNDCOLOR>", "#<BACKGROUNDCOLOR>"],
+        "#<FOREGROUNDCOLOR3>": ["#<BACKGROUNDCOLOR>", "#<BACKGROUNDCOLOR>"],
+        "#<FOREGROUNDCOLOR4>": ["#<BACKGROUNDCOLOR>", "#<BACKGROUNDCOLOR>"],
+    },
+
+    */
+
     "MBUSA": {
         "#FFFFFF": ["#717171", "#393939", "#000000"],
         "#F1F1F1": ["#393939", "#000000"],

@@ -56,8 +56,6 @@ function selectPalette(paletteElement) {
         let $paletteSelector = $(".palette-selector");
         removeActive($paletteSelector);
         selectedPlatform = paletteElement.innerText;
-        console.log(selectedPlatform);
-        console.log(compliantColors);
 
         toggleClasses(paletteElement, "active", "passive");
 
@@ -103,10 +101,8 @@ function selectFg(fgElement) {
     fgElement.classList.add("selected");
 
     $(".bg-color").remove();
-    console.log("selected fg", selectedFg);
 
     let bgColors = compliantColors[selectedPlatform][selectedFg];
-    console.log(bgColors);
 
 
     let colors = "";
