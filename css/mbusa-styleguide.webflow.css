@@ -6684,7 +6684,7 @@ body {
   right: 0%;
   bottom: auto;
   display: block;
-  height: 96px;
+  height: 80px;
   padding-top: 32px;
   padding-right: 32px;
   padding-left: 32px;
@@ -6752,6 +6752,7 @@ body {
 .type-selector-row._3 {
   display: block;
   width: 20%;
+  padding-right: 16px;
 }
 
 .typeface-selector {
@@ -6902,6 +6903,8 @@ body {
 
 .design-example-section {
   display: block;
+  overflow: hidden;
+  height: 500px;
   margin-bottom: 10px;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
@@ -6919,8 +6922,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  overflow: scroll;
-  height: 450px;
+  overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -6963,8 +6965,10 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 96px;
-  padding: 32px 32px 56px;
+  height: 80px;
+  padding-top: 32px;
+  padding-right: 32px;
+  padding-left: 32px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -7638,6 +7642,8 @@ body {
 .div-block-76 {
   overflow: scroll;
   height: 192px;
+  padding-right: 16px;
+  background-color: #fff;
 }
 
 .column-36 {
@@ -7686,8 +7692,6 @@ body {
 }
 
 .div-block-80 {
-  position: relative;
-  top: 7px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
@@ -7695,7 +7699,7 @@ body {
 }
 
 .toggle-image {
-  margin-right: 8px;
+  margin-left: 8px;
 }
 
 .logo-text {
@@ -8068,6 +8072,17 @@ body {
 .black-wrapper {
   padding-bottom: 18px;
   background-color: #000;
+}
+
+.div-block-76-selectors {
+  overflow: scroll;
+  height: 192px;
+  padding-right: 0px;
+  background-color: #fff;
+}
+
+.image-28 {
+  position: static;
 }
 
 @media screen and (max-width: 991px) {
