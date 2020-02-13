@@ -6345,13 +6345,15 @@ body {
 .div-block-49 {
   width: 64px;
   height: 64px;
-  border: 1px solid #fff;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e7e7e7;
   background-color: #176db7;
 }
 
 .div-block-49._1 {
   border-color: #fff;
-  background-color: #da8a8a;
+  background-color: #fff;
 }
 
 .div-block-49.body-2 {
@@ -6360,8 +6362,13 @@ body {
 
 .div-block-49.selected {
   border-width: 4px;
-  border-color: #f4f4f4;
+  border-color: #e7e7e7;
   background-color: #000;
+}
+
+.div-block-49.white {
+  border-color: #e7e7e7;
+  background-color: #fff;
 }
 
 .div-block-48-copy {
