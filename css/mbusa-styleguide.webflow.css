@@ -6925,6 +6925,7 @@ body {
 }
 
 .sample-page-wrapper {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8090,6 +8091,35 @@ body {
 
 .image-28 {
   position: static;
+}
+
+.line-pointer {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+  z-index: 6;
+  width: 45%;
+  height: 2px;
+  margin-top: 5%;
+  background-color: #ff00ce;
+}
+
+.image-29 {
+  width: 100%;
+}
+
+.text-block-arial {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+.text-block-2-bold {
+  font-family: Corporateacondpro, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 991px) {
