@@ -112,28 +112,10 @@ function selectStyle(styleElement) {
         "font-weight": selectedWeight,
         "font-style": selectedStyle
     });
-
-
-    $("#sample-design, #specs").remove();
-    let $sampleDesign = $(`
-<div class="sample-page-wrapper" id="sample-design">
-    <div class="line-pointer"></div>
-    <div id="33" class="div-block-75"><img src="images/Image-682x.png"
-                                           srcset="images/Image-682x-p-500.png 500w, images/Image-682x-p-800.png 800w, images/Image-682x-p-1080.png 1080w, images/Image-682x-p-1600.png 1600w, images/Image-682x.png 2000w"
-                                           sizes="(max-width: 767px) 100vw, (max-width: 991px) 968px, 98vw" alt=""
-                                           class="image-29"></div>
-    <div><img src="images/Image-692x.png"
-              srcset="images/Image-692x-p-500.png 500w, images/Image-692x-p-800.png 800w, images/Image-692x-p-1080.png 1080w, images/Image-692x-p-1600.png 1600w, images/Image-692x.png 2000w"
-              sizes="(max-width: 767px) 100vw, (max-width: 991px) 968px, 98vw" alt="" id="module-heading"></div>
-    <div><img src="images/Image-702x.png"
-              srcset="images/Image-702x-p-500.png 500w, images/Image-702x-p-800.png 800w, images/Image-702x-p-1080.png 1080w, images/Image-702x-p-1600.png 1600w, images/Image-702x.png 2000w"
-              sizes="(max-width: 767px) 100vw, (max-width: 991px) 968px, 98vw" alt="" id="paragraph-heading"></div>
-</div>
-`);
-    $("#design-sample-header").after($sampleDesign);
 }
 
 function selectSize(sizeElement) {
+    let selectedSizeText = sizeElement.innerText;
     let computedStyle = getComputedStyle(sizeElement.childNodes[1]);
     selectedSize = computedStyle.fontSize;
     selectedLeading = computedStyle.lineHeight;
@@ -154,6 +136,39 @@ function selectSize(sizeElement) {
     $("#specs").remove();
 
     $('#specs-wrapper').append($specs);
+
+
+    let sampleImage;
+    switch (selectedSizeText) {
+        case "Master heading":
+            sampleImage = `<img src="images/Image-682x.png"
+                             srcset="images/Image-682x-p-500.png 500w, images/Image-682x-p-800.png 800w, images/Image-682x-p-1080.png 1080w, images/Image-682x-p-1600.png 1600w, images/Image-682x.png 2000w"
+                             sizes="(max-width: 767px) 100vw, (max-width: 991px) 968px, 98vw" alt="" id="master-heading"
+                             class="image-29">`;
+            break;
+        case "Module heading":
+            sampleImage = `<img src="images/Image-692x.png"
+                             srcset="images/Image-692x-p-500.png 500w, images/Image-692x-p-800.png 800w, images/Image-692x-p-1080.png 1080w, images/Image-692x-p-1600.png 1600w, images/Image-692x.png 2000w"
+                             sizes="(max-width: 767px) 100vw, (max-width: 991px) 968px, 98vw" alt="" id="module-heading">`;
+            break;
+        case "Paragraph heading":
+            sampleImage = `<img src="images/Image-702x.png"
+                             srcset="images/Image-702x-p-500.png 500w, images/Image-702x-p-800.png 800w, images/Image-702x-p-1080.png 1080w, images/Image-702x-p-1600.png 1600w, images/Image-702x.png 2000w"
+                             sizes="(max-width: 767px) 100vw, (max-width: 991px) 968px, 98vw" alt="" id="paragraph-heading">`;
+            break;
+    }
+
+
+    $("#sample-design, #specs").remove();
+    let $sampleDesign = $(`
+<div class="sample-page-wrapper" id="sample-design">
+    <div class="line-pointer"></div>
+    <div id="33" class="div-block-75">
+    ${sampleImage}
+    </div>
+</div>
+`);
+    $("#design-sample-header").after($sampleDesign);
 }
 
 function toggleMobile(checkBox) {
