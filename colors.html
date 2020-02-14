@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Thu Feb 13 2020 21:09:30 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Fri Feb 14 2020 16:12:16 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="5e2f577194e2db6e8a82d08f" data-wf-site="5dd45997b98acbf1482572e4">
 <head>
   <meta charset="utf-8">
@@ -17,6 +17,326 @@
   <link href="images/webclip.png" rel="apple-touch-icon">
 </head>
 <body data-w-id="5dd83650b66d23d92aa28df9" class="body-2">
+  <div class="w-embed">
+    <style>
+    .white-arrow-down:hover {
+        opacity: 0.5;
+        cursor: pointer;
+    }
+    .selector, .div-block-49, input {
+        cursor: pointer;
+    }
+    .text-block-17 {
+        font-weight: normal;
+        margin-bottom: unset;
+        margin-left: 8px;
+        margin-right: 16px;
+        cursor: pointer;
+    }
+    .big-font {
+        font-family: Corporateacondpro, sans-serif;
+        font-size: 24pt;
+        line-height: 42pt;
+    }
+    .medium-font {
+        font-family: Corpos, sans-serif;
+        font-size: 16pt;
+        line-height: 42pt;
+    }
+    .small-font {
+        font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+        font-size: 12pt;
+        line-height: 42pt;
+    }
+    .grab {
+        cursor: grab;
+    }
+    .grab:active {
+        opacity: .5;
+    }
+    .color-selector-module, .font-selector-module {
+        background-image: url('./images/Seamless_Stripe.svg');
+    }
+    .bg-color {
+        background-color: white;
+        margin-left: 0;
+    }
+    .toggle-image {
+        margin-left: 8px;
+    }
+    .div-block-56 {
+  background-image: url('https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e385a9406b72d64ed0376e6_Seamless_Stripe.svg');
+}
+</style>
+  </div>
+  <div class="w-embed w-script">
+    <script>
+let compliantColors = {
+// First row of each section is the name of the platform/brand
+    // For the rows that follow, the first column is the foreground color, and the columns that follow are compliant
+    // background colors to match each foreground color
+    // ENTER ONLY UPPERCASE CHARACTERS
+    /* EXAMPLE FORMAT:
+    "BRAND": {
+        "#<FOREGROUNDCOLOR1>": ["#<BACKGROUNDCOLOR>", "#<BACKGROUNDCOLOR>", "#<BACKGROUNDCOLOR>"],
+        "#<FOREGROUNDCOLOR2>": ["#<BACKGROUNDCOLOR>", "#<BACKGROUNDCOLOR>"],
+        "#<FOREGROUNDCOLOR3>": ["#<BACKGROUNDCOLOR>", "#<BACKGROUNDCOLOR>"],
+        "#<FOREGROUNDCOLOR4>": ["#<BACKGROUNDCOLOR>", "#<BACKGROUNDCOLOR>"],
+    },
+    */
+    "MBUSA": {
+        "#FFFFFF": ["#717171", "#393939", "#000000"],
+        "#F1F1F1": ["#393939", "#000000"],
+        "#E3E3E3": ["#393939", "#000000"],
+        "#C6C6C6": ["#393939", "#000000"],
+        "#717171": ["#FFFFFF"],
+        "#393939": ["#FFFFFF", "#F1F1F1", "#E3E3E3", "#C6C6C6", "#7EAED7", "#B2CEE7", "#E5EFF7"],
+        "#000000": ["#FFFFFF", "#F1F1F1", "#E3E3E3", "#C6C6C6", "#2978BD", "#4B8DC7", "#7EAED7", "#B2CEE7", "#E5EFF7"],
+        "#2978BD": ["#000000"],
+        "#4B8DC7": ["#000000"],
+        "#7EAED7": ["#393939", "#000000"],
+        "#B2CEE7": ["#393939", "#000000"],
+        "#E5EFF7": ["#393939", "#000000"],
+    },
+    "AMG RED": {
+        "#FFFFFF": ["#717171", "#393939", "#000000", "#EB0000"],
+        "#F1F1F1": ["#393939", "#000000"],
+        "#E3E3E3": ["#393939", "#000000"],
+        "#C6C6C6": ["#393939", "#000000"],
+        "#717171": ["#FFFFFF"],
+        "#393939": ["#FFFFFF", "#F1F1F1", "#E3E3E3", "#C6C6C6", "#F8AAAA", "#FDE3E3"],
+        "#000000": ["#FFFFFF", "#F1F1F1", "#E3E3E3", "#C6C6C6", "#EB0000", "#EF3939", "#F47171", "#F8AAAA", "#FDE3E3"],
+        "#EB0000": ["#000000", "#FFFFFF"],
+        "#EF3939": ["#000000"],
+        "#F47171": ["#000000"],
+        "#F8AAAA": ["#393939", "#000000"],
+        "#FDE3E3": ["#393939", "#000000"],
+    },
+    "MAYBACH": {
+        "#FFFFFF": ["#717171", "#393939", "#000000", "#986F32", "#2E2E4D"],
+        "#F1F1F1": ["#393939", "#000000", "#2E2E4D"],
+        "#E3E3E3": ["#393939", "#000000", "#2E2E4D"],
+        "#C6C6C6": ["#393939", "#000000", "#2E2E4D"],
+        "#717171": ["#FFFFFF"],
+        "#393939": ["#FFFFFF", "#F1F1F1", "#E3E3E3", "#C6C6C6", "#C1A880", "#D6C5AB", "#EAE2D5", "#F5F0E9"],
+        "#000000": ["#FFFFFF", "#F1F1F1", "#E3E3E3", "#C6C6C6", "#986F32", "#AC8B56", "#C1A880", "#D6C5AB", "#EAE2D5", "#F5F0E9"],
+        "#986F32": ["#FFFFFF", "#000000"],
+        "#2E2E4D": ["#FFFFFF", "#F1F1F1", "#E3E3E3", "#C6C6C6"],
+        "#AC8B56": ["#000000"],
+        "#C1A880": ["#393939", "#000000"],
+        "#D6C5AB": ["#393939", "#000000"],
+        "#EAE2D5": ["#393939", "#000000"],
+        "#F5F0E9": ["#393939", "#000000"],
+    }
+};
+</script>
+  </div>
+  <div class="w-embed w-script">
+    <script>
+function copyStringToClipboard(str) {
+    if (str.includes("#")) str = str.substring(str.indexOf("#")).trim();
+    // Create new element
+    let el = document.createElement('textarea');
+    // Set value (string to be copied)
+    el.value = str;
+    // Set non-editable to avoid focus and move outside of view
+    el.setAttribute('readonly', '');
+    el.style = {position: 'absolute', left: '-9999px'};
+    document.body.appendChild(el);
+    // Select text inside element
+    el.select();
+    // Copy text to clipboard
+    document.execCommand('copy');
+    // Remove temporary element
+    document.body.removeChild(el);
+}
+let selectedFg, selectedBg, selectedPlatform;
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}
+function getRandomColor() {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+function toggleClasses(htmlEl, className1, className2) {
+    if (htmlEl.classList.contains(className1))
+        htmlEl.classList.replace(className1, className2);
+    else
+        htmlEl.classList.replace(className2, className1);
+}
+function removeActive($el) {
+    $el.removeClass("active");
+    $el.addClass("passive");
+}
+let rgbToHex = function (rgb) {
+    let hexDigits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
+    const hex = x => isNaN(x) ? "00" : hexDigits[(x - x % 16) / 16] + hexDigits[x % 16];
+    rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+    return `#${hex(rgb[1])}${hex(rgb[2])}${hex(rgb[3])}`;
+};
+function selectPalette(paletteElement) {
+    try {
+        let $paletteSelector = $(".palette-selector");
+        removeActive($paletteSelector);
+        selectedPlatform = paletteElement.innerText;
+        toggleClasses(paletteElement, "active", "passive");
+        let $platforms = $("#platforms");
+        let $fgColor = $(".fg-color");
+        $fgColor.remove();
+        $(".bg-color").remove();
+        let colors = ``;
+        let fgColors = Object.keys(compliantColors[selectedPlatform]);
+        for (let i = 0; i < fgColors.length; i++)
+            colors += `<div class="div-block-49 fg-block" onclick="selectFg(this)" style="background-color: ${fgColors[i]}"></div>\n`;
+        $(`<div class="fg-color" style='background-color: #fff'>
+                    <div class="colorsel-header">
+                        <div class="greyline"></div>
+                        <div class="corpo20px">Foreground Color</div>
+                    </div>
+                    <div class="div-block-48">
+                        ${colors}
+                    </div>
+                </div>`);
+        $platforms.after(
+            $("     <div class=\"fg-color\" style='background-color: #fff'>\n" +
+                "                <div class=\"colorsel-header\">\n" +
+                "                    <div class=\"greyline\"></div>\n" +
+                "                    <div class=\"corpo20px\">Foreground Color</div>\n" +
+                "                </div>\n" +
+                "                <div class=\"div-block-48\">\n" + colors +
+                "                </div>\n" +
+                "            </div>"));
+    } catch (TypeError) {
+        console.log(`${selectedPlatform} does not have a list of compliant colors yet. :-(`)
+    }
+}
+function selectFg(fgElement) {
+    selectedFg = rgbToHex(fgElement.style.backgroundColor);
+    let $fgBlocks = $(".fg-block");
+    $fgBlocks.removeClass("selected");
+    fgElement.classList.add("selected");
+    $(".bg-color").remove();
+    let bgColors = compliantColors[selectedPlatform][selectedFg];
+    let colors = "";
+    for (let i = 0; i < bgColors.length; i++) {
+        colors += "<div class=\"bg-block div-block-49\" onclick='selectBg(this)' " +
+            "style='background-color: " + bgColors[i] + "'></div>\n"
+    }
+    let $fgColor = $(".fg-color");
+    $fgColor.after($(
+        `<div class="bg-color" style='background-color: #fff'>
+                <div class="colorsel-header">
+                    <div class="greyline"></div>
+                    <div class="corpo20px">Background Color</div>
+                </div>
+                <div class="div-block-48-copy">${colors}</div>
+            </div>`));
+    let fontSelector = $(".font-selector-module");
+    fontSelector.replaceWith(
+        "<div class=\"font-selector-module\" style='margin-bottom: 0'>\n    <div class=\"div-block-47\">\n" +
+        "        <div class=\"colorsel-header\" id=\"contrast-results\">\n" +
+        "            <div class=\"greyline\"></div>\n" +
+        "            <div class=\"corpo20px\">Contrast Results</div>\n" +
+        "        </div>\n" +
+        "        <div class=\"color-sujessionselector grab\" onclick=\"copyStringToClipboard(this.innerText)\">\n" +
+        "            <div class=\"color_suggesion_wrapper\">\n" +
+        "                <div class=\"color_suggesion_label\">Foreground</div>\n" +
+        `                        <div class="color_suggesion_hex">${selectedFg}</div>` +
+        "                    </div>\n" +
+        "                    <div class=\"w-clearfix\"><img src=\"https://uploads-ssl.webflow.com/5e38810d55f784860eebb12c/5e38810d55f7846fe5ebb16f_Icon_copycode%20(1).svg\" alt=\"\" class=\"white-arrow-down\"></div>\n" +
+        "                </div>\n" +
+        "                <div class=\"color-sujessionselector grab\" id=\'background-display\' onclick=\"copyStringToClipboard(this.innerText)\">\n" +
+        "                    <div class=\"color_suggesion_wrapper\">\n" +
+        "                        <div class=\"color_suggesion_label\">Background</div>\n" +
+        "                        <div class=\"color_suggesion_hex\">???</div>\n" +
+        "                    </div>\n" +
+        "                </div>\n" +
+        "            </div>\n" +
+        "        </div>\n");
+}
+const createFontButtons = (sizes, name) => {
+    let html = "";
+    for (let i = 0; i < sizes.length; i++)
+        html += `<label><input ${i === 0 ? "checked" : ""} type="radio" name="${name}" value="${sizes[i]}"><div class="text-block-17">${sizes[i]}</div></label>`;
+    return html;
+};
+function selectBg(bgElement) {
+    selectedBg = rgbToHex(bgElement.style.backgroundColor);
+    let $bgBlocks = $(".bg-block");
+    $bgBlocks.removeClass("selected");
+    bgElement.classList.add("selected");
+    let $backgroundDisplay = $("#background-display");
+    $backgroundDisplay.html($(
+        "                    <div class=\"color_suggesion_wrapper\">\n" +
+        "                        <div class=\"color_suggesion_label\">Background</div>\n" +
+        `                        <div class=\"color_suggesion_hex\">${selectedBg}</div>\n` +
+        "                    </div>\n" +
+        "                    <div class=\"w-clearfix\"><img src=\"https://uploads-ssl.webflow.com/5e38810d55f784860eebb12c/5e38810d55f7846fe5ebb16f_Icon_copycode%20(1).svg\" alt=\"\" class=\"white-arrow-down\"></div>\n"));
+    let $fontDisplay = $(`
+                <div class="font1 font-display">
+                    <div class="font_verion_wrapper">
+                        <div class="big-font">Corporate A Regular 24pt</div>
+                        <div class="div-block-54 selector">
+                            <div class="div-block-53 w-clearfix">
+${createFontButtons(['24pt', '30pt', '36pt', '42pt'], 'big-font')}                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="font2 font-display">
+                    <div class="font_verion_wrapper">
+                        <div class="medium-font">CorpoS Regular 18pt</div>
+                        <div class="div-block-54">
+                            <div class="div-block-53 w-clearfix">
+${createFontButtons(['18pt', '32pt'], 'medium-font')}                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="font3 font-display">
+                    <div class="font_verion_wrapper">
+                        <div class="small-font">Arial Regular 14pt</div>
+                        <div class="div-block-54">
+                            <div class="div-block-53 w-clearfix">
+${createFontButtons(['12pt', '14pt'], 'small-font')}                            </div>
+                        </div>
+                    </div>
+                </div>
+`);
+    let $fontSelector = $(".font-selector-module");
+    $('.font-display').remove();
+    $fontSelector.append($fontDisplay);
+    let $fontBoxes = $(".font_verion_wrapper");
+    $fontBoxes.css({
+        "background-color": selectedBg,
+        "color": selectedFg
+    })
+    let $bigFont = $(".big-font"),
+        $mediumFont = $(".medium-font"),
+        $smallFont = $(".small-font");
+    $("input[name='big-font']").click(function () {
+        let radioValue = $("input[name='big-font']:checked").val();
+        let text = $bigFont.text();
+        $bigFont.text(text.replace(/\d\dpt/, radioValue));
+        $bigFont.css("font-size", radioValue);
+    });
+    $("input[name='medium-font']").click(function () {
+        let radioValue = $("input[name='medium-font']:checked").val();
+        let text = $bigFont.text();
+        $mediumFont.text(text.replace(/\d\dpt/, radioValue));
+        $mediumFont.css("font-size", radioValue);
+    });
+    $("input[name='small-font']").click(function () {
+        let radioValue = $("input[name='small-font']:checked").val();
+        let text = $smallFont.text();
+        $smallFont.text(text.replace(/\d\dpt/, radioValue));
+        $smallFont.css("font-size", radioValue);
+    });
+}
+</script>
+  </div>
   <div class="right-navigation">
     <div class="saerch-wrapper">
       <form action="/search" class="search w-clearfix w-form"><input type="search" maxlength="256" name="query" required="" id="search" class="search-input w-input"><a href="#" class="link-block-3 w-inline-block"><img src="images/ion-ios-search-strong---Ionicons.svg" width="25" alt=""></a><input type="submit" class="search-button w-button"></form>
@@ -205,160 +525,45 @@
         </div>
         <div class="w-col w-col-6"></div>
       </div>
-      <div class="color-selector-module">
-        <div class="div-block-47">
-          <div class="colorsel-header palette">
-            <div class="greyline"></div>
-            <div class="corpo20px">Palette</div>
-          </div>
-          <div class="div-block-50">
-            <div class="palette-selector active">
-              <div>Common</div>
-            </div>
-            <div class="palette-selector passive">
-              <div class="coprobold passive">AMG</div>
-            </div>
-            <div class="palette-selector passive">
-              <div class="coprobold passive">MBUSA+VAN</div>
-            </div>
-            <div class="palette-selector passive">
-              <div class="coprobold">Maybach</div>
-            </div>
-          </div>
-        </div>
-        <div class="fg-color">
-          <div class="colorsel-header">
-            <div class="greyline"></div>
-            <div class="corpo20px">Foreground Color</div>
-          </div>
-          <div class="div-block-48">
-            <div class="div-block-49 body-2">
-              <div class="div-block-49 selected"></div>
-            </div>
-            <div class="div-block-49"></div>
-            <div class="div-block-49"></div>
-            <div class="div-block-49"></div>
-            <div class="div-block-49"></div>
-            <div class="div-block-49"></div>
-            <div class="div-block-49"></div>
-            <div class="div-block-49"></div>
-            <div class="div-block-49"></div>
-            <div class="div-block-49"></div>
-            <div class="div-block-49"></div>
-            <div class="div-block-49"></div>
-          </div>
-        </div>
-        <div class="bg-color">
-          <div class="colorsel-header">
-            <div class="greyline"></div>
-            <div class="corpo20px">Background Color</div>
-          </div>
-          <div class="div-block-48-copy">
-            <div class="div-block-49"></div>
-            <div class="div-block-49"></div>
-            <div class="div-block-49"></div>
-            <div class="div-block-49"></div>
-            <div class="div-block-49"></div>
-            <div class="div-block-49"></div>
-            <div class="div-block-49"></div>
-            <div class="div-block-49"></div>
-            <div class="div-block-49"></div>
-            <div class="div-block-49"></div>
-            <div class="div-block-49"></div>
-          </div>
-        </div>
-      </div>
-      <div class="font-selector-module">
-        <div class="div-block-47">
-          <div class="colorsel-header result">
-            <div class="greyline"></div>
-            <div class="corpo20px">Contrast Results</div>
-          </div>
-          <div class="color-sujessionselector">
-            <div class="color_suggesion_wrapper">
-              <div class="color_suggesion_label">Foreground</div>
-              <div class="color_suggesion_hex">#FFF</div>
-            </div>
-            <div class="w-clearfix"><img src="images/Icon_copycode-1.svg" alt="" class="white-arrow-down"></div>
-          </div>
-          <div class="color-sujessionselector">
-            <div class="color_suggesion_wrapper">
-              <div class="color_suggesion_label">Background</div>
-              <div class="color_suggesion_hex">#E3E3E3</div>
-            </div>
-            <div class="w-clearfix"><img src="images/Icon_copycode-1.svg" alt="" class="white-arrow-down"></div>
-          </div>
-        </div>
-        <div class="font1">
-          <div class="font_verion_wrapper">
-            <div class="coproa24">Corporate A Regular 24pt</div>
-            <div class="div-block-54">
-              <div class="checkmarks-block w-clearfix">
-                <div class="radio_button">
-                  <div class="dot"></div>
-                </div>
-                <div class="text-block-17">18pt</div>
+      <div class="color-selector-wrapper">
+        <div class="w-embed">
+          <div class="color-selector-module">
+            <div class="div-block-47" id="platforms">
+              <div class="colorsel-header palette">
+                <div class="greyline"></div>
+                <div class="corpo20px">Platform</div>
               </div>
-              <div class="checkmarks-block w-clearfix">
-                <div class="radio_button">
-                  <div class="dot"></div>
+              <div class="div-block-50">
+                <div class="palette-selector passive selector" onclick="selectPalette(this)">
+                  <div class="coprobold passive">MBUSA</div>
                 </div>
-                <div class="text-block-17">24pt</div>
-              </div>
-              <div class="checkmarks-block w-clearfix">
-                <div class="radio_button">
-                  <div class="dot"></div>
+                <div class="palette-selector passive selector" onclick="selectPalette(this)">
+                  <div class="coprobold passive">AMG RED</div>
                 </div>
-                <div class="text-block-17">32pt</div>
-              </div>
-              <div class="checkmarks-block w-clearfix">
-                <div class="radio_button">
-                  <div class="dot"></div>
+                <div class="palette-selector passive selector" onclick="selectPalette(this)">
+                  <div class="coprobold">MAYBACH</div>
                 </div>
-                <div class="text-block-17">40pt</div>
+                <div class="palette-selector passive selector" onclick="selectPalette(this)">
+                  <div class="coprobold">MB Vans</div>
+                </div>
+                <div class="palette-selector passive selector" onclick="selectPalette(this)">
+                  <div class="coprobold">Freightliner</div>
+                </div>
+                <div class="palette-selector passive selector" onclick="selectPalette(this)">
+                  <div class="coprobold">EQ</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="font2">
-          <div class="font_verion_wrapper">
-            <div class="copros16">CorpoS Regular 18pt</div>
-            <div class="div-block-54">
-              <div class="checkmarks-block w-clearfix">
-                <div class="radio_button">
-                  <div class="dot"></div>
-                </div>
-                <div class="text-block-17">18pt</div>
-              </div>
-              <div class="checkmarks-block w-clearfix">
-                <div class="radio_button">
-                  <div class="dot"></div>
-                </div>
-                <div class="text-block-17">24pt</div>
+          <div class="font-selector-module">
+            <div class="div-block-47" id="font-selector-display">
+              <div class="colorsel-header result">
+                <div class="greyline"></div>
+                <div class="corpo20px">Contrast Results</div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="font3">
-          <div class="font_verion_wrapper">
-            <div class="arial">Arial Regular 14pt</div>
-            <div class="div-block-54">
-              <div class="checkmarks-block w-clearfix">
-                <div class="radio_button">
-                  <div class="dot"></div>
-                </div>
-                <div class="text-block-17">18pt</div>
-              </div>
-              <div class="checkmarks-block w-clearfix">
-                <div class="radio_button">
-                  <div class="dot"></div>
-                </div>
-                <div class="text-block-17">24pt</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        </div><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt=""></div>
     </div>
   </div>
   <div class="content-sect">
