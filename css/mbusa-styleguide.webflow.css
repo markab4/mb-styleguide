@@ -6324,10 +6324,7 @@ body {
 }
 
 .div-block-48 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   overflow: scroll;
   height: 192px;
   -webkit-flex-wrap: wrap;
@@ -6753,6 +6750,7 @@ body {
 }
 
 .type-selector-row._2 {
+  display: block;
   width: 40%;
 }
 
@@ -8120,6 +8118,10 @@ body {
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
+}
+
+.body-8 {
+  background-color: #ededed;
 }
 
 @media screen and (max-width: 991px) {
