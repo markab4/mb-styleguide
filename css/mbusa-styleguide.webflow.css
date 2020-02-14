@@ -6324,7 +6324,10 @@ body {
 }
 
 .div-block-48 {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   overflow: scroll;
   height: 192px;
   -webkit-flex-wrap: wrap;
