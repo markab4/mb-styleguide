@@ -14,29 +14,36 @@ function removeActive($el) {
 }
 
 function selectPalette(paletteElement) {
-    selectedPlatform = paletteElement.innerText;
-    let $paletteSelector = $(".palette-selector");
-    removeActive($paletteSelector);
-    toggleClasses(paletteElement, "active", "passive");
-    $("#size-selector, #style-selector, #typeface-selector, #specs").remove();
-    let $typefaceSelector = $(`
-                <div class="type-selector-row _3" id="typeface-selector">
+    try {
+        selectedPlatform = paletteElement.innerText;
+        let $paletteSelector = $(".palette-selector");
+        removeActive($paletteSelector);
+        toggleClasses(paletteElement, "active", "passive");
+        $("#size-selector, #style-selector, #typeface-selector, #specs").remove();
+
+        let typefaces = Object.keys(typesetting[selectedPlatform]);
+
+        let typefaceClasses = {
+            "Corporate A": "text-block-18",
+            "Corporate S Pro": "text-block-19",
+            "Arial": "text-block-arial"
+        };
+
+        let typefacesHtml = `<div class="type-selector-row _3" id="typeface-selector">
                     <div class="typesel-header">
                         <div class="greyline"></div>
                         <div class="corpo20px">Typeface</div>
-                    </div>
-                    <div class="typeface-selector">
-                        <div class="text-block-18 selector typeface-block passive" onclick="selectTypeface(this)">Corporate A</div>
-                    </div>
-                    <div class="typeface-selector">
-                        <div class="text-block-19 selector typeface-block passive" onclick="selectTypeface(this)">CorpoS</div>
-                    </div>
-                    <div class="typeface-selector">
-                        <div class="text-block-arial selector typeface-block passive" onclick="selectTypeface(this)">Arial</div>
-                    </div>
-                </div>
-`);
-    $(".type-selector-row._1").after($typefaceSelector);
+                    </div>`;
+        for (let i = 0; i < typefaces.length; i++) {
+            typefacesHtml += `<div class="typeface-selector">
+                        <div class="${typefaceClasses[typefaces[i]]} selector typeface-block passive" onclick="selectTypeface(this)">${typefaces[i]}</div>
+                        </div>`
+        }
+        typefacesHtml += `</div>`;
+        $(".type-selector-row._1").after($(typefacesHtml));
+    } catch (TypeError) {
+        console.log(`${selectedPlatform} does not have a list of typefaces yet. :-(`)
+    }
 }
 
 function selectTypeface(typefaceElement) {
