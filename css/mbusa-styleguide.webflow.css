@@ -8562,6 +8562,19 @@ body {
   background-color: transparent;
 }
 
+._111 {
+  height: 800px;
+  background-color: #4ac586;
+}
+
+._111._2 {
+  background-color: #176db7;
+}
+
+._111._3 {
+  background-color: #eb0000;
+}
+
 @media screen and (max-width: 991px) {
   .left-side {
     width: 10%;
