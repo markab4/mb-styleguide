@@ -1,5 +1,6 @@
-let selectedPlatform, selectedTypeface, selectedWeight, selectedStyle, selectedSize, selectedLeading, selectedTracking,
-    isMobile = false;
+let selectedPlatform, selectedTypeface, selectedFontFamily, selectedStyle, selectedWeight, selectedFontStyle,
+    selectedSize, selectedStyleElement, mobileSwitch,
+    selectedLeading, selectedTracking, selectedScreen = "desktop";
 
 function toggleClasses(htmlEl, className1, className2) {
     if (htmlEl.classList.contains(className1))
@@ -20,12 +21,14 @@ function selectPalette(paletteElement) {
         removeActive($paletteSelector);
         toggleClasses(paletteElement, "active", "passive");
         $("#size-selector, #style-selector, #typeface-selector, #specs").remove();
+        selectedStyleElement = null;
+        selectedScreen = "desktop";
 
         let typefaces = Object.keys(typesetting[selectedPlatform]);
 
         let typefaceClasses = {
-            "Corporate A": "text-block-18",
-            "Corporate S Pro": "text-block-19",
+            "Corpo A": "text-block-18",
+            "Corpo S": "text-block-19",
             "Arial": "text-block-arial"
         };
 
@@ -47,78 +50,107 @@ function selectPalette(paletteElement) {
 }
 
 function selectTypeface(typefaceElement) {
-    selectedTypeface = getComputedStyle(typefaceElement).fontFamily;
+    selectedTypeface = typefaceElement.innerText;
+
+    let styles = Object.keys(typesetting[selectedPlatform][selectedTypeface]);
+
+    let styleClasses = {
+        "Regular": "text-block-20",
+        "Medium": "text-block-20",
+        "Italic": "text-block-21",
+        "Bold": "text-block-2-bold"
+    };
+
+    selectedFontFamily = getComputedStyle(typefaceElement).fontFamily;
     let $typefaceBlocks = $(".typeface-block");
     $typefaceBlocks.removeClass("active");
     typefaceElement.classList.add("active");
-
     $("#size-selector, #style-selector, #specs").remove();
-    $("#typeface-selector").after(
-        $(`
-                <div class="type-selector-row _3" id="style-selector">
+    selectedStyleElement = null;
+    selectedScreen = "desktop";
+
+
+
+    let stylesHtml = `<div class="type-selector-row _3" id="style-selector">
                     <div class="typesel-header">
                         <div class="greyline"></div>
                         <div class="corpo20px">Style</div>
-                    </div>
-                    <div class="typeface-selector">
-                        <div class="text-block-20 selector style-block passive" onclick="selectStyle(this)">Regular</div>
-                    </div>
-                    <div class="typeface-selector">
-                        <div class="text-block-21 selector style-block passive" onclick="selectStyle(this)">Italic</div>
-                    </div>
-                    <div class="typeface-selector">
-                        <div class="text-block-2-bold selector style-block passive" onclick="selectStyle(this)">Bold</div>
-                    </div>
-                </div>`));
-    $(".style-block").css("font-family", selectedTypeface);
+                    </div>`;
+
+    for (let i = 0; i < styles.length; i++) {
+        stylesHtml += `<div class="typeface-selector">
+                        <div class="${styleClasses[styles[i]]} selector style-block passive" onclick="selectStyle(this)">${styles[i]}</div>
+                    </div>`
+    }
+    for (let i = styles.length; i < 3; i++) { // To make sure there are three rows in the column
+        stylesHtml += `<div class="typeface-selector">
+                        <div class="style-block"></div>
+                    </div>`
+    }
+    stylesHtml += `</div>`;
+
+    $("#typeface-selector").after($(stylesHtml));
+    $(".style-block").css("font-family", selectedFontFamily);
 }
 
 function selectStyle(styleElement) {
+
     let computedStyle = getComputedStyle(styleElement);
     selectedWeight = computedStyle.fontWeight;
-    selectedStyle = computedStyle.fontStyle;
+    selectedFontStyle = computedStyle.fontStyle;
     let $styleBlocks = $(".style-block");
     $styleBlocks.removeClass("active");
     styleElement.classList.add("active");
 
+    $("#size-blocks, #specs").remove();
 
-    $("#size-selector, #specs").remove();
-    $("#style-selector").after(
-        $(`
-<div class="type-selector-row _2" id="size-selector">
-    <div class="typesel-header-with-toggle">
-        <div class="greyline"></div>
-        <div class="corpo20px">Size</div>
-        <div class="div-block-58">
-            <label class="switch toggle _1">
-                <input type="checkbox" id="mobile-slider" onclick="toggleMobile(this)">
-                <span class="slider round"></span>
-            </label>
-            <div class="toggle-image"><img src="images/Mobile.svg" alt=""></div>
-        </div>
-    </div>
-    <div class="div-block-76">
-        <a href="#master-heading" class="typeface-selector-result selector passive size-block" onclick="selectSize(this)">
-                <div class="text-block-23 size-block">Master heading</div>
-        </a>
-        <a href="#module-heading" class="typeface-selector-result selector passive" onclick="selectSize(this)">
-            <div class="text-block-25 size-block">Module heading</div>
-        </a>
-        <a href="#paragraph-heading" class="typeface-selector-result selector passive" onclick="selectSize(this)">
-            <div class="text-block-26 size-block">Paragraph heading</div>
-        </a>
-        <a href="#paragraph-heading" class="typeface-selector-result selector passive" onclick="selectSize(this)">
-            <div class="text-block-26 size-block">Paragraph heading</div>
-        </a>
-    </div>
-</div>
-        `));
+    selectedStyle = styleElement.innerText;
 
+    let sizeList = Object.keys(typesetting[selectedPlatform][selectedTypeface][selectedStyle][selectedScreen]);
+
+    console.log(sizeList);
+
+    let sizeHtml = ``;
+
+    let $previousSelector = $("#style-selector");
+
+    if (!selectedStyleElement) { // Create toggle button if this is the first time Style is selected
+        sizeHtml = `<div class="type-selector-row _2" id="size-selector">
+        <div class="typesel-header-with-toggle">
+            <div class="greyline"></div>
+            <div class="corpo20px">Size</div>
+            <div class="div-block-58">
+                <label class="switch toggle _1">
+                    <input type="checkbox" id="mobile-slider" onclick="toggleMobile(this)">
+                    <span class="slider round"></span>
+                </label>
+                <div class="toggle-image"><img src="images/Mobile.svg" alt=""></div>
+            </div>
+        </div>`;
+    } else {
+        $previousSelector = $("#size-selector");
+        selectedScreen = mobileSwitch.checked ? "mobile" : "desktop";
+    }
+    sizeHtml += `<div class="div-block-76" id="size-blocks">`;
+
+    for (let i = 0; i < sizeList.length; i++) {
+        sizeHtml += `<div class="typeface-selector-result selector passive" onclick="selectSize(this)">
+            <div class="text-block-26 size-block">${sizeList[i]}</div>
+        </div>`
+    }
+    sizeHtml += `</div></div>`;
+    if (!selectedStyleElement) $previousSelector.after($(sizeHtml));
+    else $previousSelector.append($(sizeHtml));
     $(".size-block").css({
-        "font-family": selectedTypeface,
+        "font-family": selectedFontFamily,
         "font-weight": selectedWeight,
-        "font-style": selectedStyle
+        "font-style": selectedFontStyle
     });
+    selectedStyleElement = styleElement;
+}
+
+function addButton() {
+
 }
 
 function selectSize(sizeElement) {
@@ -132,13 +164,13 @@ function selectSize(sizeElement) {
     toggleClasses(sizeElement, "active", "passive");
 
     let $specs = $(`
-                        <div class="div-block-80" id="specs">
-                            <div class="div-block-79">
-                                <div class="text-block-31">size <span class="specs">${selectedSize}</span></div>
-                                <div class="text-block-31">leading <span class="specs">${selectedLeading}</span></div>
-                                <div class="text-block-31">tracking <span class="specs">${selectedTracking}</span></div>
-                            </div>
-                        </div>
+            <div class="div-block-80" id="specs">
+                <div class="div-block-79">
+                    <div class="text-block-31">size <span class="specs">${selectedSize}</span></div>
+                    <div class="text-block-31">leading <span class="specs">${selectedLeading}</span></div>
+                    <div class="text-block-31">tracking <span class="specs">${selectedTracking}</span></div>
+                </div>
+            </div>
     `);
     $("#specs").remove();
 
@@ -179,13 +211,17 @@ function selectSize(sizeElement) {
 }
 
 function toggleMobile(checkBox) {
-    isMobile = checkBox.checked;
+    selectedScreen = checkBox.checked ? "mobile" : "desktop";
+    mobileSwitch = checkBox;
     console.log("selectedPlatform: ", selectedPlatform,
-        "selectedTypeface", selectedTypeface,
+        "selectedFontFamily", selectedFontFamily,
         "selectedWeight", selectedWeight,
-        "selectedStyle", selectedStyle,
+        "selectedFontStyle", selectedFontStyle,
         "selectedSize", selectedSize,
         "selectedLeading", selectedLeading,
         "selectedTracking", selectedTracking,
-        "isMobile", isMobile);
+        "selectedScreen", selectedScreen);
+
+    selectStyle(selectedStyleElement);
+
 }

@@ -1,6 +1,6 @@
 let typesetting = {
     "MBUSA": {
-        "Corporate A": {
+        "Corpo A": {
             "Regular": {
                 "desktop": {
                     "Master Heading": {
@@ -59,7 +59,7 @@ let typesetting = {
                 }
             }
         },
-        "Corporate S Pro": {
+        "Corpo S": {
             "Medium": {
                 "desktop": {
                     "Large All Caps": {
@@ -143,7 +143,7 @@ let typesetting = {
         },
     },
     "AMG": {
-        "Corporate A": {
+        "Corpo A": {
             "Italic": {
                 "desktop": {
                     "Master Heading": {
@@ -186,7 +186,7 @@ let typesetting = {
                 },
             },
         },
-        "Corporate S Pro": {
+        "Corpo S": {
             "Medium": {
                 "desktop": {
                     "Large All Caps": {
