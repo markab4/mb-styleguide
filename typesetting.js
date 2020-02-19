@@ -62,24 +62,24 @@ let typesetting = {
         "Corpo S": {
             "Medium": {
                 "desktop": {
-                    "Large All Caps": {
+                    "LARGE ALL CAPS": {
                         "size": "18px",
                         "leading": "22px",
                         "tracking": "20"
                     },
-                    "Navigation All Caps": {
+                    "NAVIGATION ALL CAPS": {
                         "size": "14px",
                         "leading": "18px",
                         "tracking": "20"
                     }
                 },
                 "mobile": {
-                    "Large All Caps": {
+                    "LARGE ALL CAPS": {
                         "size": "18px",
                         "leading": "22px",
                         "tracking": "20"
                     },
-                    "Navigation All Caps": {
+                    "NAVIGATION ALL CAPS": {
                         "size": "14px",
                         "leading": "18px",
                         "tracking": "20"
@@ -88,24 +88,24 @@ let typesetting = {
             },
             "Bold": {
                 "desktop": {
-                    "Large All Caps": {
+                    "LARGE ALL CAPS": {
                         "size": "18px",
                         "leading": "22px",
                         "tracking": "20"
                     },
-                    "Navigation All Caps": {
+                    "NAVIGATION ALL CAPS": {
                         "size": "14px",
                         "leading": "18px",
                         "tracking": "20"
                     }
                 },
                 "mobile": {
-                    "Large All Caps": {
+                    "LARGE ALL CAPS": {
                         "size": "18px",
                         "leading": "22px",
                         "tracking": "20"
                     },
-                    "Navigation All Caps": {
+                    "NAVIGATION ALL CAPS": {
                         "size": "14px",
                         "leading": "18px",
                         "tracking": "20"
@@ -189,24 +189,24 @@ let typesetting = {
         "Corpo S": {
             "Medium": {
                 "desktop": {
-                    "Large All Caps": {
+                    "LARGE ALL CAPS": {
                         "size": "18px",
                         "leading": "22px",
                         "tracking": "20"
                     },
-                    "Navigation All Caps": {
+                    "NAVIGATION ALL CAPS": {
                         "size": "14px",
                         "leading": "18px",
                         "tracking": "20"
                     }
                 },
                 "mobile": {
-                    "Large All Caps": {
+                    "LARGE ALL CAPS": {
                         "size": "18px",
                         "leading": "22px",
                         "tracking": "20"
                     },
-                    "Navigation All Caps": {
+                    "NAVIGATION ALL CAPS": {
                         "size": "14px",
                         "leading": "18px",
                         "tracking": "20"
@@ -215,24 +215,24 @@ let typesetting = {
             },
             "Bold": {
                 "desktop": {
-                    "Large All Caps": {
+                    "LARGE ALL CAPS": {
                         "size": "18px",
                         "leading": "22px",
                         "tracking": "20"
                     },
-                    "Navigation All Caps": {
+                    "NAVIGATION ALL CAPS": {
                         "size": "14px",
                         "leading": "18px",
                         "tracking": "20"
                     }
                 },
                 "mobile": {
-                    "Large All Caps": {
+                    "LARGE ALL CAPS": {
                         "size": "18px",
                         "leading": "22px",
                         "tracking": "20"
                     },
-                    "Navigation All Caps": {
+                    "NAVIGATION ALL CAPS": {
                         "size": "14px",
                         "leading": "18px",
                         "tracking": "20"
