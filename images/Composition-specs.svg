@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1096" height="81" viewBox="0 0 1096 81">
+  <g id="Group_5347" data-name="Group 5347" transform="translate(-64 -1679.5)">
+    <rect id="Rectangle_9590" data-name="Rectangle 9590" width="1096" height="80" transform="translate(64 1680)" fill="none"/>
+    <text id="Frame_center" data-name="Frame center" transform="translate(624 1740)" fill="#393939" font-size="12" font-family="ArialMT, Arial" letter-spacing="0.01em"><tspan x="0" y="0">Frame center</tspan></text>
+    <rect id="Rectangle_2406" data-name="Rectangle 2406" width="40" height="4" transform="translate(608 1756)" fill="#c6c6c6"/>
+    <rect id="Rectangle_9591" data-name="Rectangle 9591" width="40" height="4" transform="translate(856 1756)" fill="#c6c6c6"/>
+    <text id="Subject_Matter" data-name="Subject Matter" transform="translate(872 1739)" fill="#393939" font-size="12" font-family="ArialMT, Arial" letter-spacing="0.01em"><tspan x="0" y="0">Subject Matter</tspan></text>
+    <line id="Line_7" data-name="Line 7" y1="80" transform="translate(608 1680)" fill="none" stroke="#c6c6c6" stroke-linecap="round" stroke-width="1" stroke-dasharray="4 8"/>
+    <line id="Line_226" data-name="Line 226" y1="78" transform="translate(856 1680)" fill="none" stroke="#c6c6c6" stroke-linecap="round" stroke-width="1" stroke-dasharray="4 8"/>
+  </g>
+</svg>
