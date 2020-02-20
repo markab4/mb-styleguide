@@ -133,7 +133,7 @@ function selectStyle(styleElement) {
         let fullStyle = typesetting[selectedPlatform][selectedTypeface][selectedStyle][selectedScreen][sizeList[i]];
 
         sizeHtml += `<div class="typeface-selector-result selector passive" onclick="selectSize(this)">
-    <div style="font-size: ${fullStyle.size}; line-height: ${fullStyle.leading}; letter-spacing: ${fullStyle.tracking}"
+    <div style="font-size: ${fullStyle.size}; line-height: ${fullStyle.leading}; letter-spacing: ${fullStyle.tracking}px"
          class="text-block-26 size-block ${sizeList[i].includes("Caps") ? "all-caps" : ""}">
         ${sizeList[i]}
     </div>
