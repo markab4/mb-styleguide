@@ -56,9 +56,9 @@ function selectTypeface(typefaceElement) {
 
     let styleClasses = {
         "Regular": "text-block-20",
-        "Medium": "text-block-20",
+        "Medium/Bold": "text-block-2-bold",
         "Italic": "text-block-21",
-        "Bold": "text-block-2- bold"
+        "Bold": "text-block-2-bold"
     };
 
     selectedFontFamily = getComputedStyle(typefaceElement).fontFamily;
@@ -68,7 +68,6 @@ function selectTypeface(typefaceElement) {
     $("#size-selector, #style-selector, #specs, #sample-design").remove();
     selectedStyleElement = null;
     selectedScreen = "desktop";
-
 
     let stylesHtml = `<div class="type-selector-row _3" id="style-selector">
                     <div class="typesel-header">
@@ -131,7 +130,7 @@ function selectStyle(styleElement) {
         let fullStyle = typesetting[selectedPlatform][selectedTypeface][selectedStyle][selectedScreen][sizeList[i]];
 
         sizeHtml += `<div class="typeface-selector-result selector passive" onclick="selectSize(this)">
-    <div style="font-size: ${fullStyle.size}; line-height: ${fullStyle.leading}; letter-spacing: ${fullStyle.tracking}px"
+    <div style="font-size: ${fullStyle.size}; line-height: ${fullStyle.leading}; letter-spacing: ${fullStyle.tracking}"
          class="text-block-26 size-block ${sizeList[i].includes("Caps") ? "all-caps" : ""}">
         ${sizeList[i]}
     </div>
@@ -202,7 +201,7 @@ function selectSize(sizeElement) {
 // `);
 
     if ($("#sample-design").length < 1) {  // if there's no sample-design yet
-        console.log(`$("#sample-design").length`, $("#sample-design").length);
+        console.log(`sample design length`, $("#sample-design").length);
         let $sampleDesign = $(`
 <div id="sample-design">
                 <div id="spinner">Loading...</div>
@@ -246,51 +245,51 @@ function toggleMobile(checkBox) {
 
 }
 
-let Carousel = {
-    width: 991,     // Images are forced into a width of this many pixels.
-    numVisible: 2,  // The number of images visible at once.
-    duration: 600,  // Animation duration in milliseconds.
-    padding: 2      // Vertical padding around each image, in pixels.
-};
-
-function rotateForward() {
-    let carousel = Carousel.carousel,
-        children = carousel.children,
-        firstChild = children[0],
-        lastChild = children[children.length - 1];
-    carousel.insertBefore(lastChild, firstChild);
-}
-
-function rotateBackward() {
-    let carousel = Carousel.carousel,
-        children = carousel.children,
-        firstChild = children[0],
-        lastChild = children[children.length - 1];
-    carousel.insertBefore(firstChild, lastChild.nextSibling);
-}
-
-function animate(begin, end, finalTask) {
-    let wrapper = Carousel.wrapper,
-        carousel = Carousel.carousel,
-        change = end - begin,
-        duration = Carousel.duration,
-        startTime = Date.now();
-    carousel.style.top = begin + 'px';
-    let animateInterval = window.setInterval(function () {
-        let t = Date.now() - startTime;
-        if (t >= duration) {
-            window.clearInterval(animateInterval);
-            finalTask();
-            return;
-        }
-        t /= (duration / 2);
-        let top = begin + (t < 1 ? change / 2 * Math.pow(t, 3) :
-            change / 2 * (Math.pow(t - 2, 3) + 2));
-        carousel.style.top = top + 'px';
-    }, 1000 / 60);
-}
-
 function loadSamples() {
+    let Carousel = {
+        width: $(`.design-example-section`).outerWidth(),     // Images are forced into a width of this many pixels.
+        numVisible: 2,  // The number of images visible at once.
+        duration: 600,  // Animation duration in milliseconds.
+        padding: 2      // Vertical padding around each image, in pixels.
+    };
+
+    function rotateForward() {
+        let carousel = Carousel.carousel,
+            children = carousel.children,
+            firstChild = children[0],
+            lastChild = children[children.length - 1];
+        carousel.insertBefore(lastChild, firstChild);
+    }
+
+    function rotateBackward() {
+        let carousel = Carousel.carousel,
+            children = carousel.children,
+            firstChild = children[0],
+            lastChild = children[children.length - 1];
+        carousel.insertBefore(firstChild, lastChild.nextSibling);
+    }
+
+    function animate(begin, end, finalTask) {
+        let wrapper = Carousel.wrapper,
+            carousel = Carousel.carousel,
+            change = end - begin,
+            duration = Carousel.duration,
+            startTime = Date.now();
+        carousel.style.top = begin + 'px';
+        let animateInterval = window.setInterval(function () {
+            let t = Date.now() - startTime;
+            if (t >= duration) {
+                window.clearInterval(animateInterval);
+                finalTask();
+                return;
+            }
+            t /= (duration / 2);
+            let top = begin + (t < 1 ? change / 2 * Math.pow(t, 3) :
+                change / 2 * (Math.pow(t - 2, 3) + 2));
+            carousel.style.top = top + 'px';
+        }, 1000 / 60);
+    }
+
     document.getElementById('spinner').style.display = 'none';
     let carousel = Carousel.carousel = document.getElementById('carousel'),
         images = carousel.getElementsByTagName('img'),

@@ -60,7 +60,7 @@ let typesetting = {
             }
         },
         "Corpo S": {
-            "Medium": {
+            "Medium/Bold": {
                 "desktop": {
                     "LARGE ALL CAPS": {
                         "size": "18px",
@@ -86,32 +86,6 @@ let typesetting = {
                     }
                 }
             },
-            "Bold": {
-                "desktop": {
-                    "LARGE ALL CAPS": {
-                        "size": "18px",
-                        "leading": "22px",
-                        "tracking": "20"
-                    },
-                    "NAVIGATION ALL CAPS": {
-                        "size": "14px",
-                        "leading": "18px",
-                        "tracking": "20"
-                    }
-                },
-                "mobile": {
-                    "LARGE ALL CAPS": {
-                        "size": "18px",
-                        "leading": "22px",
-                        "tracking": "20"
-                    },
-                    "NAVIGATION ALL CAPS": {
-                        "size": "14px",
-                        "leading": "18px",
-                        "tracking": "20"
-                    }
-                }
-            }
         },
         "Arial": {
             "Regular": {
@@ -187,7 +161,7 @@ let typesetting = {
             },
         },
         "Corpo S": {
-            "Medium": {
+            "Medium/Bold": {
                 "desktop": {
                     "LARGE ALL CAPS": {
                         "size": "18px",
@@ -213,32 +187,6 @@ let typesetting = {
                     }
                 }
             },
-            "Bold": {
-                "desktop": {
-                    "LARGE ALL CAPS": {
-                        "size": "18px",
-                        "leading": "22px",
-                        "tracking": "20"
-                    },
-                    "NAVIGATION ALL CAPS": {
-                        "size": "14px",
-                        "leading": "18px",
-                        "tracking": "20"
-                    }
-                },
-                "mobile": {
-                    "LARGE ALL CAPS": {
-                        "size": "18px",
-                        "leading": "22px",
-                        "tracking": "20"
-                    },
-                    "NAVIGATION ALL CAPS": {
-                        "size": "14px",
-                        "leading": "18px",
-                        "tracking": "20"
-                    }
-                }
-            }
         },
         "Arial": {
             "Regular": {
