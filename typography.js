@@ -213,28 +213,11 @@ function selectSize(sizeElement) {
 // </div>
 // `);
 
-    if ($(".sample-image").length < 1) {  // if there's no sample-design yet
-        console.log(`sample design length`, $("#sample-design").length);
 
-        $("#design-sample-header").after($(sampleImage).hide());
-        $(".sample-image").slideDown();
+    $(".sample-image").remove();
+    $("#design-sample-header").after($(sampleImage).hide());
+    $(".sample-image").fadeIn(400);
 
-        // $('.sample-image').slideUp(
-        //     function(){
-        //     $("#design-sample-header").after($sampleDesign).hide(function() {
-        //         $('.sample-image').slideDown();
-        //     });
-        // }
-        // );
-        console.log("NEW DESIGN SAMPLE");
-    } else {
-        // $('.sample-image').slideUp(function () { // if there's been a sample already
-        //     // $('.sample-image').addClass("to-be-removed");
-        //     // $('.sample-image').remove();
-        // });
-        $("#design-sample-header").after($(sampleImage).hide());
-        $(".sample-image").slideDown();
-    }
 
     // $('.design-example-section').css("height", $("#design-sample-header").first().css("height"));
 
