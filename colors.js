@@ -61,23 +61,16 @@ function selectPalette(paletteElement) {
 
         let $platforms = $("#platforms");
         let $fgColor = $(".fg-color");
+        // $fgColor.hide(400);
+        // $(".bg-color").hide(400);
         $fgColor.remove();
         $(".bg-color").remove();
+
 
         let colors = ``;
         let fgColors = Object.keys(compliantColors[selectedPlatform]);
         for (let i = 0; i < fgColors.length; i++)
             colors += `<div class="div-block-49 fg-block" onclick="selectFg(this)" style="background-color: ${fgColors[i]}"></div>\n`;
-
-        $(`<div class="fg-color" style='background-color: #fff'>
-                    <div class="colorsel-header">
-                        <div class="greyline"></div>
-                        <div class="corpo20px">Foreground Color</div>
-                    </div>
-                    <div class="div-block-48">
-                        ${colors}
-                    </div>
-                </div>`);
 
 
         $platforms.after(
@@ -88,7 +81,11 @@ function selectPalette(paletteElement) {
                 "                </div>\n" +
                 "                <div class=\"div-block-48\">\n" + colors +
                 "                </div>\n" +
-                "            </div>"));
+                "            </div>").hide()
+        );
+
+        $(".fg-color").show(400);
+
     } catch (TypeError) {
         console.log(`${selectedPlatform} does not have a list of compliant colors yet. :-(`)
     }
@@ -119,10 +116,12 @@ function selectFg(fgElement) {
                     <div class="corpo20px">Background Color</div>
                 </div>
                 <div class="div-block-48-copy">${colors}</div>
-            </div>`));
+            </div>`).hide());
+    $(".bg-color").show(400);
 
-    let fontSelector = $(".font-selector-module");
-    fontSelector.replaceWith(
+    let $fontSelector = $(".font-selector-module");
+
+    $fontSelector.replaceWith(
         "<div class=\"font-selector-module\" style='margin-bottom: 0'>\n    <div class=\"div-block-47\">\n" +
         "        <div class=\"colorsel-header\" id=\"contrast-results\">\n" +
         "            <div class=\"greyline\"></div>\n" +
@@ -168,13 +167,11 @@ function selectBg(bgElement) {
         "                    </div>\n" +
         "                    <div class=\"w-clearfix\"><img src=\"images/Icon_copycode-1.svg\" alt=\"\" class=\"white-arrow-down\"></div>\n"));
 
-    let $fontDisplay = $(`
-                <div class="font1 font-display">
+    let $fontDisplay = $(`<div class="font1 font-display">
                     <div class="font_verion_wrapper">
                         <div class="big-font">Corporate A Regular 24pt</div>
                         <div class="div-block-54 selector">
-                            <div class="div-block-53 w-clearfix">
-${createFontButtons(['24pt', '30pt', '36pt', '42pt'], 'big-font')}                            </div>
+                            <div class="div-block-53 w-clearfix">${createFontButtons(['24pt', '30pt', '36pt', '42pt'], 'big-font')}</div>
                         </div>
                     </div>
                 </div>
@@ -182,8 +179,7 @@ ${createFontButtons(['24pt', '30pt', '36pt', '42pt'], 'big-font')}              
                     <div class="font_verion_wrapper">
                         <div class="medium-font">CorpoS Regular 18pt</div>
                         <div class="div-block-54">
-                            <div class="div-block-53 w-clearfix">
-${createFontButtons(['18pt', '32pt'], 'medium-font')}                            </div>
+                            <div class="div-block-53 w-clearfix">${createFontButtons(['18pt', '32pt'], 'medium-font')}</div>
                         </div>
                     </div>
                 </div>
@@ -191,16 +187,15 @@ ${createFontButtons(['18pt', '32pt'], 'medium-font')}                           
                     <div class="font_verion_wrapper">
                         <div class="small-font">Arial Regular 14pt</div>
                         <div class="div-block-54">
-                            <div class="div-block-53 w-clearfix">
-${createFontButtons(['12pt', '14pt'], 'small-font')}                            </div>
+                            <div class="div-block-53 w-clearfix">${createFontButtons(['12pt', '14pt'], 'small-font')}</div>
                         </div>
                     </div>
-                </div>
-`);
+                </div>`);
 
     let $fontSelector = $(".font-selector-module");
     $('.font-display').remove();
-    $fontSelector.append($fontDisplay);
+    $fontSelector.append($fontDisplay.hide());
+    $('.font-display').show(400);
     let $fontBoxes = $(".font_verion_wrapper");
     $fontBoxes.css({
         "background-color": selectedBg,
