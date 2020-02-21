@@ -177,8 +177,6 @@ function initializeCtaOptions() {
     $ctaSpecs.show(400);
 
     switchDesignSamples(selectedType, selectedStyle, selectedWidth);
-
-
 }
 
 $(function () {

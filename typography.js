@@ -186,11 +186,11 @@ function selectSize(sizeElement) {
 
     let sampleImage = `<img width=${$(`.design-example-section`).outerWidth()} class="sample-image" `;
     try {
-        if (selectedSizeText.includes("Master")) {
+        if (selectedSizeText.includes("Master") || (selectedScreen === "mobile" && selectedSizeText.includes("Heading"))) {
             sampleImage += `src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${1}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${1}">`;
         } else if (selectedSizeText.includes("Module")) {
             sampleImage += `src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${3}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${3}">`;
-        } else if (selectedSizeText.includes("CAPS")) {
+        } else if (selectedSizeText.includes("CAPS") || (selectedScreen === "mobile" && selectedSizeText.includes("Nav"))) {
             sampleImage += `src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${2}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${2}">`;
         } else if (selectedSizeText.includes("Paragraph")) {
             sampleImage += `src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${4}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${4}">`;
@@ -199,6 +199,7 @@ function selectSize(sizeElement) {
         } else sampleImage += `src='images/Screens/Mercedes-Benz-Logo.jpg' alt="" id="placeholder">`;
     } catch {
         sampleImage += `src='images/Screens/Mercedes-Benz-Logo.jpg' alt="" id="placeholder">`;
+        console.log("No image yet");
     }
 
 
