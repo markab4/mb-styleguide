@@ -29,7 +29,8 @@ function switchDesignSamples() {
     }
     $("#design-sample").remove();
 
-    $(".cta-example-wrapper").append($(`<img id="design-sample" src="${imgSource}" alt="">`));
+    $(".cta-example-wrapper").append($(`<img id="design-sample" src="${imgSource}" alt="">`).hide());
+    $("#design-sample").fadeIn(400);
 
     console.log("imgSource", imgSource);
 }
@@ -172,7 +173,8 @@ function initializeCtaOptions() {
     </div>
 `);
     }
-    $(".cta-type").after($ctaSpecs);
+    $(".cta-type").after($ctaSpecs.hide());
+    $ctaSpecs.show(400);
 
     switchDesignSamples(selectedType, selectedStyle, selectedWidth);
 

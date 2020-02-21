@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bcaabf09-e1a7-419e-9445-50a87c462c46" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typography.html" beforeDir="false" afterPath="$PROJECT_DIR$/typography.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typography.js" beforeDir="false" afterPath="$PROJECT_DIR$/typography.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic.js" beforeDir="false" afterPath="$PROJECT_DIR$/atomic.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,8 +30,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/typography.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="591">
-                  <caret line="150" selection-start-line="150" selection-end-line="152" selection-end-column="9" />
+                <state relative-caret-position="633">
+                  <caret line="152" column="9" lean-forward="true" selection-start-line="152" selection-start-column="9" selection-end-line="152" selection-end-column="9" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -60,14 +59,23 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/typography.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="811">
-                  <caret line="238" column="89" selection-start-line="238" selection-start-column="89" selection-end-line="238" selection-end-column="89" />
+                <state relative-caret-position="706">
+                  <caret line="234" lean-forward="true" selection-start-line="234" selection-end-line="234" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/atomic.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="857">
+                  <caret line="176" column="24" selection-start-line="176" selection-start-column="24" selection-end-line="176" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -102,6 +110,15 @@
                     <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/atoms.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="155">
+                  <caret line="452" column="30" selection-start-line="452" selection-start-column="30" selection-end-line="452" selection-end-column="30" />
                 </state>
               </provider>
             </entry>
@@ -175,13 +192,13 @@
         <option value="$PROJECT_DIR$/css/mbusa-styleguide.webflow.css" />
         <option value="$PROJECT_DIR$/atomic-new.html" />
         <option value="$PROJECT_DIR$/compliant-colors.js" />
-        <option value="$PROJECT_DIR$/atomic.js" />
         <option value="$PROJECT_DIR$/atoms.html" />
         <option value="$PROJECT_DIR$/colors.html" />
         <option value="$PROJECT_DIR$/typesetting.js" />
         <option value="$PROJECT_DIR$/colors.js" />
         <option value="$PROJECT_DIR$/typography.html" />
         <option value="$PROJECT_DIR$/typography.js" />
+        <option value="$PROJECT_DIR$/atomic.js" />
       </list>
     </option>
   </component>
@@ -209,45 +226,6 @@
             <path>
               <item name="mbusa-styleguide030220-3" type="b2602c69:ProjectViewProjectNode" />
               <item name="mbusa-styleguide030220-3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mbusa-styleguide030220-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mbusa-styleguide030220-3" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mbusa-styleguide030220-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mbusa-styleguide030220-3" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="Screens" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mbusa-styleguide030220-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mbusa-styleguide030220-3" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="Screens" type="462c0819:PsiDirectoryNode" />
-              <item name="AMG-desktop-screens" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mbusa-styleguide030220-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mbusa-styleguide030220-3" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="Screens" type="462c0819:PsiDirectoryNode" />
-              <item name="AMG-mobile-screens" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mbusa-styleguide030220-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mbusa-styleguide030220-3" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="Screens" type="462c0819:PsiDirectoryNode" />
-              <item name="MBUSA-desktop-screens" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mbusa-styleguide030220-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mbusa-styleguide030220-3" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="Screens" type="462c0819:PsiDirectoryNode" />
-              <item name="MBUSA-mobile-screens" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -523,17 +501,31 @@
       <option name="project" value="LOCAL" />
       <updated>1582300909177</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="scroll images type">
+      <created>1582306468352</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1582306468352</updated>
+    </task>
+    <task id="LOCAL-00031" summary="change scroll to fade">
+      <created>1582308578404</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1582308578404</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155238000" />
+    <option name="totallyTimeSpent" value="156581000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-640" y="-1200" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13112165" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20273829" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" />
@@ -576,8 +568,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="make skeleton of typeface selector" />
-    <MESSAGE value="change order of sample design" />
     <MESSAGE value="format andrey code" />
     <MESSAGE value="add size selector to typography" />
     <MESSAGE value="Merge branch 'andrey' of https://github.com/markab4/styleguide into andrey&#10;&#10;* 'andrey' of https://github.com/markab4/styleguide:&#10;  Updated a loot of differen stuff + Typo Style fixed UPPERCASE&#10;&#10;# Conflicts:&#10;#&#9;typography.html" />
@@ -601,7 +591,9 @@
     <MESSAGE value="fix slider bug of not loading initially, conflate medium/bold" />
     <MESSAGE value="animations on Colors toolpicker" />
     <MESSAGE value="animate typography" />
-    <option name="LAST_COMMIT_MESSAGE" value="animate typography" />
+    <MESSAGE value="scroll images type" />
+    <MESSAGE value="change scroll to fade" />
+    <option name="LAST_COMMIT_MESSAGE" value="change scroll to fade" />
   </component>
   <component name="WindowStateProjectService">
     <state width="202" height="186" key="Git.Branch.Popup" />
@@ -650,13 +642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5628">
           <caret line="268" column="102" selection-start-line="268" selection-start-column="102" selection-end-line="268" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atoms.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="452" column="30" selection-start-line="452" selection-start-column="30" selection-end-line="452" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -755,13 +740,6 @@
     <entry file="file://$PROJECT_DIR$/images/Icon-Link.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/atomic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/embed.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -771,8 +749,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/typography.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="150" selection-start-line="150" selection-end-line="152" selection-end-column="9" />
+        <state relative-caret-position="633">
+          <caret line="152" column="9" lean-forward="true" selection-start-line="152" selection-start-column="9" selection-end-line="152" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -788,11 +766,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/typography.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="811">
-          <caret line="238" column="89" selection-start-line="238" selection-start-column="89" selection-end-line="238" selection-end-column="89" />
+        <state relative-caret-position="706">
+          <caret line="234" lean-forward="true" selection-start-line="234" selection-end-line="234" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atoms.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="452" column="30" selection-start-line="452" selection-start-column="30" selection-end-line="452" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="857">
+          <caret line="176" column="24" selection-start-line="176" selection-start-column="24" selection-end-line="176" selection-end-column="24" />
         </state>
       </provider>
     </entry>
