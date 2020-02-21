@@ -43,7 +43,8 @@ function selectPalette(paletteElement) {
                         </div>`
         }
         typefacesHtml += `</div>`;
-        $(".type-selector-row._1").after($(typefacesHtml));
+        $(".type-selector-row._1").after($(typefacesHtml).hide());
+        $('#typeface-selector').show(400);
     } catch (TypeError) {
         console.log(`${selectedPlatform} does not have a list of typefaces yet. :-(`)
     }
@@ -87,8 +88,10 @@ function selectTypeface(typefaceElement) {
     }
     stylesHtml += `</div>`;
 
-    $("#typeface-selector").after($(stylesHtml));
+    $("#typeface-selector").after($(stylesHtml).hide());
     $(".style-block").css("font-family", selectedFontFamily);
+    $('#style-selector').show(400);
+
 }
 
 function selectStyle(styleElement) {
@@ -131,19 +134,22 @@ function selectStyle(styleElement) {
 
         sizeHtml += `<div class="typeface-selector-result selector passive" onclick="selectSize(this)">
     <div style="font-size: ${fullStyle.size}; line-height: ${fullStyle.leading}; letter-spacing: ${fullStyle.tracking/1000}em"
-         class="text-block-26 size-block ${sizeList[i].includes("Caps") ? "all-caps" : ""}">
+         class="text-block-26 size-block ${sizeList[i]}">
         ${sizeList[i]}
     </div>
 </div>`
     }
     sizeHtml += `</div></div>`;
-    if (!selectedStyleElement) $previousSelector.after($(sizeHtml));
+    if (!selectedStyleElement) $previousSelector.after($(sizeHtml).hide());
     else $previousSelector.append($(sizeHtml));
     $(".size-block").css({
         "font-family": selectedFontFamily,
         "font-weight": selectedWeight,
         "font-style": selectedFontStyle
     });
+    $('#size-selector').show(400);
+
+
     selectedStyleElement = styleElement;
 }
 
