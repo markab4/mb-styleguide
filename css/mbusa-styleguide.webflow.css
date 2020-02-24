@@ -1163,6 +1163,7 @@ body {
 
 .body-copy {
   font-family: Corpos, sans-serif;
+  color: #000;
   font-size: 14px;
   line-height: 24px;
 }
@@ -1217,6 +1218,7 @@ body {
   margin-bottom: 4px;
   margin-left: auto;
   font-family: Corpos, sans-serif;
+  color: #000;
   font-size: 20px;
   line-height: 28px;
   font-weight: 400;
@@ -6217,6 +6219,7 @@ body {
   -ms-flex-align: center;
   align-items: center;
   border-top: 2px dotted #c7c7c7;
+  color: #000;
 }
 
 .palette-selector.active {
@@ -6879,6 +6882,7 @@ body {
   -ms-flex-align: center;
   align-items: center;
   border-top: 2px dotted #c7c7c7;
+  color: #000;
 }
 
 .typeface-selector.active {
@@ -6979,6 +6983,7 @@ body {
 
 .typeface-selector-result.active {
   border: 4px solid #000;
+  color: #000;
   text-transform: none;
 }
 
