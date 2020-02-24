@@ -174,33 +174,42 @@ function selectSize(sizeElement) {
                 </div>
     `));
 
-//     let sampleImages = `<div id="sample-design">
-// <div id="spinner">Loading...</div><div id="carousel">`, numberOfImages = 4;
-//     if (selectedScreen === "desktop" && selectedPlatform === "MBUSA") numberOfImages = 5;
-//
-//     for (let i = 1; i <= numberOfImages; i++) {
-//         sampleImages += `<img src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${i}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${i}">`
-//     }
-//
-//     sampleImages += `</div></div>`;
+    let sampleImages = ``, numberOfImages = 4;
+// <div id="sample-design">
+// <div id="spinner">Loading...</div><div id="carousel">`,
 
-    let sampleImage = `<img width=${$(`.design-example-section`).outerWidth()} class="sample-image" `;
-    try {
-        if (selectedSizeText.includes("Master") || (selectedScreen === "mobile" && selectedSizeText.includes("Heading"))) {
-            sampleImage += `src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${1}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${1}">`;
-        } else if (selectedSizeText.includes("Module")) {
-            sampleImage += `src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${3}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${3}">`;
-        } else if (selectedSizeText.includes("CAPS") || (selectedScreen === "mobile" && selectedSizeText.includes("Nav"))) {
-            sampleImage += `src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${2}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${2}">`;
-        } else if (selectedSizeText.includes("Paragraph")) {
-            sampleImage += `src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${4}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${4}">`;
-        } else if (selectedSizeText.includes("Navigational")) {
-            sampleImage += `src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${5}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${5}">`;
-        } else sampleImage += `src='images/Screens/Mercedes-Benz-Logo.jpg' alt="" id="placeholder">`;
-    } catch {
-        sampleImage += `src='images/Screens/Mercedes-Benz-Logo.jpg' alt="" id="placeholder">`;
-        console.log("No image yet");
+    if (selectedScreen === "desktop" && selectedPlatform === "MBUSA") numberOfImages = 5;
+
+    for (let i = 1; i <= numberOfImages; i++) {
+        sampleImages += `<img width=${$(`.design-example-section`).outerWidth()} class="sample-image" src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${i}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${i}">`
     }
+    console.log(sampleImages);
+
+    // let sampleImage = `<img width=${$(`.design-example-section`).outerWidth()} class="sample-image" `;
+    // try {
+    //     if (selectedSizeText.includes("Master") || (selectedScreen === "mobile" && selectedSizeText.includes("Heading"))) {
+    //         sampleImage += `src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${1}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${1}">`;
+    //     } else if (selectedSizeText.includes("Module")) {
+    //         sampleImage += `src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${3}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${3}">`;
+    //     } else if (selectedSizeText.includes("CAPS") || (selectedScreen === "mobile" && selectedSizeText.includes("Nav"))) {
+    //         sampleImage += `src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${2}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${2}">`;
+    //     } else if (selectedSizeText.includes("Paragraph")) {
+    //         sampleImage += `src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${4}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${4}">`;
+    //     } else if (selectedSizeText.includes("Navigational")) {
+    //         sampleImage += `src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${5}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${5}">`;
+    //     } else sampleImage += `src='images/Screens/Mercedes-Benz-Logo.jpg' alt="" id="placeholder">`;
+    // } catch {
+    //     sampleImage += `src='images/Screens/Mercedes-Benz-Logo.jpg' alt="" id="placeholder">`;
+    //     console.log("No image yet");
+    // }
+
+    let $container = $('.sample-page-wrapper');
+    $container.after($(sampleImages));
+    let $scrollTo = $('#MBUSA-desktop-3');
+
+    $container.animate({
+        scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop()
+    });
 
 
     // $("#sample-design").remove();
@@ -214,10 +223,10 @@ function selectSize(sizeElement) {
 // </div>
 // `);
 
-
-    $(".sample-image").remove();
-    $("#design-sample-header").after($(sampleImage).hide());
-    $(".sample-image").fadeIn(400);
+    //
+    // $(".sample-image").remove();
+    // $("#design-sample-header").after($(sampleImage).hide());
+    // $(".sample-image").fadeIn(400);
 
 
     // $('.design-example-section').css("height", $("#design-sample-header").first().css("height"));
@@ -229,8 +238,7 @@ function selectSize(sizeElement) {
         "selectedSize", selectedSize,
         "selectedLeading", selectedLeading,
         "selectedTracking", selectedTracking,
-        "selectedScreen", selectedScreen,
-        "sampleImage", sampleImage)
+        "selectedScreen", selectedScreen)
     ;
 }
 
@@ -242,6 +250,8 @@ function toggleMobile(checkBox) {
 }
 
 function loadSamples() {
+
+
 //     let Carousel = {
 //         width: $(`.design-example-section`).outerWidth(),     // Images are forced into a width of this many pixels.
 //         numVisible: 2,  // The number of images visible at once.

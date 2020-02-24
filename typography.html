@@ -18,7 +18,7 @@
         !function (o, c) {
             var n = c.documentElement,
                 t = " w-mod-";
-        n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+            n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
         }(window, document);
     </script>
     <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
@@ -79,7 +79,7 @@
         }
 
         .typeface-block.passive, .style-block.passive {
-            color: #c7c7c7;
+            color: #666666;
         }
 
         .typeface-block.active, .style-block.active {
@@ -375,91 +375,92 @@
                         </div>
                     </div>
                 </div>
-<!--                <div class="type-selector-row _3" id="typeface-selector">-->
-<!--                    <div class="typesel-header">-->
-<!--                        <div class="greyline"></div>-->
-<!--                        <div class="corpo20px">Typeface</div>-->
-<!--                    </div>-->
-<!--                    <div class="typeface-selector">-->
-<!--                        <div class="text-block-18">Corporate A</div>-->
-<!--                    </div>-->
-<!--                    <div class="typeface-selector">-->
-<!--                        <div class="text-block-19">CorpoS</div>-->
-<!--                    </div>-->
-<!--                    <div class="typeface-selector">-->
-<!--                        <div class="text-block-19">Arial</div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="type-selector-row _3" id="style-selector">-->
-<!--                    <div class="typesel-header">-->
-<!--                        <div class="greyline"></div>-->
-<!--                        <div class="corpo20px">Style</div>-->
-<!--                    </div>-->
-<!--                    <div class="typeface-selector">-->
-<!--                        <div class="text-block-20">Regular</div>-->
-<!--                    </div>-->
-<!--                    <div class="typeface-selector">-->
-<!--                        <div class="text-block-21">Regular Italic</div>-->
-<!--                    </div>-->
-<!--                    <div class="typeface-selector"></div>-->
-<!--                </div>-->
-<!--                <div class="type-selector-row _2" id="size-selector">-->
-<!--                    <div class="typesel-header-with-toggle">-->
-<!--                        <div class="greyline"></div>-->
-<!--                        <div class="corpo20px">Size</div>-->
-<!--                        <div class="div-block-58">-->
-<!--                            <label class="switch toggle _1">-->
-<!--                                <input type="checkbox" id="mobile-slider" onclick="toggleMobile(this)">-->
-<!--                                <span class="slider round"></span>-->
-<!--                            </label>-->
-<!--                            <div class="toggle-image"><img src="images/Mobile.svg" alt=""></div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="div-block-76">-->
-<!--                        <div class="typeface-selector-result active">-->
-<!--                            <div>-->
-<!--                                <div class="text-block-23">Master heading</div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="typeface-selector-result passive">-->
-<!--                            <div class="text-block-25">Module heading</div>-->
-<!--                        </div>-->
-<!--                        <div class="typeface-selector-result passive">-->
-<!--                            <div class="text-block-26">Paragraph heading</div>-->
-<!--                        </div>-->
-<!--                        <div class="typeface-selector-result passive">-->
-<!--                            <div class="text-block-26">Paragraph heading</div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
+                <!--                <div class="type-selector-row _3" id="typeface-selector">-->
+                <!--                    <div class="typesel-header">-->
+                <!--                        <div class="greyline"></div>-->
+                <!--                        <div class="corpo20px">Typeface</div>-->
+                <!--                    </div>-->
+                <!--                    <div class="typeface-selector">-->
+                <!--                        <div class="text-block-18">Corporate A</div>-->
+                <!--                    </div>-->
+                <!--                    <div class="typeface-selector">-->
+                <!--                        <div class="text-block-19">CorpoS</div>-->
+                <!--                    </div>-->
+                <!--                    <div class="typeface-selector">-->
+                <!--                        <div class="text-block-19">Arial</div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--                <div class="type-selector-row _3" id="style-selector">-->
+                <!--                    <div class="typesel-header">-->
+                <!--                        <div class="greyline"></div>-->
+                <!--                        <div class="corpo20px">Style</div>-->
+                <!--                    </div>-->
+                <!--                    <div class="typeface-selector">-->
+                <!--                        <div class="text-block-20">Regular</div>-->
+                <!--                    </div>-->
+                <!--                    <div class="typeface-selector">-->
+                <!--                        <div class="text-block-21">Regular Italic</div>-->
+                <!--                    </div>-->
+                <!--                    <div class="typeface-selector"></div>-->
+                <!--                </div>-->
+                <!--                <div class="type-selector-row _2" id="size-selector">-->
+                <!--                    <div class="typesel-header-with-toggle">-->
+                <!--                        <div class="greyline"></div>-->
+                <!--                        <div class="corpo20px">Size</div>-->
+                <!--                        <div class="div-block-58">-->
+                <!--                            <label class="switch toggle _1">-->
+                <!--                                <input type="checkbox" id="mobile-slider" onclick="toggleMobile(this)">-->
+                <!--                                <span class="slider round"></span>-->
+                <!--                            </label>-->
+                <!--                            <div class="toggle-image"><img src="images/Mobile.svg" alt=""></div>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                    <div class="div-block-76">-->
+                <!--                        <div class="typeface-selector-result active">-->
+                <!--                            <div>-->
+                <!--                                <div class="text-block-23">Master heading</div>-->
+                <!--                            </div>-->
+                <!--                        </div>-->
+                <!--                        <div class="typeface-selector-result passive">-->
+                <!--                            <div class="text-block-25">Module heading</div>-->
+                <!--                        </div>-->
+                <!--                        <div class="typeface-selector-result passive">-->
+                <!--                            <div class="text-block-26">Paragraph heading</div>-->
+                <!--                        </div>-->
+                <!--                        <div class="typeface-selector-result passive">-->
+                <!--                            <div class="text-block-26">Paragraph heading</div>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
             </div>
             <div class="design-example-section">
                 <div class="typesel-header" id="design-sample-header">
                     <div class="div-block-78">
                         <div class="corpo20px">Design sample</div>
                         <div class="div-block-80" id="specs-wrapper">
-<!--                            <div class="div-block-79">-->
-<!--                                <div class="text-block-31">size <span class="specs">32</span></div>-->
-<!--                                <div class="text-block-31">leading <span class="specs">56</span></div>-->
-<!--                                <div class="text-block-31">tracking <span class="specs">-10</span></div>-->
-<!--                            </div>-->
+                            <!--                            <div class="div-block-79">-->
+                            <!--                                <div class="text-block-31">size <span class="specs">32</span></div>-->
+                            <!--                                <div class="text-block-31">leading <span class="specs">56</span></div>-->
+                            <!--                                <div class="text-block-31">tracking <span class="specs">-10</span></div>-->
+                            <!--                            </div>-->
                         </div>
                     </div>
                     <div class="greyline"></div>
                 </div>
-<!--                <div class="sample-page-wrapper">-->
-<!--                    <div class="line-pointer"></div>-->
-<!--                    <div id="33" class="div-block-75"><img src="images/Image-682x.png"-->
-<!--                                                           srcset="images/Image-682x-p-500.png 500w, images/Image-682x-p-800.png 800w, images/Image-682x-p-1080.png 1080w, images/Image-682x-p-1600.png 1600w, images/Image-682x.png 2000w"-->
-<!--                                                           sizes="(max-width: 767px) 100vw, (max-width: 991px) 968px, 98vw"-->
-<!--                                                           alt="" class="image-29"></div>-->
-<!--                    <div id="11"><img src="images/Image-692x.png"-->
-<!--                                      srcset="images/Image-692x-p-500.png 500w, images/Image-692x-p-800.png 800w, images/Image-692x-p-1080.png 1080w, images/Image-692x-p-1600.png 1600w, images/Image-692x.png 2000w"-->
-<!--                                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 968px, 98vw" alt=""></div>-->
-<!--                    <div id="22"><img src="images/Image-702x.png"-->
-<!--                                      srcset="images/Image-702x-p-500.png 500w, images/Image-702x-p-800.png 800w, images/Image-702x-p-1080.png 1080w, images/Image-702x-p-1600.png 1600w, images/Image-702x.png 2000w"-->
-<!--                                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 968px, 98vw" alt=""></div>-->
+                <div class="sample-page-wrapper">
+                    <!--                    <div class="line-pointer"></div>-->
+                    <!--                    <div id="33" class="div-block-75"><img src="images/Image-682x.png"-->
+                    <!--                                                           srcset="images/Image-682x-p-500.png 500w, images/Image-682x-p-800.png 800w, images/Image-682x-p-1080.png 1080w, images/Image-682x-p-1600.png 1600w, images/Image-682x.png 2000w"-->
+                    <!--                                                           sizes="(max-width: 767px) 100vw, (max-width: 991px) 968px, 98vw"-->
+                    <!--                                                           alt="" class="image-29"></div>-->
+                    <!--                    <div id="11"><img src="images/Image-692x.png"-->
+                    <!--                                      srcset="images/Image-692x-p-500.png 500w, images/Image-692x-p-800.png 800w, images/Image-692x-p-1080.png 1080w, images/Image-692x-p-1600.png 1600w, images/Image-692x.png 2000w"-->
+                    <!--                                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 968px, 98vw" alt=""></div>-->
+                    <!--                    <div id="22"><img src="images/Image-702x.png"-->
+                    <!--                                      srcset="images/Image-702x-p-500.png 500w, images/Image-702x-p-800.png 800w, images/Image-702x-p-1080.png 1080w, images/Image-702x-p-1600.png 1600w, images/Image-702x.png 2000w"-->
+                    <!--                                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 968px, 98vw" alt=""></div>-->
 
+                </div>
             </div>
         </div>
     </div>

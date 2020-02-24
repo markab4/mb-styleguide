@@ -64,5 +64,6 @@ let compliantColors = {
         "#D6C5AB": ["#393939", "#000000"],
         "#EAE2D5": ["#393939", "#000000"],
         "#F5F0E9": ["#393939", "#000000"],
-    }
+    },
 };
+compliantColors["MB VANS"] = compliantColors["MBUSA"];    // MB VANS uses same colors as MBUSA
