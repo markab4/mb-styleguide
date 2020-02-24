@@ -6228,7 +6228,7 @@ body {
 
 .palette-selector.passive {
   font-family: Corpos, sans-serif;
-  color: #999999;
+  color: #666;
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
@@ -6238,6 +6238,10 @@ body {
   font-size: 30px;
   line-height: 40px;
   text-transform: uppercase;
+}
+
+.coprobold.passive {
+  color: #666;
 }
 
 .color-wrapper {
@@ -6538,7 +6542,7 @@ body {
 
 .color-sujessionselector.passive {
   font-family: Corpos, sans-serif;
-  color: #999999;
+  color: #c7c7c7;
   font-size: 28px;
   font-weight: 700;
 }
@@ -6834,7 +6838,7 @@ body {
 
 .font-selector.passive {
   font-family: Corpos, sans-serif;
-  color: #999999;
+  color: #c7c7c7;
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
@@ -6886,7 +6890,7 @@ body {
 
 .typeface-selector.passive {
   font-family: Corpos, sans-serif;
-  color: #999999;
+  color: #c7c7c7;
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
@@ -6905,7 +6909,7 @@ body {
 
 .text-block-19 {
   font-family: Corpos, sans-serif;
-  color: #999999;
+  color: #666;
   font-size: 30px;
 }
 
@@ -6918,7 +6922,7 @@ body {
 
 .text-block-21 {
   font-family: Corporateacondpro, sans-serif;
-  color: #999999;
+  color: #666;
   font-size: 30px;
   font-style: italic;
   font-weight: 300;
@@ -6967,7 +6971,7 @@ body {
 
 .typeface-selector-result.passive {
   font-family: Corpos, sans-serif;
-  color: #666666;
+  color: #c7c7c7;
   font-size: 28px;
   font-weight: 700;
   text-transform: none;
@@ -6998,6 +7002,7 @@ body {
 .text-block-25 {
   margin-top: 8px;
   font-family: Corporateacondpro, sans-serif;
+  color: #666;
   font-size: 32px;
   font-weight: 300;
 }
@@ -7005,6 +7010,7 @@ body {
 .text-block-26 {
   margin-top: 8px;
   font-family: Corporateacondpro, sans-serif;
+  color: #666;
   font-size: 28px;
   line-height: 28px;
   font-weight: 300;
@@ -7033,6 +7039,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+  max-width: 1376px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -8234,16 +8241,16 @@ body {
 
 .text-block-arial {
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  color: #666666;
+  color: #666;
   font-size: 30px;
 }
 
 .text-block-2-bold {
   font-family: Corporateacondpro, sans-serif;
-  color: #666666;
+  color: #666;
   font-size: 30px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .body-8 {
