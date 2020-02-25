@@ -132,7 +132,7 @@ function selectFg(fgElement) {
         "                <div class=\"color_suggesion_label\">Foreground</div>\n" +
         `                        <div class="color_suggesion_hex">${selectedFg}</div>` +
         "                    </div>\n" +
-        "                    <div class=\"w-clearfix\"><img src=\"images/Icon_copycode-1.svg\" alt=\"\" class=\"white-arrow-down\"></div>\n" +
+        "                    <div class=\"w-clearfix\"><img src=\"https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e0629620b1ac55a4df1b955_Icon_copycode%20(1).svg\" alt=\"\" class=\"white-arrow-down\"></div>\n" +
         "                </div>\n" +
         "                <div class=\"color-sujessionselector grab\" id=\'background-display\' onclick=\"copyStringToClipboard(this.innerText)\">\n" +
         "                    <div class=\"color_suggesion_wrapper\">\n" +
@@ -165,7 +165,7 @@ function selectBg(bgElement) {
         "                        <div class=\"color_suggesion_label\">Background</div>\n" +
         `                        <div class=\"color_suggesion_hex\">${selectedBg}</div>\n` +
         "                    </div>\n" +
-        "                    <div class=\"w-clearfix\"><img src=\"images/Icon_copycode-1.svg\" alt=\"\" class=\"white-arrow-down\"></div>\n"));
+        "                    <div class=\"w-clearfix\"><img src=\"https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e0629620b1ac55a4df1b955_Icon_copycode%20(1).svg\" alt=\"\" class=\"white-arrow-down\"></div>\n"));
 
     let $fontDisplay = $(`<div class="font1 font-display">
                     <div class="font_verion_wrapper">

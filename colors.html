@@ -18,7 +18,7 @@
         !function (o, c) {
             var n = c.documentElement,
                 t = " w-mod-";
-        n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+            n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
         }(window, document);
     </script>
     <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
@@ -70,7 +70,7 @@
         }
 
         .color-selector-module, .font-selector-module {
-            background-image: url('./images/Seamless_Stripe.svg');
+            background-image: url('https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e385a9406b72d64ed0376e6_Seamless_Stripe.svg');
         }
 
         .bg-color {
@@ -82,6 +82,9 @@
             margin-left: 8px;
         }
 
+        .palette-selector.active > .coprobold {
+            color: black;
+        }
 
     </style>
 </head>
@@ -89,11 +92,11 @@
 <div class="right-navigation">
     <div class="saerch-wrapper">
         <form action="/search" class="search w-clearfix w-form"><input type="search" maxlength="256" name="query"
-                   required="" id="search"
-                   class="search-input w-input"><a href="#"
-                                                   class="link-block-3 w-inline-block"><img
+                                                                       required="" id="search"
+                                                                       class="search-input w-input"><a href="#"
+                                                                                                       class="link-block-3 w-inline-block"><img
                 src="images/ion-ios-search-strong---Ionicons.svg" width="25" alt=""></a><input type="submit"
-                   class="search-button w-button">
+                                                                                               class="search-button w-button">
         </form>
     </div>
     <div class="navigation-wrapper">
@@ -188,7 +191,7 @@
         <div data-w-id="31c70ec6-254e-bc1d-5cba-7e18e2765604" style="opacity:0">
             <div class="div-block-96">
                 <div class="wrapper left">
-                        <div class="call-out">Mercedes-Benz colors</div>
+                    <div class="call-out">Mercedes-Benz colors</div>
                     <div class="body-copy">The timeless combination of Black and White is the center-point of our brand
                         colors. When combined with an accent of blue, a refreshing and unique look emerges for
                         Mercedes-Benz. The greyscale can be applied not only to the core Mercedes-Benz brand, but also
@@ -196,39 +199,40 @@
                     </div>
                 </div>
                 <div class="colortints-2">
-                        <div class="div-block-37">
+                    <div class="div-block-37">
                         <div class="colorsect-copy black">
-                                <div class="text-block-7-copy">Black</div>
+                            <div class="text-block-7-copy">Black</div>
                             <div class="div-block-7 w-clearfix grab" onclick="copyStringToClipboard(this.innerText)">
-                                    <div class="text-block-8">#000000</div>
-                                    <img src="https://uploads-ssl.webflow.com/5e38810d55f784860eebb12c/5e38810d55f78467a0ebb178_Icon_copycode.svg"
+                                <div class="text-block-8">#000000</div>
+                                <img src="https://uploads-ssl.webflow.com/5e38810d55f784860eebb12c/5e38810d55f78467a0ebb178_Icon_copycode.svg"
                                      width="17" alt="" class="white-arrow-down"></div>
                         </div>
                         <div class="colorsect-copy whit">
                             <div class="text-block-7-copy blck">White</div>
                             <div class="w-clearfix grab" onclick="copyStringToClipboard(this.innerText)">
                                 <div class="text-block-8 blacktext">#111111</div>
-                                <img src="images/Icon_copycode-1.svg" width="16" alt="" class="white-arrow-down"></div>
-                            </div>
-                            <div class="colorsect-copy blue">
-                                <div class="text-block-7-copy">Blue</div>
-                                <div class="w-clearfix grab" onclick="copyStringToClipboard(this.innerText)">
-                                    <div class="text-block-8">#2978BD</div>
-                                    <img src="https://uploads-ssl.webflow.com/5e38810d55f784860eebb12c/5e38810d55f78467a0ebb178_Icon_copycode.svg"
+                                <img src="https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e0629620b1ac55a4df1b955_Icon_copycode%20(1).svg"
                                      width="16" alt="" class="white-arrow-down"></div>
-                            </div>
                         </div>
+                        <div class="colorsect-copy blue">
+                            <div class="text-block-7-copy">Blue</div>
+                            <div class="w-clearfix grab" onclick="copyStringToClipboard(this.innerText)">
+                                <div class="text-block-8">#2978BD</div>
+                                <img src="https://uploads-ssl.webflow.com/5e38810d55f784860eebb12c/5e38810d55f78467a0ebb178_Icon_copycode.svg"
+                                     width="16" alt="" class="white-arrow-down"></div>
+                        </div>
+                    </div>
                     <img src="images/Bluenblack.svg" width="854" alt="" class="image-21">
-                        <div class="annotation-wrapper"><img
-                                src="https://uploads-ssl.webflow.com/5e38810d55f784860eebb12c/5e38810d55f7841ff3ebb1f9_warning%20icon.svg"
-                                alt="">
+                    <div class="annotation-wrapper"><img
+                            src="https://uploads-ssl.webflow.com/5e38810d55f784860eebb12c/5e38810d55f7841ff3ebb1f9_warning%20icon.svg"
+                            alt="">
                         <div class="annotation">Always use our customized color selector below to ensure contrast is ADA
                             compliant.
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         <div data-w-id="263f011f-f775-dbec-0505-311021210ea8" style="opacity:0">
             <div class="div-block-96-copy">
                 <div class="colortints-2">
@@ -251,22 +255,22 @@
                     </div>
                 </div>
                 <div class="wrapper right">
-                        <div class="call-out">Mercedes-AMG colors</div>
+                    <div class="call-out">Mercedes-AMG colors</div>
                     <div class="body-copy">Mercedes-AMG uses an unique vibrant red to represent the power and dynamic of
                         AMG models. At the same time AMG can use
-                        </div>
                     </div>
                 </div>
             </div>
+        </div>
         <div data-w-id="75babc9f-a5be-431a-1e8c-b31a9fe19650" style="opacity:0">
             <div class="div-block-96">
                 <div class="wrapper left">
-                        <div class="call-out">Mercedes-Maybach colors</div>
-                        <div class="body-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet
+                    <div class="call-out">Mercedes-Maybach colors</div>
+                    <div class="body-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet
                         ornare felis. Morbi leo lorem, imperdiet vel sollicitudin vel, eleifend a orci. Sed id tincidunt
                         nulla, ut dignissim leo.
-                        </div>
                     </div>
+                </div>
                 <div class="colortints-2">
                     <div class="div-block-37">
                         <div class="colorsect-copy gold-copy">
@@ -304,176 +308,177 @@
         </div>
         <div class="color-selector-wrapper">
             <div class="colselwrap">
-        <div class="color-selector-module">
-            <div class="div-block-47" id="platforms">
-                <div class="colorsel-header palette">
-                    <div class="greyline"></div>
-                    <div class="corpo20px">Platform</div>
+                <div class="color-selector-module">
+                    <div class="div-block-47" id="platforms">
+                        <div class="colorsel-header palette">
+                            <div class="greyline"></div>
+                            <div class="corpo20px">Platform</div>
+                        </div>
+                        <div class="div-block-50">
+                            <div class="palette-selector passive selector" onclick="selectPalette(this)">
+                                <div class="coprobold passive">MBUSA</div>
+                            </div>
+                            <div class="palette-selector passive selector" onclick="selectPalette(this)">
+                                <div class="coprobold passive">AMG RED</div>
+                            </div>
+                            <div class="palette-selector passive selector" onclick="selectPalette(this)">
+                                <div class="coprobold">MAYBACH</div>
+                            </div>
+                            <div class="palette-selector passive selector" onclick="selectPalette(this)">
+                                <div class="coprobold">MB VANS</div>
+                            </div>
+                            <div class="palette-selector passive selector" onclick="selectPalette(this)">
+                                <div class="coprobold">Freightliner</div>
+                            </div>
+                            <div class="palette-selector passive selector" onclick="selectPalette(this)">
+                                <div class="coprobold">EQ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--            <div class="fg-color">-->
+                    <!--                <div class="colorsel-header">-->
+                    <!--                    <div class="greyline"></div>-->
+                    <!--                    <div class="corpo20px">Foreground Color</div>-->
+                    <!--                </div>-->
+                    <!--                <div class="div-block-48">-->
+                    <!--                    <div class="div-block-49 _1"></div>-->
+                    <!--                    <div class="div-block-49 body-2"></div>-->
+                    <!--                    <div class="div-block-49 selected"></div>-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                </div>-->
+                    <!--            </div>-->
+                    <!--            <div class="bg-color">-->
+                    <!--                <div class="colorsel-header">-->
+                    <!--                    <div class="greyline"></div>-->
+                    <!--                    <div class="corpo20px">Background Color</div>-->
+                    <!--                </div>-->
+                    <!--                <div class="div-block-48-copy">-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                    <div class="div-block-49"></div>-->
+                    <!--                </div>-->
+                    <!--            </div>-->
                 </div>
-                <div class="div-block-50">
-                    <div class="palette-selector passive selector" onclick="selectPalette(this)">
-                        <div class="coprobold passive">MBUSA</div>
+                <div class="font-selector-module">
+                    <div class="div-block-47" id="font-selector-display">
+                        <div class="colorsel-header result">
+                            <div class="greyline"></div>
+                            <div class="corpo20px">Contrast Results</div>
+                        </div>
+                        <!--                <div class="color-sujessionselector grab" onclick="copyStringToClipboard(this.innerText)">-->
+                        <!--                    <div class="color_suggesion_wrapper">-->
+                        <!--                        <div class="color_suggesion_label">Foreground</div>-->
+                        <!--                        <div class="color_suggesion_hex">#FFF</div>-->
+                        <!--                    </div>-->
+                        <!--                    <div class="w-clearfix"><img src="https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e0629620b1ac55a4df1b955_Icon_copycode%20(1).svg" alt="" class="white-arrow-down"></div>-->
+                        <!--                </div>-->
+                        <!--                <div class="color-sujessionselector grab" onclick="copyStringToClipboard(this.innerText)">-->
+                        <!--                    <div class="color_suggesion_wrapper">-->
+                        <!--                        <div class="color_suggesion_label">Background</div>-->
+                        <!--                        <div class="color_suggesion_hex">#E3E3E3</div>-->
+                        <!--                    </div>-->
+                        <!--                    <div class="w-clearfix"><img src="https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e0629620b1ac55a4df1b955_Icon_copycode%20(1).svg" alt="" class="white-arrow-down"></div>-->
+                        <!--                </div>-->
                     </div>
-                    <div class="palette-selector passive selector" onclick="selectPalette(this)">
-                        <div class="coprobold passive">AMG RED</div>
-                    </div>
-                    <div class="palette-selector passive selector" onclick="selectPalette(this)">
-                        <div class="coprobold">MAYBACH</div>
-                    </div>
-                    <div class="palette-selector passive selector" onclick="selectPalette(this)">
-                        <div class="coprobold">MB VANS</div>
-                    </div>
-                    <div class="palette-selector passive selector" onclick="selectPalette(this)">
-                        <div class="coprobold">Freightliner</div>
-                    </div>
-                    <div class="palette-selector passive selector" onclick="selectPalette(this)">
-                        <div class="coprobold">EQ</div>
-                    </div>
+                    <!--            <div class="font1">-->
+                    <!--                <div class="font_verion_wrapper">-->
+                    <!--                    <div class="coproa24">Corporate A Regular 24pt</div>-->
+                    <!--                    <div class="div-block-54">-->
+                    <!--                        <div class="checkmarks-block w-clearfix">-->
+                    <!--                            <div class="radio_button">-->
+                    <!--                                <div class="dot"></div>-->
+                    <!--                            </div>-->
+                    <!--                            <div class="text-block-17">18pt</div>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="checkmarks-block w-clearfix">-->
+                    <!--                            <div class="radio_button">-->
+                    <!--                                <div class="dot"></div>-->
+                    <!--                            </div>-->
+                    <!--                            <div class="text-block-17">24pt</div>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="checkmarks-block w-clearfix">-->
+                    <!--                            <div class="radio_button">-->
+                    <!--                                <div class="dot"></div>-->
+                    <!--                            </div>-->
+                    <!--                            <div class="text-block-17">32pt</div>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="checkmarks-block w-clearfix">-->
+                    <!--                            <div class="radio_button">-->
+                    <!--                                <div class="dot"></div>-->
+                    <!--                            </div>-->
+                    <!--                            <div class="text-block-17">40pt</div>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                    <!--                </div>-->
+                    <!--            </div>-->
+                    <!--            <div class="font2">-->
+                    <!--                <div class="font_verion_wrapper">-->
+                    <!--                    <div class="copros16">CorpoS Regular 18pt</div>-->
+                    <!--                    <div class="div-block-54">-->
+                    <!--                        <div class="checkmarks-block w-clearfix">-->
+                    <!--                            <div class="radio_button">-->
+                    <!--                                <div class="dot"></div>-->
+                    <!--                            </div>-->
+                    <!--                            <div class="text-block-17">18pt</div>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="checkmarks-block w-clearfix">-->
+                    <!--                            <div class="radio_button">-->
+                    <!--                                <div class="dot"></div>-->
+                    <!--                            </div>-->
+                    <!--                            <div class="text-block-17">24pt</div>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                    <!--                </div>-->
+                    <!--            </div>-->
+                    <!--            <div class="font3">-->
+                    <!--                <div class="font_verion_wrapper">-->
+                    <!--                    <div class="arial">Arial Regular 14pt</div>-->
+                    <!--                    <div class="div-block-54">-->
+                    <!--                        <div class="checkmarks-block w-clearfix">-->
+                    <!--                            <div class="radio_button">-->
+                    <!--                                <div class="dot"></div>-->
+                    <!--                            </div>-->
+                    <!--                            <div class="text-block-17">18pt</div>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="checkmarks-block w-clearfix">-->
+                    <!--                            <div class="radio_button">-->
+                    <!--                                <div class="dot"></div>-->
+                    <!--                            </div>-->
+                    <!--                            <div class="text-block-17">24pt</div>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                    <!--                </div>-->
+                    <!--            </div>-->
                 </div>
             </div>
-            <!--            <div class="fg-color">-->
-            <!--                <div class="colorsel-header">-->
-            <!--                    <div class="greyline"></div>-->
-            <!--                    <div class="corpo20px">Foreground Color</div>-->
-            <!--                </div>-->
-            <!--                <div class="div-block-48">-->
-            <!--                    <div class="div-block-49 _1"></div>-->
-            <!--                    <div class="div-block-49 body-2"></div>-->
-            <!--                    <div class="div-block-49 selected"></div>-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                </div>-->
-            <!--            </div>-->
-            <!--            <div class="bg-color">-->
-            <!--                <div class="colorsel-header">-->
-            <!--                    <div class="greyline"></div>-->
-            <!--                    <div class="corpo20px">Background Color</div>-->
-            <!--                </div>-->
-            <!--                <div class="div-block-48-copy">-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                    <div class="div-block-49"></div>-->
-            <!--                </div>-->
-            <!--            </div>-->
         </div>
-        <div class="font-selector-module">
-            <div class="div-block-47" id="font-selector-display">
-                <div class="colorsel-header result">
-                    <div class="greyline"></div>
-                    <div class="corpo20px">Contrast Results</div>
-                </div>
-                <!--                <div class="color-sujessionselector grab" onclick="copyStringToClipboard(this.innerText)">-->
-                <!--                    <div class="color_suggesion_wrapper">-->
-                <!--                        <div class="color_suggesion_label">Foreground</div>-->
-                <!--                        <div class="color_suggesion_hex">#FFF</div>-->
-                <!--                    </div>-->
-                <!--                    <div class="w-clearfix"><img src="images/Icon_copycode-1.svg" alt="" class="white-arrow-down"></div>-->
-                <!--                </div>-->
-                <!--                <div class="color-sujessionselector grab" onclick="copyStringToClipboard(this.innerText)">-->
-                <!--                    <div class="color_suggesion_wrapper">-->
-                <!--                        <div class="color_suggesion_label">Background</div>-->
-                <!--                        <div class="color_suggesion_hex">#E3E3E3</div>-->
-                <!--                    </div>-->
-                <!--                    <div class="w-clearfix"><img src="images/Icon_copycode-1.svg" alt="" class="white-arrow-down"></div>-->
-                <!--                </div>-->
+        <div class="content-sect">
+            <div class="contraw">
+                <div></div>
             </div>
-            <!--            <div class="font1">-->
-            <!--                <div class="font_verion_wrapper">-->
-            <!--                    <div class="coproa24">Corporate A Regular 24pt</div>-->
-            <!--                    <div class="div-block-54">-->
-            <!--                        <div class="checkmarks-block w-clearfix">-->
-            <!--                            <div class="radio_button">-->
-            <!--                                <div class="dot"></div>-->
-            <!--                            </div>-->
-            <!--                            <div class="text-block-17">18pt</div>-->
-            <!--                        </div>-->
-            <!--                        <div class="checkmarks-block w-clearfix">-->
-            <!--                            <div class="radio_button">-->
-            <!--                                <div class="dot"></div>-->
-            <!--                            </div>-->
-            <!--                            <div class="text-block-17">24pt</div>-->
-            <!--                        </div>-->
-            <!--                        <div class="checkmarks-block w-clearfix">-->
-            <!--                            <div class="radio_button">-->
-            <!--                                <div class="dot"></div>-->
-            <!--                            </div>-->
-            <!--                            <div class="text-block-17">32pt</div>-->
-            <!--                        </div>-->
-            <!--                        <div class="checkmarks-block w-clearfix">-->
-            <!--                            <div class="radio_button">-->
-            <!--                                <div class="dot"></div>-->
-            <!--                            </div>-->
-            <!--                            <div class="text-block-17">40pt</div>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
-            <!--            <div class="font2">-->
-            <!--                <div class="font_verion_wrapper">-->
-            <!--                    <div class="copros16">CorpoS Regular 18pt</div>-->
-            <!--                    <div class="div-block-54">-->
-            <!--                        <div class="checkmarks-block w-clearfix">-->
-            <!--                            <div class="radio_button">-->
-            <!--                                <div class="dot"></div>-->
-            <!--                            </div>-->
-            <!--                            <div class="text-block-17">18pt</div>-->
-            <!--                        </div>-->
-            <!--                        <div class="checkmarks-block w-clearfix">-->
-            <!--                            <div class="radio_button">-->
-            <!--                                <div class="dot"></div>-->
-            <!--                            </div>-->
-            <!--                            <div class="text-block-17">24pt</div>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
-            <!--            <div class="font3">-->
-            <!--                <div class="font_verion_wrapper">-->
-            <!--                    <div class="arial">Arial Regular 14pt</div>-->
-            <!--                    <div class="div-block-54">-->
-            <!--                        <div class="checkmarks-block w-clearfix">-->
-            <!--                            <div class="radio_button">-->
-            <!--                                <div class="dot"></div>-->
-            <!--                            </div>-->
-            <!--                            <div class="text-block-17">18pt</div>-->
-            <!--                        </div>-->
-            <!--                        <div class="checkmarks-block w-clearfix">-->
-            <!--                            <div class="radio_button">-->
-            <!--                                <div class="dot"></div>-->
-            <!--                            </div>-->
-            <!--                            <div class="text-block-17">24pt</div>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
         </div>
-    </div>
-</div>
-<div class="content-sect">
-    <div class="contraw">
-        <div></div>
-    </div>
-</div>
-<script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="js/webflow.js" type="text/javascript"></script>
-<!-- [if lte IE 9]>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+        <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript"
+                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="js/webflow.js" type="text/javascript"></script>
+        <!-- [if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script>
+        <![endif] -->
 </body>
 </html>

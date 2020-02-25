@@ -1,6 +1,106 @@
 let selectedPlatform, selectedTypeface, selectedFontFamily, selectedStyle, selectedWeight, selectedFontStyle,
     selectedSize, selectedStyleElement, mobileSwitch,
-    selectedLeading, selectedTracking, selectedScreen = "desktop";
+    selectedLeading, selectedTracking, selectedScreen = "desktop", selectedSizeText;
+
+function scrollToSelectedImage() {
+    (function (f) {
+        "use strict";
+        "function" === typeof define && define.amd ? define(["jquery"], f) : "undefined" !== typeof module && module.exports ? module.exports = f(require("jquery")) : f(jQuery)
+    })(function ($) {
+        "use strict";
+
+        function n(a) {
+            return !a.nodeName || -1 !== $.inArray(a.nodeName.toLowerCase(), ["iframe", "#document", "html", "body"])
+        }
+
+        function h(a) {
+            return $.isFunction(a) || $.isPlainObject(a) ? a : {top: a, left: a}
+        }
+
+        var p = $.scrollTo = function (a, d, b) {
+            return $(window).scrollTo(a, d, b)
+        };
+        p.defaults = {axis: "xy", duration: 0, limit: !0};
+        $.fn.scrollTo = function (a, d, b) {
+            "object" === typeof d && (b = d, d = 0);
+            "function" === typeof b && (b = {onAfter: b});
+            "max" === a && (a = 9E9);
+            b = $.extend({}, p.defaults, b);
+            d = d || b.duration;
+            var u = b.queue && 1 < b.axis.length;
+            u && (d /= 2);
+            b.offset = h(b.offset);
+            b.over = h(b.over);
+            return this.each(function () {
+                function k(a) {
+                    var k = $.extend({}, b, {
+                        queue: !0, duration: d, complete: a && function () {
+                            a.call(q, e, b)
+                        }
+                    });
+                    r.animate(f, k)
+                }
+
+                if (null !== a) {
+                    var l = n(this), q = l ? this.contentWindow || window : this, r = $(q), e = a, f = {}, t;
+                    switch (typeof e) {
+                        case "number":
+                        case "string":
+                            if (/^([+-]=?)?\d+(\.\d+)?(px|%)?$/.test(e)) {
+                                e = h(e);
+                                break
+                            }
+                            e = l ? $(e) : $(e, q);
+                        case "object":
+                            if (e.length === 0) return;
+                            if (e.is || e.style) t = (e = $(e)).offset()
+                    }
+                    var v = $.isFunction(b.offset) && b.offset(q, e) || b.offset;
+                    $.each(b.axis.split(""), function (a, c) {
+                        var d = "x" === c ? "Left" : "Top", m = d.toLowerCase(), g = "scroll" + d, h = r[g](),
+                            n = p.max(q, c);
+                        t ? (f[g] = t[m] + (l ? 0 : h - r.offset()[m]), b.margin && (f[g] -= parseInt(e.css("margin" + d), 10) || 0, f[g] -= parseInt(e.css("border" + d + "Width"), 10) || 0), f[g] += v[m] || 0, b.over[m] && (f[g] += e["x" === c ? "width" : "height"]() * b.over[m])) : (d = e[m], f[g] = d.slice && "%" === d.slice(-1) ? parseFloat(d) / 100 * n : d);
+                        b.limit && /^\d+$/.test(f[g]) && (f[g] = 0 >= f[g] ? 0 : Math.min(f[g], n));
+                        !a && 1 < b.axis.length && (h === f[g] ? f = {} : u && (k(b.onAfterFirst), f = {}))
+                    });
+                    k(b.onAfter)
+                }
+            })
+        };
+        p.max = function (a, d) {
+            var b = "x" === d ? "Width" : "Height", h = "scroll" + b;
+            if (!n(a)) return a[h] - $(a)[b.toLowerCase()]();
+            var b = "client" + b, k = a.ownerDocument || a.document, l = k.documentElement, k = k.body;
+            return Math.max(l[h], k[h]) - Math.min(l[b], k[b])
+        };
+        $.Tween.propHooks.scrollLeft = $.Tween.propHooks.scrollTop = {
+            get: function (a) {
+                return $(a.elem)[a.prop]()
+            }, set: function (a) {
+                var d = this.get(a);
+                if (a.options.interrupt && a._last && a._last !== d) return $(a.elem).stop();
+                var b = Math.round(a.now);
+                d !== b && ($(a.elem)[a.prop](b), a._last = this.get(a))
+            }
+        };
+        return p
+    });
+
+    let imageToScrollTo;
+    if (selectedSizeText.includes("Master") || (selectedScreen === "mobile" && selectedSizeText.includes("Heading"))) {
+        imageToScrollTo = `${selectedPlatform}-${selectedScreen}-${1}`;
+    } else if (selectedSizeText.includes("Module")) {
+        imageToScrollTo = `#${selectedPlatform}-${selectedScreen}-${3}`;
+    } else if (selectedSizeText.includes("CAPS") || (selectedScreen === "mobile" && selectedSizeText.includes("Nav"))) {
+        imageToScrollTo = `#${selectedPlatform}-${selectedScreen}-${2}`;
+    } else if (selectedSizeText.includes("Paragraph")) {
+        imageToScrollTo = `#${selectedPlatform}-${selectedScreen}-${4}`;
+    } else if (selectedSizeText.includes("Navigational")) {
+        imageToScrollTo = `#${selectedPlatform}-${selectedScreen}-${5}`;
+    } else imageToScrollTo = `#placeholder`;
+    $('.sample-page-wrapper').scrollTo(imageToScrollTo);
+}
+
 
 function toggleClasses(htmlEl, className1, className2) {
     if (htmlEl.classList.contains(className1))
@@ -20,7 +120,7 @@ function selectPalette(paletteElement) {
         let $paletteSelector = $(".palette-selector");
         removeActive($paletteSelector);
         toggleClasses(paletteElement, "active", "passive");
-        $("#size-selector, #style-selector, #typeface-selector, #specs, #sample-design").remove();
+        $("#size-selector, #style-selector, #typeface-selector, #specs, #sample-design, .sample-image").remove();
         selectedStyleElement = null;
         selectedScreen = "desktop";
 
@@ -133,11 +233,8 @@ function selectStyle(styleElement) {
         let fullStyle = typesetting[selectedPlatform][selectedTypeface][selectedStyle][selectedScreen][sizeList[i]];
 
         sizeHtml += `<div class="typeface-selector-result selector passive" onclick="selectSize(this)">
-    <div style="font-size: ${fullStyle.size}; line-height: ${fullStyle.leading}; letter-spacing: ${fullStyle.tracking / 1000}em"
-         class="text-block-26 size-block ${sizeList[i]}">
-        ${sizeList[i]}
-    </div>
-</div>`
+        <div style="font-size: ${fullStyle.size}; line-height: ${fullStyle.leading}; letter-spacing: ${fullStyle.tracking / 1000}em"
+         class="text-block-26 size-block ${sizeList[i]}">${sizeList[i]}</div></div>`;
     }
     sizeHtml += `</div></div>`;
     if (!selectedStyleElement) $previousSelector.after($(sizeHtml).hide());
@@ -154,7 +251,15 @@ function selectStyle(styleElement) {
 }
 
 function selectSize(sizeElement) {
-    let selectedSizeText = sizeElement.innerText;
+
+    // jQuery.fn.scrollTo = function (elem, speed) {
+    //     $(this).animate({
+    //         scrollTop: $(this).scrollTop() - $(this).offset().top + $(elem).offset().top
+    //     }, speed === undefined ? 1000 : speed);
+    //     return this;
+    // };
+
+    selectedSizeText = sizeElement.innerText;
     let fullStyle = typesetting[selectedPlatform][selectedTypeface][selectedStyle][selectedScreen][selectedSizeText];
 
     selectedSize = fullStyle.size;
@@ -174,181 +279,74 @@ function selectSize(sizeElement) {
                 </div>
     `));
 
-    let sampleImages = ``, numberOfImages = 4;
-// <div id="sample-design">
-// <div id="spinner">Loading...</div><div id="carousel">`,
+    if ($(".sample-image").length === 0) {
 
-    if (selectedScreen === "desktop" && selectedPlatform === "MBUSA") numberOfImages = 5;
+        let sampleImages = ``, numberOfImages = 4, outerWidth = $(`.design-example-section`).outerWidth();
 
-    for (let i = 1; i <= numberOfImages; i++) {
-        sampleImages += `<img width=${$(`.design-example-section`).outerWidth()} class="sample-image" src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${i}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${i}">`
+        if (selectedScreen === "desktop" && selectedPlatform === "MBUSA") numberOfImages = 5;
+
+        for (let i = 1; i <= numberOfImages; i++) {
+            sampleImages += `<img src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${i}.jpg' alt=""
+                              id="${selectedPlatform}-${selectedScreen}-${i}" class="sample-image">`
+        }
+        sampleImages += `<img class="sample-image" src='images/Screens/Mercedes-Benz-Logo.jpg' alt="" id="placeholder">`;
+        console.log(sampleImages);
+
+        let $container = $('.sample-page-wrapper');
+        $container.css("max-width", $("#design-sample-header").css("width"));
+        $container.append($(sampleImages));
     }
-    console.log(sampleImages);
 
-    // let sampleImage = `<img width=${$(`.design-example-section`).outerWidth()} class="sample-image" `;
+    if ($(".sample-image").length) {
+        console.log("right before");
+        scrollToSelectedImage();
+        console.log("right after");
+    }
+    // let imageToScrollTo;
+    // if (selectedSizeText.includes("Master") || (selectedScreen === "mobile" && selectedSizeText.includes("Heading"))) {
+    //     imageToScrollTo = `${selectedPlatform}-${selectedScreen}-${1}`;
+    // } else if (selectedSizeText.includes("Module")) {
+    //     imageToScrollTo = `#${selectedPlatform}-${selectedScreen}-${3}`;
+    // } else if (selectedSizeText.includes("CAPS") || (selectedScreen === "mobile" && selectedSizeText.includes("Nav"))) {
+    //     imageToScrollTo = `#${selectedPlatform}-${selectedScreen}-${2}`;
+    // } else if (selectedSizeText.includes("Paragraph")) {
+    //     imageToScrollTo = `#${selectedPlatform}-${selectedScreen}-${4}`;
+    // } else if (selectedSizeText.includes("Navigational")) {
+    //     imageToScrollTo = `#${selectedPlatform}-${selectedScreen}-${5}`;
+    // } else imageToScrollTo = `#placeholder`;
     // try {
-    //     if (selectedSizeText.includes("Master") || (selectedScreen === "mobile" && selectedSizeText.includes("Heading"))) {
-    //         sampleImage += `src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${1}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${1}">`;
-    //     } else if (selectedSizeText.includes("Module")) {
-    //         sampleImage += `src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${3}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${3}">`;
-    //     } else if (selectedSizeText.includes("CAPS") || (selectedScreen === "mobile" && selectedSizeText.includes("Nav"))) {
-    //         sampleImage += `src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${2}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${2}">`;
-    //     } else if (selectedSizeText.includes("Paragraph")) {
-    //         sampleImage += `src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${4}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${4}">`;
-    //     } else if (selectedSizeText.includes("Navigational")) {
-    //         sampleImage += `src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${5}.jpg' alt="" id="${selectedPlatform}-${selectedScreen}-${5}">`;
-    //     } else sampleImage += `src='images/Screens/Mercedes-Benz-Logo.jpg' alt="" id="placeholder">`;
+    //     // $container.scrollTo(imageToScrollTo);
+    //     // let scroll =$(imageToScrollTo)[0].offsetTop;
+    //     $container.scrollTo(imageToScrollTo);
     // } catch {
-    //     sampleImage += `src='images/Screens/Mercedes-Benz-Logo.jpg' alt="" id="placeholder">`;
-    //     console.log("No image yet");
+    //     console.log("fail");
+    //     // console.log("$(\"#placeholder\")", $("#placeholder"));
+    //     // let scrollTop = $("#placeholder").offset().top;
+    //     // $container.scrollTop(scrollTop);
+    //     // console.log("No image yet");
     // }
 
-    let $container = $('.sample-page-wrapper');
-    $container.after($(sampleImages));
-    let $scrollTo = $('#MBUSA-desktop-3');
 
-    $container.animate({
-        scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop()
-    });
+    // let $scrollTo = $('#MBUSA-desktop-3');
 
 
     // $("#sample-design").remove();
 
-//     let $sampleDesign = $(`
-// <div class="sample-page-wrapper" id="sample-design">
-//     <div class="line-pointer"></div>
-//     <div id="33" class="div-block-75">
-//     ${sampleImage}
-//     </div>
-// </div>
-// `);
-
-    //
-    // $(".sample-image").remove();
-    // $("#design-sample-header").after($(sampleImage).hide());
-    // $(".sample-image").fadeIn(400);
-
-
-    // $('.design-example-section').css("height", $("#design-sample-header").first().css("height"));
 
     console.log("selectedPlatform: ", selectedPlatform,
-        "selectedFontFamily", selectedFontFamily,
-        "selectedWeight", selectedWeight,
-        "selectedFontStyle", selectedFontStyle,
-        "selectedSize", selectedSize,
-        "selectedLeading", selectedLeading,
-        "selectedTracking", selectedTracking,
-        "selectedScreen", selectedScreen)
+        "selectedFontFamily: ", selectedFontFamily,
+        "selectedWeight: ", selectedWeight,
+        "selectedFontStyle: ", selectedFontStyle,
+        "selectedSize: ", selectedSize,
+        "selectedLeading: ", selectedLeading,
+        "selectedTracking: ", selectedTracking,
+        "selectedScreen: ", selectedScreen)
     ;
 }
 
 function toggleMobile(checkBox) {
     selectedScreen = checkBox.checked ? "mobile" : "desktop";
     mobileSwitch = checkBox;
+    $("#sample-design, .sample-image").remove();
     selectStyle(selectedStyleElement);
-
-}
-
-function loadSamples() {
-
-
-//     let Carousel = {
-//         width: $(`.design-example-section`).outerWidth(),     // Images are forced into a width of this many pixels.
-//         numVisible: 2,  // The number of images visible at once.
-//         duration: 600,  // Animation duration in milliseconds.
-//         padding: 2      // Vertical padding around each image, in pixels.
-//     };
-//
-//     function rotateForward() {
-//         let carousel = Carousel.carousel,
-//             children = carousel.children,
-//             firstChild = children[0],
-//             lastChild = children[children.length - 1];
-//         carousel.insertBefore(lastChild, firstChild);
-//     }
-//
-//     function rotateBackward() {
-//         let carousel = Carousel.carousel,
-//             children = carousel.children,
-//             firstChild = children[0],
-//             lastChild = children[children.length - 1];
-//         carousel.insertBefore(firstChild, lastChild.nextSibling);
-//     }
-//
-//     function animate(begin, end, finalTask) {
-//         let wrapper = Carousel.wrapper,
-//             carousel = Carousel.carousel,
-//             change = end - begin,
-//             duration = Carousel.duration,
-//             startTime = Date.now();
-//         carousel.style.top = begin + 'px';
-//         let animateInterval = window.setInterval(function () {
-//             let t = Date.now() - startTime;
-//             if (t >= duration) {
-//                 window.clearInterval(animateInterval);
-//                 finalTask();
-//                 return;
-//             }
-//             t /= (duration / 2);
-//             let top = begin + (t < 1 ? change / 2 * Math.pow(t, 3) :
-//                 change / 2 * (Math.pow(t - 2, 3) + 2));
-//             carousel.style.top = top + 'px';
-//         }, 1000 / 60);
-//     }
-//
-//     document.getElementById('spinner').style.display = 'none';
-//     let carousel = Carousel.carousel = document.getElementById('carousel'),
-//         images = carousel.getElementsByTagName('img'),
-//         numImages = images.length,
-//         imageWidth = Carousel.width,
-//         aspectRatio = images[0].width / images[0].height,
-//         imageHeight = imageWidth / aspectRatio,
-//         padding = Carousel.padding,
-//         rowHeight = Carousel.rowHeight = imageHeight + 2 * padding;
-//     carousel.style.width = imageWidth + 'px';
-//     for (let i = 0; i < numImages; ++i) {
-//         let image = images[i],
-//             frame = document.createElement('div');
-//         frame.className = 'pictureFrame';
-//         let aspectRatio = image.offsetWidth / image.offsetHeight;
-//         image.style.width = frame.style.width = imageWidth + 'px';
-//         image.style.height = imageHeight + 'px';
-//         image.style.paddingTop = padding + 'px';
-//         image.style.paddingBottom = padding + 'px';
-//         frame.style.height = rowHeight + 'px';
-//         carousel.insertBefore(frame, image);
-//         frame.appendChild(image);
-//     }
-//     Carousel.rowHeight = carousel.getElementsByTagName('div')[0].offsetHeight;
-//     carousel.style.height = Carousel.numVisible * Carousel.rowHeight + 'px';
-//     carousel.style.visibility = 'visible';
-//     let wrapper = Carousel.wrapper = document.createElement('div');
-//     wrapper.id = 'carouselWrapper';
-//     wrapper.style.width = carousel.offsetWidth + 'px';
-//     wrapper.style.height = carousel.offsetHeight + 'px';
-//     carousel.parentNode.insertBefore(wrapper, carousel);
-//     wrapper.appendChild(carousel);
-//     // let prevButton = document.getElementById('prev'),
-//     //     nextButton = document.getElementById('next');
-//     // prevButton.onclick = function () {
-//     //     prevButton.disabled = nextButton.disabled = true;
-//     //     rotateForward();
-//     //     animate(-Carousel.rowHeight, 0, function () {
-//     //         carousel.style.top = '0';
-//     //         prevButton.disabled = nextButton.disabled = false;
-//     //     });
-//     // };
-//     // nextButton.onclick = gotoNext;
-//
-//     $(".typeface-selector-result").click(gotoNext);
-//
-//
-//     function gotoNext() {
-//         // prevButton.disabled = nextButton.disabled = true;
-//         animate(0, -Carousel.rowHeight, function () {
-//             rotateBackward();
-//             carousel.style.top = '0';
-//             // prevButton.disabled = nextButton.disabled = false;
-//         });
-//     }
 }
