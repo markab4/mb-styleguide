@@ -1,5 +1,5 @@
 function copyStringToClipboard(str) {
-    if (str.includes("#")) str = str.substring(str.indexOf("#")).trim();
+    if (str.includes("#")) str = str.substring(str.indexOf("#")+1).trim();
     // Create new element
     let el = document.createElement('textarea');
     // Set value (string to be copied)
@@ -17,19 +17,6 @@ function copyStringToClipboard(str) {
 }
 
 let selectedFg, selectedBg, selectedPlatform;
-
-function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
-}
-
-function getRandomColor() {
-    let letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
 
 function toggleClasses(htmlEl, className1, className2) {
     if (htmlEl.classList.contains(className1))
@@ -61,8 +48,6 @@ function selectPalette(paletteElement) {
 
         let $platforms = $("#platforms");
         let $fgColor = $(".fg-color");
-        // $fgColor.hide(400);
-        // $(".bg-color").hide(400);
         $fgColor.remove();
         $(".bg-color").remove();
 

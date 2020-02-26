@@ -86,19 +86,8 @@ function scrollToSelectedImage() {
         return p
     });
 
-    let imageToScrollTo;
-    if (selectedSizeText.includes("Master") || (selectedScreen === "mobile" && selectedSizeText.includes("Heading"))) {
-        imageToScrollTo = `${selectedPlatform}-${selectedScreen}-${1}`;
-    } else if (selectedSizeText.includes("Module")) {
-        imageToScrollTo = `#${selectedPlatform}-${selectedScreen}-${3}`;
-    } else if (selectedSizeText.includes("CAPS") || (selectedScreen === "mobile" && selectedSizeText.includes("Nav"))) {
-        imageToScrollTo = `#${selectedPlatform}-${selectedScreen}-${2}`;
-    } else if (selectedSizeText.includes("Paragraph")) {
-        imageToScrollTo = `#${selectedPlatform}-${selectedScreen}-${4}`;
-    } else if (selectedSizeText.includes("Navigational")) {
-        imageToScrollTo = `#${selectedPlatform}-${selectedScreen}-${5}`;
-    } else imageToScrollTo = `#placeholder`;
-    $('.sample-page-wrapper').scrollTo(imageToScrollTo);
+    let imageToScrollTo = typesetting[selectedPlatform][selectedTypeface][selectedStyle][selectedScreen][selectedSizeText].image;
+    $('.sample-page-wrapper').scrollTo(`#${imageToScrollTo.slice(57, imageToScrollTo.indexOf('%'))}`);
 }
 
 
@@ -246,19 +235,10 @@ function selectStyle(styleElement) {
     });
     $('#size-selector').show(400);
 
-
     selectedStyleElement = styleElement;
 }
 
 function selectSize(sizeElement) {
-
-    // jQuery.fn.scrollTo = function (elem, speed) {
-    //     $(this).animate({
-    //         scrollTop: $(this).scrollTop() - $(this).offset().top + $(elem).offset().top
-    //     }, speed === undefined ? 1000 : speed);
-    //     return this;
-    // };
-
     selectedSizeText = sizeElement.innerText;
     let fullStyle = typesetting[selectedPlatform][selectedTypeface][selectedStyle][selectedScreen][selectedSizeText];
 
@@ -280,68 +260,17 @@ function selectSize(sizeElement) {
     `));
 
     if ($(".sample-image").length === 0) {
+        let sampleImages = ``, outerWidth = $(`.design-example-section`).outerWidth();
 
-        let sampleImages = ``, numberOfImages = 4, outerWidth = $(`.design-example-section`).outerWidth();
-
-        if (selectedScreen === "desktop" && selectedPlatform === "MBUSA") numberOfImages = 5;
-
-        for (let i = 1; i <= numberOfImages; i++) {
-            sampleImages += `<img src='images/Screens/${selectedPlatform}-${selectedScreen}-screens/${selectedPlatform}-${selectedScreen}-${i}.jpg' alt=""
-                              id="${selectedPlatform}-${selectedScreen}-${i}" class="sample-image">`
+        let images = imageAssets[selectedPlatform][selectedScreen];
+        for (let i = 0; i < images.length; i++) {
+            sampleImages += `<img src='${images[i]}' alt="sample-image" id="${images[i].slice(57, images[i].indexOf('%'))}" class="sample-image">`
         }
-        sampleImages += `<img class="sample-image" src='images/Screens/Mercedes-Benz-Logo.jpg' alt="" id="placeholder">`;
-        console.log(sampleImages);
-
         let $container = $('.sample-page-wrapper');
         $container.css("max-width", $("#design-sample-header").css("width"));
         $container.append($(sampleImages));
     }
-
-    if ($(".sample-image").length) {
-        console.log("right before");
-        scrollToSelectedImage();
-        console.log("right after");
-    }
-    // let imageToScrollTo;
-    // if (selectedSizeText.includes("Master") || (selectedScreen === "mobile" && selectedSizeText.includes("Heading"))) {
-    //     imageToScrollTo = `${selectedPlatform}-${selectedScreen}-${1}`;
-    // } else if (selectedSizeText.includes("Module")) {
-    //     imageToScrollTo = `#${selectedPlatform}-${selectedScreen}-${3}`;
-    // } else if (selectedSizeText.includes("CAPS") || (selectedScreen === "mobile" && selectedSizeText.includes("Nav"))) {
-    //     imageToScrollTo = `#${selectedPlatform}-${selectedScreen}-${2}`;
-    // } else if (selectedSizeText.includes("Paragraph")) {
-    //     imageToScrollTo = `#${selectedPlatform}-${selectedScreen}-${4}`;
-    // } else if (selectedSizeText.includes("Navigational")) {
-    //     imageToScrollTo = `#${selectedPlatform}-${selectedScreen}-${5}`;
-    // } else imageToScrollTo = `#placeholder`;
-    // try {
-    //     // $container.scrollTo(imageToScrollTo);
-    //     // let scroll =$(imageToScrollTo)[0].offsetTop;
-    //     $container.scrollTo(imageToScrollTo);
-    // } catch {
-    //     console.log("fail");
-    //     // console.log("$(\"#placeholder\")", $("#placeholder"));
-    //     // let scrollTop = $("#placeholder").offset().top;
-    //     // $container.scrollTop(scrollTop);
-    //     // console.log("No image yet");
-    // }
-
-
-    // let $scrollTo = $('#MBUSA-desktop-3');
-
-
-    // $("#sample-design").remove();
-
-
-    console.log("selectedPlatform: ", selectedPlatform,
-        "selectedFontFamily: ", selectedFontFamily,
-        "selectedWeight: ", selectedWeight,
-        "selectedFontStyle: ", selectedFontStyle,
-        "selectedSize: ", selectedSize,
-        "selectedLeading: ", selectedLeading,
-        "selectedTracking: ", selectedTracking,
-        "selectedScreen: ", selectedScreen)
-    ;
+    scrollToSelectedImage();
 }
 
 function toggleMobile(checkBox) {
