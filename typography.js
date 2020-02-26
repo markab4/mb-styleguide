@@ -87,7 +87,11 @@ function scrollToSelectedImage() {
     });
 
     let imageToScrollTo = typesetting[selectedPlatform][selectedTypeface][selectedStyle][selectedScreen][selectedSizeText].image;
-    $('.sample-page-wrapper').scrollTo(`#${imageToScrollTo.slice(57, imageToScrollTo.indexOf('%'))}`);
+    try {
+        $('.sample-page-wrapper').scrollTo(`#${imageToScrollTo.slice(57, imageToScrollTo.indexOf('%'))}`);
+    } catch {
+        console.log(`${selectedSizeText} on ${selectedPlatform} does not have any design samples currently.`);
+    }
 }
 
 
@@ -158,6 +162,7 @@ function selectTypeface(typefaceElement) {
     $("#size-selector, #style-selector, #specs, #sample-design").remove();
     selectedStyleElement = null;
     selectedScreen = "desktop";
+    if (mobileSwitch && selectedScreen === "desktop" && mobileSwitch.checked) $(".sample-image").remove();
 
     let stylesHtml = `<div class="type-selector-row _3" id="style-selector">
                     <div class="typesel-header">
@@ -192,6 +197,8 @@ function selectStyle(styleElement) {
     styleElement.classList.add("active");
 
     $("#size-blocks, #specs, #sample-design").remove();
+    if (mobileSwitch && selectedScreen === "desktop" && mobileSwitch.checked) $(".sample-image").remove();
+
 
     selectedStyle = styleElement.innerText;
 
