@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Thu Feb 27 2020 18:41:48 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Thu Feb 27 2020 20:13:55 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="5e2f577194e2db77aa82d08e" data-wf-site="5dd45997b98acbf1482572e4">
 <head>
   <meta charset="utf-8">
@@ -64,7 +64,7 @@
         }
         .type-selector-module,
         .font-selector-module {
-          background-image: url('./images/Seamless_Stripe.svg');
+          background-image: url('https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e385a9406b72d64ed0376e6_Seamless_Stripe.svg');
         }
         a.text-block-26 {
           color: inherit;
@@ -871,106 +871,47 @@
         <div class="call-out">Typeface usage selector</div>
         <div class="body-copy">We have designed a filter system to help designer and developer quickly select typeface usage in work. Currently Mercedes-Benz Digital Language has three main sets. Start by selecting your platform and typeface.</div>
       </div>
-      <div>
-        <div class="type-selector-module">
-          <div class="type-selector-row _1">
-            <div class="typesel-header">
-              <div class="greyline"></div>
-              <div class="corpo20px">Platform</div>
-            </div>
-            <div class="div-block-76">
-              <div class="palette-selector active">
-                <div class="coprobold">Common</div>
+      <div class="w-embed">
+        <div>
+          <div class="type-selector-module" id="type-selector">
+            <div class="type-selector-row _1">
+              <div class="typesel-header">
+                <div class="greyline"></div>
+                <div class="corpo20px">Platform</div>
               </div>
-              <div class="palette-selector passive">
-                <div class="coprobold">AMG</div>
-              </div>
-              <div class="palette-selector passive">
-                <div class="coprobold">MBUSA+VAN</div>
-              </div>
-              <div class="palette-selector passive">
-                <div class="coprobold">Common</div>
-              </div>
-            </div>
-          </div>
-          <div class="type-selector-row _3">
-            <div class="typesel-header">
-              <div class="greyline"></div>
-              <div class="corpo20px">Typeface</div>
-            </div>
-            <div class="typeface-selector">
-              <div class="text-block-18">Corporate A</div>
-            </div>
-            <div class="typeface-selector">
-              <div class="text-block-19">CorpoS</div>
-            </div>
-            <div class="typeface-selector">
-              <div class="text-block-arial">Arial</div>
-            </div>
-          </div>
-          <div class="type-selector-row _3">
-            <div class="typesel-header">
-              <div class="greyline"></div>
-              <div class="corpo20px">Style</div>
-            </div>
-            <div class="typeface-selector">
-              <div class="text-block-20">Regular</div>
-            </div>
-            <div class="typeface-selector">
-              <div class="text-block-21">Italic</div>
-            </div>
-            <div class="typeface-selector">
-              <div class="text-block-2-bold">Bold</div>
-            </div>
-          </div>
-          <div class="type-selector-row _2">
-            <div class="typesel-header-with-toggle">
-              <div class="greyline"></div>
-              <div class="corpo20px">Size</div>
-              <div class="div-block-58">
-                <div class="toggle _1">
-                  <div class="toggle-dot"></div>
+              <div class="div-block-76">
+                <div class="palette-selector selector passive" onclick="selectPalette(this)">
+                  <div class="coprobold">MBUSA</div>
                 </div>
-                <div class="toggle-image"><img src="images/Mobile.svg" alt="" class="image-28"></div>
-              </div>
-            </div>
-            <div class="div-block-76-selectors">
-              <div class="typeface-selector-result active">
-                <div>
-                  <div class="text-block-23">Master heading</div>
+                <div class="palette-selector selector passive" onclick="selectPalette(this)">
+                  <div class="coprobold">AMG</div>
                 </div>
-              </div>
-              <div class="typeface-selector-result passive">
-                <div class="text-block-25">Module heading</div>
-              </div>
-              <div class="typeface-selector-result passive">
-                <div class="text-block-26">Paragraph heading</div>
-              </div>
-              <div class="typeface-selector-result passive">
-                <div class="text-block-26">Paragraph heading</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="design-example-section">
-          <div class="typesel-header">
-            <div class="div-block-78">
-              <div class="corpo20px">Design sample</div>
-              <div class="div-block-80">
-                <div class="div-block-79">
-                  <div class="text-block-31">size <span class="specs">32</span></div>
-                  <div class="text-block-31">leading <span class="specs">56</span></div>
-                  <div class="text-block-31">tracking <span class="specs">-10</span></div>
+                <div class="palette-selector selector passive" onclick="selectPalette(this)">
+                  <div class="coprobold">MB VANS</div>
+                </div>
+                <div class="palette-selector selector passive" onclick="selectPalette(this)">
+                  <div class="coprobold">Freightliner</div>
+                </div>
+                <div class="palette-selector selector passive" onclick="selectPalette(this)">
+                  <div class="coprobold">MAYBACH</div>
+                </div>
+                <div class="palette-selector selector passive" onclick="selectPalette(this)">
+                  <div class="coprobold">EQ</div>
                 </div>
               </div>
             </div>
-            <div class="greyline"></div>
           </div>
-          <div class="sample-page-wrapper">
-            <div class="line-pointer"></div>
-            <div id="33" class="div-block-75"><img src="images/Image-682x.png" srcset="images/Image-682x-p-500.png 500w, images/Image-682x-p-800.png 800w, images/Image-682x-p-1080.png 1080w, images/Image-682x-p-1600.png 1600w, images/Image-682x.png 2000w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 953px, 96vw" alt="" class="image-29"></div>
-            <div id="11"><img src="images/Image-692x.png" srcset="images/Image-692x-p-500.png 500w, images/Image-692x-p-800.png 800w, images/Image-692x-p-1080.png 1080w, images/Image-692x-p-1600.png 1600w, images/Image-692x.png 2000w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 953px, 96vw" alt=""></div>
-            <div id="22"><img src="images/Image-702x.png" srcset="images/Image-702x-p-500.png 500w, images/Image-702x-p-800.png 800w, images/Image-702x-p-1080.png 1080w, images/Image-702x-p-1600.png 1600w, images/Image-702x.png 2000w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 953px, 96vw" alt=""></div>
+          <div class="design-example-section">
+            <div class="typesel-header" id="design-sample-header">
+              <div class="div-block-78">
+                <div class="corpo20px">Design sample</div>
+                <div class="div-block-80" id="specs-wrapper">
+                </div>
+              </div>
+              <div class="greyline"></div>
+            </div>
+            <div class="sample-page-wrapper">
+            </div>
           </div>
         </div>
       </div>

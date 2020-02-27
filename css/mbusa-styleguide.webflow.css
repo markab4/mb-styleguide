@@ -2265,7 +2265,7 @@ body {
 }
 
 .div-block-6 {
-  position: relative;
+  position: absolute;
   left: 0%;
   top: 0%;
   right: 0%;
@@ -2697,6 +2697,7 @@ body {
 }
 
 .black-block-2._2 {
+  position: relative;
   height: 80px;
 }
 
@@ -2710,17 +2711,16 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 280px;
   padding: 0px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   background-color: #fff;
 }
 
@@ -3946,7 +3946,8 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 130px;
+  height: 250px;
+  padding-top: 60px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -8121,6 +8122,10 @@ body {
 
 .logo-description.padded {
   padding-left: 48px;
+}
+
+.logo-description.ctas {
+  margin-bottom: 40px;
 }
 
 .image-22 {
