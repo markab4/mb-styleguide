@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<!--  This site was created in Webflow. http://www.webflow.com  -->
+<!--  Last Published: Thu Feb 27 2020 20:13:55 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="5e5698153efcbc5ad9ce8de3" data-wf-site="5dd45997b98acbf1482572e4">
+<head>
+  <meta charset="utf-8">
+  <title>Molecule</title>
+  <meta content="Molecule" property="og:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/mbusa-styleguide.webflow.css" rel="stylesheet" type="text/css">
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">
+      ! function(o, c) {
+        var n = c.documentElement,
+          t = " w-mod-";
+        n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+      }(window, document);
+    </script>
+  <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+</head>
+<body data-w-id="5dd83650b66d23d92aa28df9" class="body-2">
+  <a href="index.html" class="logo w-inline-block">
+    <div class="logomb"><img src="images/Logo-png.png" width="32" alt=""></div>
+    <div class="logo-text">
+      <div class="text-block-10">MBUSA Digital Design Language</div>
+    </div>
+  </a>
+  <div class="right-navigation">
+    <div class="saerch-wrapper">
+      <form action="/search" class="search w-clearfix w-form"><input type="search" maxlength="256" name="query" required="" id="search" class="search-input w-input"><a href="#" class="link-block-3 w-inline-block"><img src="images/ion-ios-search-strong---Ionicons.svg" width="25" alt=""></a><input type="submit" class="search-button w-button"></form>
+    </div>
+    <div class="navigation-wrapper">
+      <a href="index.html" class="menu_link w-inline-block">
+        <div>Introduction</div>
+      </a>
+      <div class="menu_link_dropdown">
+        <a data-w-id="5d520115-5cb5-f1f3-11da-fd8e0b953652" href="#" class="menu_link w-inline-block">
+          <div>Foundation</div>
+        </a>
+        <div style="display:none" class="sublinks-wrapper_found _1">
+          <a href="logo.html" class="menu_sublink w-inline-block">
+            <div>Logo</div>
+          </a>
+          <a href="grid-main.html" class="menu_sublink w-inline-block">
+            <div>Grid</div>
+          </a>
+          <a href="typography.html" class="menu_sublink w-inline-block">
+            <div>Typography</div>
+          </a>
+          <a href="colors.html" class="menu_sublink w-inline-block">
+            <div>Color</div>
+          </a>
+          <a href="iconography.html" class="menu_sublink w-inline-block">
+            <div>Iconography</div>
+          </a>
+          <a href="photography.html" class="menu_sublink w-inline-block">
+            <div>Photography</div>
+          </a>
+        </div>
+      </div>
+      <div class="menu_link_dropdown">
+        <a data-w-id="5d520115-5cb5-f1f3-11da-fd8e0b953669" href="#" class="menu_link w-inline-block">
+          <div>Design components</div>
+        </a>
+        <div class="sublinks-wrapper_found _2">
+          <a href="introduction-to-2-atomic.html" class="menu_sublink w-inline-block">
+            <div>Introduction</div>
+          </a>
+          <a href="atoms.html" class="menu_sublink w-inline-block">
+            <div>Atoms</div>
+          </a>
+          <a href="molecules.html" class="menu_sublink w-inline-block w--current">
+            <div>Molecules</div>
+          </a>
+          <div class="sub_sublinks-wrapper">
+            <a href="#text-input" class="menu_sub_sublink w-inline-block">
+              <div>Text input</div>
+            </a>
+            <a href="#Dropdowns" class="menu_sub_sublink w-inline-block">
+              <div>Dropdown</div>
+            </a>
+            <a href="#date-dropdown" class="menu_sub_sublink w-inline-block">
+              <div>Date Dropdown</div>
+            </a>
+            <a href="#Textarea" class="menu_sub_sublink w-inline-block">
+              <div>Text Area</div>
+            </a>
+            <a href="#" class="menu_sub_sublink w-inline-block">
+              <div>Inputs</div>
+            </a>
+            <a href="#" class="menu_sub_sublink w-inline-block">
+              <div>Controls</div>
+            </a>
+            <a href="#" class="menu_sub_sublink w-inline-block">
+              <div>Tooltips</div>
+            </a>
+          </div>
+          <a href="organisms.html" class="menu_sublink w-inline-block">
+            <div>Organisms</div>
+          </a>
+          <a href="#" class="menu_sublink w-inline-block">
+            <div>Templates</div>
+          </a>
+          <a href="#" class="menu_sublink w-inline-block">
+            <div>Pages</div>
+          </a>
+        </div>
+      </div>
+      <a href="#" class="menu_link w-inline-block">
+        <div>Tools and Resources</div>
+      </a>
+      <a href="#" class="menu_link w-inline-block">
+        <div>Support</div>
+      </a>
+    </div>
+  </div>
+  <div class="hero-sect colors w-clearfix">
+    <div class="hero-block molecules">
+      <div class="cont-hero">
+        <div class="column-color w-row">
+          <div class="w-col w-col-3"></div>
+          <div class="w-col w-col-5">
+            <div data-w-id="398503fa-6e84-ad77-6fe5-bac7d4836c21" style="opacity:0" class="heading-wrapper">
+              <div class="header2">Molecules</div>
+              <div class="body-copy">In interfaces, molecules are relatively simple groups of UI elements functioning together as a unit. For example, a form label, search input, and button can join together to create a search form molecule.</div>
+            </div>
+          </div>
+          <div class="w-col w-col-4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-w-id="31c70ec6-254e-bc1d-5cba-7e18e2765602" class="content-sect">
+    <div class="contraw icons-section1">
+      <div class="cta-selector">
+        <div class="logo-description ctas">
+          <div class="call-out">Call to actions</div>
+          <div class="body-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit, sem sed dictum aliquet, risus metus egestas risus.</div>
+        </div>
+        <div class="type-selector-modul">
+          <div class="button-selector_side">
+            <div class="cta-type">
+              <div class="typesel-header-with-toggle">
+                <div class="greyline"></div>
+                <div class="corpo20px">Type</div>
+                <div class="div-block-58">
+                  <div class="toggle _1">
+                    <div class="toggle-dot"></div>
+                  </div>
+                  <div class="toggle-image"><img src="images/Mobile.svg" alt="" class="image-28"></div>
+                </div>
+              </div>
+              <div>
+                <div class="checkmarks-wrapper-vertical">
+                  <div class="checkmarks-block buttons_selector">
+                    <div class="div-block-53 w-clearfix">
+                      <div class="radio_button">
+                        <div class="dot"></div>
+                      </div>
+                      <div class="text-block-17">Button</div>
+                    </div>
+                  </div>
+                  <div class="checkmarks-block buttons_selector">
+                    <div class="div-block-53 w-clearfix">
+                      <div class="radio_button"></div>
+                      <div class="text-block-17">Text link</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cta-specs">
+              <div class="div-block-69">
+                <div class="buttonsel-header">
+                  <div class="greyline"></div>
+                  <div class="corpo20px black">Style</div>
+                </div>
+                <div class="checkmarks-wrapper-vertical">
+                  <div class="checkmarks-block buttons_selector">
+                    <div class="div-block-53 w-clearfix">
+                      <div class="radio_button">
+                        <div class="dot"></div>
+                      </div>
+                      <div class="text-block-17">Primary</div>
+                    </div>
+                  </div>
+                  <div class="checkmarks-block buttons_selector">
+                    <div class="div-block-53 w-clearfix">
+                      <div class="radio_button"></div>
+                      <div class="text-block-17">Secondary</div>
+                    </div>
+                  </div>
+                  <div class="checkmarks-block buttons_selector">
+                    <div class="div-block-53 w-clearfix">
+                      <div class="radio_button"></div>
+                      <div class="text-block-17">Secondary Alt</div>
+                    </div>
+                  </div>
+                  <div class="checkmarks-block buttons_selector">
+                    <div class="div-block-53 w-clearfix">
+                      <div class="radio_button"></div>
+                      <div class="text-block-17">Tertiary</div>
+                    </div>
+                  </div>
+                  <div class="checkmarks-block buttons_selector">
+                    <div class="div-block-53 w-clearfix">
+                      <div class="radio_button"></div>
+                      <div class="text-block-17">AMG</div>
+                    </div>
+                  </div>
+                  <div class="checkmarks-block buttons_selector">
+                    <div class="div-block-53 w-clearfix">
+                      <div class="radio_button"></div>
+                      <div class="text-block-17">Disabled</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="buttonsel-header">
+                  <div class="greyline"></div>
+                  <div class="corpo20px">Width</div>
+                </div>
+                <div class="checkmarks-wrapper-vertical">
+                  <div class="checkmarks-block buttons_selector w-clearfix">
+                    <div class="radio_button">
+                      <div class="dot"></div>
+                    </div>
+                    <div class="text-block-17">Default</div>
+                  </div>
+                  <div class="checkmarks-block buttons_selector w-clearfix">
+                    <div class="radio_button"></div>
+                    <div class="text-block-17">Full-width</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="div-block-66">
+            <div class="black-wrapper">
+              <div class="corpo20px white">Design sample<br></div>
+              <div class="greyline transp"></div>
+            </div>
+            <div class="cta-example-wrapper"><img src="images/Primary--text-link.jpg" srcset="images/Primary--text-link-p-500.jpeg 500w, images/Primary--text-link-p-800.jpeg 800w, images/Primary--text-link.jpg 1000w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 833.609375px, (max-width: 1190px) 84vw, 1000px" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div id="text-input" class="molecules-raws right">
+        <div id="w-node-2bbddb50dc27-d9ce8de3">
+          <div class="logo-description padded">
+            <div class="call-out">Text Input</div>
+            <div class="body-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit, sem sed dictum aliquet, risus metus egestas risus.</div><a href="#" class="button-with-icon w-button">Download the Asset</a></div>
+        </div>
+        <div id="w-node-2bbddb50dc2d-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Text input (Default)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/FORM-DISABLED-FILLED.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-d8589d00c294-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Text input (Disabled - Default)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/FORM-DISABLED-FILLED-Copy-4.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-4c75472ffd4c-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Text input (Focused before typing)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/FOCUSED-BT.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-0a613f38241a-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Text input (Disabled - Entered)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/FORM-DISABLED-FILLEDENTERED.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-b8cdd3665176-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black"> Text input (Focused - Typing)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/FOCUSWtooltip.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-6d72edc692af-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black"> Text input (Default with tooltip)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/INACTIVE.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-0f847c8773e3-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Text input (Entered)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/FORM-DISABLED-FILLED-Copy-2.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-902324db538b-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black"> Text input (Default with tooltip)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/FOCUSWtooltip.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-3f401409da07-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black"> Text input (Error)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/FORM-DISABLED-FILLED-Copy-3.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-022a5ee866c8-d9ce8de3" class="molecules-image-wrapper"></div>
+      </div>
+      <div id="Dropdowns" class="molrowsright">
+        <div id="w-node-bff7c20d20d5-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Dropdown (Default)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/DROPDOWN-DEFAULT.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-d6a5556fa52a-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Dropdown (Entered)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/DROPDOWN-ENTERED.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-9583b6db9e10-d9ce8de3">
+          <div class="logo-description padded">
+            <div class="call-out">Dropdowns</div>
+            <div class="body-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit, sem sed dictum aliquet, risus metus egestas risus.</div><a href="#" class="button-with-icon w-button">Download the Asset</a></div>
+        </div>
+        <div id="w-node-4e9450b24a9b-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Dropdown (Error)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/DROPDOWN-ERROR.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-319d7287e286-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Dropdown (With Tooltip)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/DROPDOWN-DEFAULT--WTooltip.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-93cdd7b46e66-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Dropdown (With Entered)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/DROPDOWN-ENTERED--W.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-308725daaaa0-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Dropdown (Drawer Opened)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/DROPDOWN-DRAWER-OPENED.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-fa8b8030e6ab-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Dropdown (Drawer Opened + Hover)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/DROPDOWN-DRAWER-OPENED--HOVER.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-ba75ac4e8808-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Dropdown (Drawer Opened + Hover + Entered)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/DROPDOWN-DRAWER-OPENED--ENTERED--HOVER.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-6baf9baaa751-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Dropdown (Drawer Opened + Hover + Entered)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/DROPDOWN-DRAWER-OPENED--Wtoolt.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-f814deccb716-d9ce8de3" class="molecules-section">
+          <div class="molecules-image-wrapper"></div>
+        </div>
+      </div>
+      <div id="date-dropdown" class="molecules-raws right">
+        <div id="w-node-5e427169a770-d9ce8de3">
+          <div class="logo-description padded">
+            <div class="call-out">Date Dropdown</div>
+            <div class="body-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit, sem sed dictum aliquet, risus metus egestas risus.</div><a href="#" class="button-with-icon w-button">Download the Asset</a></div>
+        </div>
+        <div id="w-node-5e427169a778-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Date Dropdown (Default)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/DATE-DROPDOWN-DEFAULT.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-5e427169a782-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Date Dropdown (Entered)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/DATE-DROPDOWN-ENTERED.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-5e427169a78c-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Date Dropdown (Drawer Opened)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/DATE-DROPDOWN-DRAWER-OPENED.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-6f26e4689300-d9ce8de3" class="molecules-image-wrapper"></div>
+      </div>
+      <div id="Textarea" class="molrowsright">
+        <div id="w-node-7e3f1787ad4c-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Textarea (Default)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/TEXTAREA-DEFAULT.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-7e3f1787ad56-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Textarea (Entered)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/TEXTAREA-ENTERED.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-7e3f1787ad60-d9ce8de3">
+          <div class="logo-description padded">
+            <div class="call-out">Textarea</div>
+            <div class="body-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit, sem sed dictum aliquet, risus metus egestas risus.</div><a href="https://publicis.invisionapp.com/dsm/publicis/mbdds/folder/components/5e28b6659aa51cbf8573c0e2" target="_blank" class="button-with-icon w-button">Download the Asset</a></div>
+        </div>
+        <div id="w-node-7e3f1787ad68-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Dropdown (Error)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/TEXTAREA-ERROR.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-7e3f1787ad72-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Textarea (Focused + typing)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/TEXTAREA-FOCUSED--TYPING.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-7e3f1787ad7c-d9ce8de3" class="molecules-section">
+          <div class="molecules-header">
+            <div class="corpo20px black">Dropdown (With Entered)</div><a href="#" class="w-inline-block"><img src="images/DL_blacksvg.svg" width="16" alt="" class="image-32"></a></div>
+          <div class="molecules-image-wrapper"><img src="images/TEXTAREA-DRAWER-DEFAULT.png" alt="">
+            <div class="additionannotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+        <div id="w-node-7e3f1787adae-d9ce8de3" class="molecules-section">
+          <div class="molecules-image-wrapper"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+</body>
+</html>
