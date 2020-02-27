@@ -267,7 +267,7 @@ function selectSize(sizeElement) {
     `));
 
     if ($(".sample-image").length === 0) {
-        let sampleImages = ``, outerWidth = $(`.design-example-section`).outerWidth();
+        let sampleImages = ``;
 
         let images = imageAssets[selectedPlatform][selectedScreen];
         for (let i = 0; i < images.length; i++) {
