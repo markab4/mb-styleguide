@@ -26,35 +26,32 @@ function switchDesignSamples() {
     selectedType = $("input[name='type']:checked").val();
     selectedStyle = $("input[name='style']:checked").val();
     selectedWidth = $("input[name='width']:checked").val();
-    console.log("selectedType:", selectedType, "\nselectedStyle:", selectedStyle, "\nselectedWidth:", selectedWidth);
 
     let imgSource;
 
     if (selectedType === "text-link") {
         // Bold link
-        if (selectedStyle === "bold-link") imgSource = "images/Bold link.jpg";
+        if (selectedStyle === "bold-link") imgSource = "https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e46c6301bee19ad1fc0e83c_Bold%20link.jpg";
         // Primary text link
-        else if (selectedStyle === "primary-link") imgSource = "images/Primary  text link.jpg";
+        else if (selectedStyle === "primary-link") imgSource = "https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e447715f4740e84431fbb5f_Primary%20%20text%20link.jpg";
         // Icon link
         else
         // if (selectedStyle === "icon-link")
-            imgSource = "images/Icon-Link.jpg";
+            imgSource = "https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e44766dce2bf2604f460247_Primary%20Link.jpg";
     } else {
         // Primary button
-        if (selectedStyle === "primary") imgSource = "images/Primary Button.jpg";
+        if (selectedStyle === "primary") imgSource = "https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e46c630c8bcef232379344b_Primary%20Button.jpg";
         // Secondary button
-        else if (selectedStyle === "secondary") imgSource = "images/Secondary Button.jpg";
+        else if (selectedStyle === "secondary") imgSource = "https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e447702fe671a3054a3e830_Secondary%20Button.jpg";
         // Secondary alternative
         else
         // if (selectedStyle === "secondary-alt")
-            imgSource = "images/Secondary Alternative.jpg";
+            imgSource = "https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e46c63207688fab1ae854ac_Secondary%20Alternative-p-800.jpeg";
     }
     $("#design-sample").remove();
 
     $(".cta-example-wrapper").append($(`<img id="design-sample" src="${imgSource}" alt="">`).hide());
     $("#design-sample").fadeIn(400);
-
-    console.log("imgSource", imgSource);
 }
 
 function initializeCtaOptions() {
@@ -62,7 +59,6 @@ function initializeCtaOptions() {
     selectedType = $("input[name='type']:checked").val();
     selectedStyle = $("input[name='style']:checked").val();
     selectedWidth = $("input[name='width']:checked").val();
-    console.log("selectedType:", selectedType, "\nselectedStyle:", selectedStyle, "\nselectedWidth:", selectedWidth);
 
     $(".cta-specs").remove();
     let $ctaSpecs;
@@ -203,4 +199,7 @@ function initializeCtaOptions() {
 
 document.addEventListener("DOMContentLoaded", function() {
     initializeCtaOptions();
+    let $toCopy = $(".colorsect, .black-block-2");
+    $toCopy.attr("onclick", "copyStringToClipboard(this.innerText)");
+    $toCopy.addClass("grab");
 });

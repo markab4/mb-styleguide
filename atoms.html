@@ -146,6 +146,14 @@
                         cursor: pointer;
                         margin-bottom: 0;
                     }
+
+                    .grab {
+                        cursor: grab;
+                    }
+                    .grab:active {
+                        opacity: .5;
+                    }
+
                 </style>
                 <div class="content-block white">
                     <div class="text-block-5">Page headline</div>
@@ -286,7 +294,9 @@
                                             <input type="checkbox" id="mobile-slider" onclick="switchDesignSamples()">
                                             <span class="slider round"></span>
                                         </label>
-                                        <div class="toggle-image"><img src="images/Mobile.svg" alt=""></div>
+                                        <div class="toggle-image"><img
+                                                src="https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e3db2fd884abc96179750e5_Mobile.svg"
+                                                alt=""></div>
                                     </div>
                                 </div>
                                 <div class="checkmarks-wrapper-vertical">
@@ -307,83 +317,11 @@
                                 </div>
                             </div>
                         </div>
-                        <!--                        <div class="cta-specs">-->
-                        <!--                            <div class="div-block-69">-->
-                        <!--                                <div class="buttonsel-header">-->
-                        <!--                                    <div class="greyline"></div>-->
-                        <!--                                    <div class="corpo20px black">Style</div>-->
-                        <!--                                </div>-->
-                        <!--                                <div class="checkmarks-wrapper-vertical">-->
-                        <!--                                    <div class="checkmarks-block buttons_selector">-->
-                        <!--                                        <div class="div-block-53 w-clearfix" onclick="initializeCtaOptions()">-->
-                        <!--                                            <input class="radio_button" checked type="radio" id="primary" name="style"-->
-                        <!--                                                   value="primary">-->
-                        <!--                                            <label class="radio_label" for="primary">Primary</label><br>-->
-                        <!--                                        </div>-->
-                        <!--                                    </div>-->
-                        <!--                                    <div class="checkmarks-block buttons_selector">-->
-                        <!--                                        <div class="div-block-53 w-clearfix" onclick="initializeCtaOptions()">-->
-                        <!--                                            <input class="radio_button" type="radio" id="secondary" name="style"-->
-                        <!--                                                   value="secondary">-->
-                        <!--                                            <label class="radio_label" for="secondary">Secondary</label><br>-->
-                        <!--                                        </div>-->
-                        <!--                                    </div>-->
-                        <!--                                    <div class="checkmarks-block buttons_selector">-->
-                        <!--                                        <div class="div-block-53 w-clearfix" onclick="initializeCtaOptions()">-->
-                        <!--                                            <input class="radio_button" type="radio" id="secondary-alt" name="style"-->
-                        <!--                                                   value="secondary-alt">-->
-                        <!--                                            <label class="radio_label" for="secondary-alt">Secondary Alt</label><br>-->
-                        <!--                                        </div>-->
-                        <!--                                    </div>-->
-                        <!--                                    <div class="checkmarks-block buttons_selector">-->
-                        <!--                                        <div class="div-block-53 w-clearfix" onclick="initializeCtaOptions()">-->
-                        <!--                                            <input class="radio_button" type="radio" id="tertiary" name="style"-->
-                        <!--                                                   value="tertiary">-->
-                        <!--                                            <label class="radio_label" for="tertiary">Tertiary</label><br>-->
-                        <!--                                        </div>-->
-                        <!--                                    </div>-->
-                        <!--                                    <div class="checkmarks-block buttons_selector">-->
-                        <!--                                        <div class="div-block-53 w-clearfix" onclick="initializeCtaOptions()">-->
-                        <!--                                            <input class="radio_button" type="radio" id="AMG" name="style"-->
-                        <!--                                                   value="AMG">-->
-                        <!--                                            <label class="radio_label" for="AMG">AMG</label><br>-->
-                        <!--                                        </div>-->
-                        <!--                                    </div>-->
-                        <!--                                    <div class="checkmarks-block buttons_selector">-->
-                        <!--                                        <div class="div-block-53 w-clearfix" onclick="initializeCtaOptions()">-->
-                        <!--                                            <input class="radio_button" type="radio" id="disabled" name="style"-->
-                        <!--                                                   value="disabled">-->
-                        <!--                                            <label class="radio_label" for="disabled">Disabled</label><br>-->
-                        <!--                                        </div>-->
-                        <!--                                    </div>-->
-                        <!--                                </div>-->
-                        <!--                            </div>-->
-                        <!--                            <div>-->
-                        <!--                                <div class="buttonsel-header">-->
-                        <!--                                    <div class="greyline"></div>-->
-                        <!--                                    <div class="corpo20px">Width</div>-->
-                        <!--                                </div>-->
-                        <!--                                <div class="checkmarks-wrapper-vertical">-->
-                        <!--                                    <div class="checkmarks-block buttons_selector w-clearfix">-->
-                        <!--                                        <input class="radio_button" checked type="radio" id="default" name="width"-->
-                        <!--                                               value="default">-->
-                        <!--                                        <label class="radio_label" for="default">Default</label><br>-->
-                        <!--                                    </div>-->
-                        <!--                                    <div class="checkmarks-block buttons_selector w-clearfix">-->
-                        <!--                                        <input class="radio_button" type="radio" id="wide" name="width"-->
-                        <!--                                               value="width">-->
-                        <!--                                        <label class="radio_label" for="wide">Wide</label><br>-->
-                        <!--                                    </div>-->
-                        <!--                                </div>-->
-                        <!--                            </div>-->
-                        <!--                        </div>-->
                     </div>
                     <div class="div-block-66">
                         <div class="black-wrapper">
-                            <div class="logos-header black">
-                                <div class="greyline transp"></div>
-                                <div class="corpo20px white">Design sample<br></div>
-                            </div>
+                            <div class="greyline transp"></div>
+                            <div class="corpo20px white">Design sample<br></div>
                         </div>
                         <div class="cta-example-wrapper"><img id="design-sample" src="images/Primary--text-link.jpg"
                                                               alt=""></div>
