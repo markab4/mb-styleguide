@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
 <!--  Last Published: Fri Feb 28 2020 16:22:51 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="5e2f577194e2dbe4a982d085" data-wf-site="5dd45997b98acbf1482572e4">
+<html data-wf-page="5e593470e4b5f5391acd16f5" data-wf-site="5dd45997b98acbf1482572e4">
 <head>
   <meta charset="utf-8">
   <title>Atoms</title>
@@ -293,7 +293,7 @@
           $ctaSpecs.show(400);
           switchDesignSamples(selectedType, selectedStyle, selectedWidth);
         }
-        document.addEventListener("DOMContentLoaded", function() {
+        $(function() {
           initializeCtaOptions();
         });
       </script>
@@ -423,36 +423,101 @@
           <div class="call-out">Call to Action</div>
           <div class="body-copy">Four primary colors of our brand</div>
         </div>
-      </div>
-      <div class="w-embed">
         <div class="cta-selector">
-          <div class="type-selector-modul" id="cta-selector-module">
+          <div class="type-selector-modul">
             <div class="button-selector_side">
               <div class="cta-type">
-                <div>
-                  <div class="typesel-header-with-toggle">
-                    <div class="greyline"></div>
-                    <div class="corpo20px black">Type</div>
-                    <div class="div-block-58">
-                      <label class="switch toggle _1">
-                                            <input type="checkbox" id="mobile-slider" onclick="switchDesignSamples()">
-                                            <span class="slider round"></span>
-                                        </label>
-                      <div class="toggle-image"><img src="images/Mobile.svg" alt=""></div>
+                <div class="typesel-header-with-toggle">
+                  <div class="greyline"></div>
+                  <div class="corpo20px">Type</div>
+                  <div class="div-block-58">
+                    <div class="toggle _1">
+                      <div class="toggle-dot"></div>
                     </div>
+                    <div class="toggle-image"><img src="images/Mobile.svg" alt="" class="image-28"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="checkmarks-wrapper-vertical">
+                    <div class="checkmarks-block buttons_selector">
+                      <div class="div-block-53 w-clearfix">
+                        <div class="radio_button">
+                          <div class="dot"></div>
+                        </div>
+                        <div class="text-block-17">Button</div>
+                      </div>
+                    </div>
+                    <div class="checkmarks-block buttons_selector">
+                      <div class="div-block-53 w-clearfix">
+                        <div class="radio_button"></div>
+                        <div class="text-block-17">Text link</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cta-specs">
+                <div class="div-block-69">
+                  <div class="buttonsel-header">
+                    <div class="greyline"></div>
+                    <div class="corpo20px black">Style</div>
                   </div>
                   <div class="checkmarks-wrapper-vertical">
                     <div class="checkmarks-block buttons_selector">
-                      <div class="div-block-53 w-clearfix" onclick="initializeCtaOptions()">
-                        <input class="radio_button" checked="" type="radio" id="button" name="type" value="button">
-                        <label class="radio_label" for="button">Button</label><br>
+                      <div class="div-block-53 w-clearfix">
+                        <div class="radio_button">
+                          <div class="dot"></div>
+                        </div>
+                        <div class="text-block-17">Primary</div>
                       </div>
                     </div>
                     <div class="checkmarks-block buttons_selector">
-                      <div class="div-block-53 w-clearfix" onclick="initializeCtaOptions()">
-                        <input class="radio_button" type="radio" id="text-link" name="type" value="text-link">
-                        <label class="radio_label" for="text-link">Text Link</label><br>
+                      <div class="div-block-53 w-clearfix">
+                        <div class="radio_button"></div>
+                        <div class="text-block-17">Secondary</div>
                       </div>
+                    </div>
+                    <div class="checkmarks-block buttons_selector">
+                      <div class="div-block-53 w-clearfix">
+                        <div class="radio_button"></div>
+                        <div class="text-block-17">Secondary Alt</div>
+                      </div>
+                    </div>
+                    <div class="checkmarks-block buttons_selector">
+                      <div class="div-block-53 w-clearfix">
+                        <div class="radio_button"></div>
+                        <div class="text-block-17">Tertiary</div>
+                      </div>
+                    </div>
+                    <div class="checkmarks-block buttons_selector">
+                      <div class="div-block-53 w-clearfix">
+                        <div class="radio_button"></div>
+                        <div class="text-block-17">AMG</div>
+                      </div>
+                    </div>
+                    <div class="checkmarks-block buttons_selector">
+                      <div class="div-block-53 w-clearfix">
+                        <div class="radio_button"></div>
+                        <div class="text-block-17">Disabled</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="buttonsel-header">
+                    <div class="greyline"></div>
+                    <div class="corpo20px">Width</div>
+                  </div>
+                  <div class="checkmarks-wrapper-vertical">
+                    <div class="checkmarks-block buttons_selector w-clearfix">
+                      <div class="radio_button">
+                        <div class="dot"></div>
+                      </div>
+                      <div class="text-block-17">Default</div>
+                    </div>
+                    <div class="checkmarks-block buttons_selector w-clearfix">
+                      <div class="radio_button"></div>
+                      <div class="text-block-17">Full-width</div>
                     </div>
                   </div>
                 </div>
@@ -460,12 +525,10 @@
             </div>
             <div class="div-block-66">
               <div class="black-wrapper">
-                <div class="logos-header black">
-                  <div class="greyline transp"></div>
-                  <div class="corpo20px white">Design sample<br></div>
-                </div>
+                <div class="corpo20px white">Design sample<br></div>
+                <div class="greyline transp"></div>
               </div>
-              <div class="cta-example-wrapper"><img id="design-sample" src="images/Primary--text-link.jpg" alt=""></div>
+              <div class="cta-example-wrapper"><img src="images/Primary--text-link.jpg" srcset="images/Primary--text-link-p-500.jpeg 500w, images/Primary--text-link-p-800.jpeg 800w, images/Primary--text-link.jpg 1000w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 61vw, (max-width: 991px) 65vw, (max-width: 2083px) 48vw, 1000px" alt=""></div>
             </div>
           </div>
         </div>
@@ -491,7 +554,7 @@
             <div class="w-clearfix">
               <div class="text-block-8">#eb0000</div><img src="images/Icon_copycode.svg" alt="" class="white-arrow-down"></div>
           </div>
-          <div id="w-node-c264fc8e745e-a982d085" class="colorsect black">
+          <div id="w-node-c264fc8e745e-1acd16f5" class="colorsect black">
             <div class="text-block-7">Black</div>
             <div class="div-block-7 w-clearfix">
               <div class="text-block-8">#000000</div><img src="images/Icon_copycode.svg" alt="" class="white-arrow-down"></div>
@@ -585,7 +648,7 @@
           <a href="introduction-to-2-atomic.html" class="menu_sublink w-inline-block">
             <div>Introduction</div>
           </a>
-          <a href="atoms.html" class="menu_sublink w-inline-block w--current">
+          <a href="atoms.html" class="menu_sublink w-inline-block">
             <div>Atoms</div>
           </a>
           <div class="sub_sublinks-wrapper">
