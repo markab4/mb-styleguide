@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Fri Feb 28 2020 16:22:51 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Fri Feb 28 2020 18:45:51 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="5e2f577194e2dbe4a982d085" data-wf-site="5dd45997b98acbf1482572e4">
 <head>
   <meta charset="utf-8">
@@ -98,28 +98,28 @@
         .slider.round:before {
           border-radius: 50%;
         }
+        .grab {
+          cursor: grab;
+        }
+        .grab:active {
+          opacity: .5;
+        }
       </style>
   </div>
   <div class="w-embed w-script">
     <script>
         function copyStringToClipboard(str) {
           if (str.includes("#")) str = str.substring(str.indexOf("#") + 1).trim();
-          // Create new element
           let el = document.createElement('textarea');
-          // Set value (string to be copied)
           el.value = str;
-          // Set non-editable to avoid focus and move outside of view
           el.setAttribute('readonly', '');
           el.style = {
             position: 'absolute',
             left: '-9999px'
           };
           document.body.appendChild(el);
-          // Select text inside element
           el.select();
-          // Copy text to clipboard
           document.execCommand('copy');
-          // Remove temporary element
           document.body.removeChild(el);
         }
         let selectedType, selectedStyle, selectedWidth;
@@ -127,37 +127,34 @@
           selectedType = $("input[name='type']:checked").val();
           selectedStyle = $("input[name='style']:checked").val();
           selectedWidth = $("input[name='width']:checked").val();
-          console.log("selectedType:", selectedType, "\nselectedStyle:", selectedStyle, "\nselectedWidth:", selectedWidth);
           let imgSource;
           if (selectedType === "text-link") {
             // Bold link
-            if (selectedStyle === "bold-link") imgSource = "images/Bold link.jpg";
+            if (selectedStyle === "bold-link") imgSource = "https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e46c6301bee19ad1fc0e83c_Bold%20link.jpg";
             // Primary text link
-            else if (selectedStyle === "primary-link") imgSource = "images/Primary  text link.jpg";
+            else if (selectedStyle === "primary-link") imgSource = "https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e447715f4740e84431fbb5f_Primary%20%20text%20link.jpg";
             // Icon link
             else
               // if (selectedStyle === "icon-link")
-              imgSource = "images/Icon-Link.jpg";
+              imgSource = "https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e44766dce2bf2604f460247_Primary%20Link.jpg";
           } else {
             // Primary button
-            if (selectedStyle === "primary") imgSource = "images/Primary Button.jpg";
+            if (selectedStyle === "primary") imgSource = "https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e46c630c8bcef232379344b_Primary%20Button.jpg";
             // Secondary button
-            else if (selectedStyle === "secondary") imgSource = "images/Secondary Button.jpg";
+            else if (selectedStyle === "secondary") imgSource = "https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e447702fe671a3054a3e830_Secondary%20Button.jpg";
             // Secondary alternative
             else
               // if (selectedStyle === "secondary-alt")
-              imgSource = "images/Secondary Alternative.jpg";
+              imgSource = "https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e46c63207688fab1ae854ac_Secondary%20Alternative-p-800.jpeg";
           }
           $("#design-sample").remove();
           $(".cta-example-wrapper").append($(`<img id="design-sample" src="${imgSource}" alt="">`).hide());
           $("#design-sample").fadeIn(400);
-          console.log("imgSource", imgSource);
         }
         function initializeCtaOptions() {
           selectedType = $("input[name='type']:checked").val();
           selectedStyle = $("input[name='style']:checked").val();
           selectedWidth = $("input[name='width']:checked").val();
-          console.log("selectedType:", selectedType, "\nselectedStyle:", selectedStyle, "\nselectedWidth:", selectedWidth);
           $(".cta-specs").remove();
           let $ctaSpecs;
           if (selectedType === "button") {
@@ -295,6 +292,9 @@
         }
         document.addEventListener("DOMContentLoaded", function() {
           initializeCtaOptions();
+          let $toCopy = $(".colorsect, .black-block-2");
+          $toCopy.attr("onclick", "copyStringToClipboard(this.innerText)");
+          $toCopy.addClass("grab");
         });
       </script>
   </div>
@@ -460,10 +460,8 @@
             </div>
             <div class="div-block-66">
               <div class="black-wrapper">
-                <div class="logos-header black">
-                  <div class="greyline transp"></div>
-                  <div class="corpo20px white">Design sample<br></div>
-                </div>
+                <div class="greyline transp"></div>
+                <div class="corpo20px white">Design sample<br></div>
               </div>
               <div class="cta-example-wrapper"><img id="design-sample" src="images/Primary--text-link.jpg" alt=""></div>
             </div>
@@ -501,8 +499,7 @@
       <div id="icons">
         <div class="hero-text-block">
           <div class="call-out">Icons</div>
-          <div class="body-copy">Please only grab assets and code from below verified design.</div>
-        </div>
+          <div class="body-copy">Please only grab assets and code from below verified design.</div><a href="https://lion.box.com/s/fvcsqapcidsbanuxxk8nyi2ysrxjog16" target="_blank" class="button-with-icon w-button">Download the Asset</a></div>
         <div class="div-block-5">
           <div class="iconsect-2">
             <div class="div-block-6 w-clearfix">
@@ -600,15 +597,6 @@
             </a>
             <a href="#icons" class="menu_sub_sublink w-inline-block">
               <div>Icons</div>
-            </a>
-            <a href="#" class="menu_sub_sublink w-inline-block">
-              <div>Inputs</div>
-            </a>
-            <a href="#" class="menu_sub_sublink w-inline-block">
-              <div>Controls</div>
-            </a>
-            <a href="#" class="menu_sub_sublink w-inline-block">
-              <div>Tooltips</div>
             </a>
           </div>
           <a href="molecules.html" class="menu_sublink w-inline-block">

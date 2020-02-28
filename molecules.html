@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Fri Feb 28 2020 16:22:51 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Fri Feb 28 2020 18:45:51 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="5e5698153efcbc5ad9ce8de3" data-wf-site="5dd45997b98acbf1482572e4">
 <head>
   <meta charset="utf-8">
@@ -23,6 +23,281 @@
   <link href="images/webclip.png" rel="apple-touch-icon">
 </head>
 <body data-w-id="5dd83650b66d23d92aa28df9" class="body-2">
+  <div class="w-embed">
+    <style>
+        .white-arrow-down:hover {
+          opacity: 0.5;
+          cursor: pointer;
+        }
+        .selector,
+        .div-block-49,
+        input,
+        .buttons_selector,
+        .radio_button {
+          cursor: pointer;
+        }
+        label {
+          font-weight: inherit;
+          font-family: inherit;
+          color: inherit;
+          font-size: inherit;
+          line-height: inherit;
+          cursor: pointer;
+          margin-bottom: 0;
+        }
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 50px;
+          height: 24px;
+        }
+        /* Hide default HTML checkbox */
+        .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+        /* The slider */
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 16px;
+          width: 16px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+        input:checked+.slider {
+          background-color: #000;
+        }
+        input:focus+.slider {
+          box-shadow: 0 0 1px #000;
+        }
+        input:checked+.slider:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(26px);
+        }
+        /* Rounded sliders */
+        .slider.round {
+          border-radius: 34px;
+        }
+        .slider.round:before {
+          border-radius: 50%;
+        }
+        .grab {
+          cursor: grab;
+        }
+        .grab:active {
+          opacity: .5;
+        }
+      </style>
+  </div>
+  <div class="w-embed w-script">
+    <script>
+        function copyStringToClipboard(str) {
+          if (str.includes("#")) str = str.substring(str.indexOf("#") + 1).trim();
+          let el = document.createElement('textarea');
+          el.value = str;
+          el.setAttribute('readonly', '');
+          el.style = {
+            position: 'absolute',
+            left: '-9999px'
+          };
+          document.body.appendChild(el);
+          el.select();
+          document.execCommand('copy');
+          document.body.removeChild(el);
+        }
+        let selectedType, selectedStyle, selectedWidth;
+        function switchDesignSamples() {
+          selectedType = $("input[name='type']:checked").val();
+          selectedStyle = $("input[name='style']:checked").val();
+          selectedWidth = $("input[name='width']:checked").val();
+          let imgSource;
+          if (selectedType === "text-link") {
+            // Bold link
+            if (selectedStyle === "bold-link") imgSource = "https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e46c6301bee19ad1fc0e83c_Bold%20link.jpg";
+            // Primary text link
+            else if (selectedStyle === "primary-link") imgSource = "https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e447715f4740e84431fbb5f_Primary%20%20text%20link.jpg";
+            // Icon link
+            else
+              // if (selectedStyle === "icon-link")
+              imgSource = "https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e44766dce2bf2604f460247_Primary%20Link.jpg";
+          } else {
+            // Primary button
+            if (selectedStyle === "primary") imgSource = "https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e46c630c8bcef232379344b_Primary%20Button.jpg";
+            // Secondary button
+            else if (selectedStyle === "secondary") imgSource = "https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e447702fe671a3054a3e830_Secondary%20Button.jpg";
+            // Secondary alternative
+            else
+              // if (selectedStyle === "secondary-alt")
+              imgSource = "https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e46c63207688fab1ae854ac_Secondary%20Alternative-p-800.jpeg";
+          }
+          $("#design-sample").remove();
+          $(".cta-example-wrapper").append($(`<img id="design-sample" src="${imgSource}" alt="">`).hide());
+          $("#design-sample").fadeIn(400);
+        }
+        function initializeCtaOptions() {
+          selectedType = $("input[name='type']:checked").val();
+          selectedStyle = $("input[name='style']:checked").val();
+          selectedWidth = $("input[name='width']:checked").val();
+          $(".cta-specs").remove();
+          let $ctaSpecs;
+          if (selectedType === "button") {
+            $ctaSpecs = $(`
+    <div class="cta-specs">
+        <div class="div-block-69">
+            <div class="buttonsel-header">
+                <div class="greyline"></div>
+                <div class="corpo20px black">Style</div>
+            </div>
+            <div class="checkmarks-wrapper-vertical">
+                <div class="checkmarks-block buttons_selector">
+                    <div class="div-block-53 w-clearfix" onclick="switchDesignSamples()">
+                        <input class="radio_button" checked type="radio" id="primary" name="style"
+                               value="primary">
+                        <label class="radio_label" for="primary">Primary</label><br>
+                    </div>
+                </div>
+                <div class="checkmarks-block buttons_selector">
+                    <div class="div-block-53 w-clearfix" onclick="switchDesignSamples()">
+                        <input class="radio_button" type="radio" id="secondary" name="style"
+                               value="secondary">
+                        <label class="radio_label" for="secondary">Secondary</label><br>
+                    </div>
+                </div>
+                <div class="checkmarks-block buttons_selector">
+                    <div class="div-block-53 w-clearfix" onclick="switchDesignSamples()">
+                        <input class="radio_button" type="radio" id="secondary-alt" name="style"
+                               value="secondary-alt">
+                        <label class="radio_label" for="secondary-alt">Secondary Alt</label><br>
+                    </div>
+                </div>
+                <div class="checkmarks-block buttons_selector">
+                    <div class="div-block-53 w-clearfix" onclick="switchDesignSamples()">
+                        <input class="radio_button" type="radio" id="tertiary" name="style"
+                               value="tertiary">
+                        <label class="radio_label" for="tertiary">Tertiary</label><br>
+                    </div>
+                </div>
+                <div class="checkmarks-block buttons_selector">
+                    <div class="div-block-53 w-clearfix" onclick="switchDesignSamples()">
+                        <input class="radio_button" type="radio" id="AMG" name="style"
+                               value="AMG">
+                        <label class="radio_label" for="AMG">AMG</label><br>
+                    </div>
+                </div>
+                <div class="checkmarks-block buttons_selector">
+                    <div class="div-block-53 w-clearfix" onclick="switchDesignSamples()">
+                        <input class="radio_button" type="radio" id="disabled" name="style"
+                               value="disabled">
+                        <label class="radio_label" for="disabled">Disabled</label><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="buttonsel-header">
+                <div class="greyline"></div>
+                <div class="corpo20px">Width</div>
+            </div>
+            <div class="checkmarks-wrapper-vertical">
+                <div class="checkmarks-block buttons_selector w-clearfix" onclick="switchDesignSamples()">
+                    <input class="radio_button" checked type="radio" id="default" name="width"
+                           value="default">
+                    <label class="radio_label" for="default">Default</label><br>
+                </div>
+                <div class="checkmarks-block buttons_selector w-clearfix" onclick="switchDesignSamples()">
+                    <input class="radio_button" type="radio" id="wide" name="width"
+                           value="width">
+                    <label class="radio_label" for="wide">Wide</label><br>
+                </div>
+            </div>
+        </div>
+    </div>
+`);
+          } else {
+            $ctaSpecs = $(`
+    <div class="cta-specs">
+        <div class="div-block-69">
+            <div class="buttonsel-header">
+                <div class="greyline"></div>
+                <div class="corpo20px black">Style</div>
+            </div>
+            <div class="checkmarks-wrapper-vertical">
+                <div class="checkmarks-block buttons_selector">
+                    <div class="div-block-53 w-clearfix" onclick="switchDesignSamples()">
+                        <input class="radio_button" checked type="radio" id="primary-link" name="style"
+                               value="primary-link">
+                        <label class="radio_label" for="primary-link">Primary Link</label><br>
+                    </div>
+                </div>
+                <div class="checkmarks-block buttons_selector">
+                    <div class="div-block-53 w-clearfix" onclick="switchDesignSamples()">
+                        <input class="radio_button" type="radio" id="secondary-link" name="style"
+                               value="secondary-link">
+                        <label class="radio_label" for="secondary-link">Secondary Link</label><br>
+                    </div>
+                </div>
+                <div class="checkmarks-block buttons_selector">
+                    <div class="div-block-53 w-clearfix" onclick="switchDesignSamples()">
+                        <input class="radio_button" type="radio" id="bold-link" name="style"
+                               value="bold-link">
+                        <label class="radio_label" for="bold-link">Bold Link</label><br>
+                    </div>
+                </div>
+                <div class="checkmarks-block buttons_selector">
+                    <div class="div-block-53 w-clearfix" onclick="switchDesignSamples()">
+                        <input class="radio_button" type="radio" id="icon-link" name="style"
+                               value="icon-link">
+                        <label class="radio_label" for="icon-link">Icon Link</label><br>
+                    </div>
+                </div>
+                <div class="checkmarks-block buttons_selector">
+                    <div class="div-block-53 w-clearfix" onclick="switchDesignSamples()">
+                        <input class="radio_button" type="radio" id="in-text-link" name="style"
+                               value="in-text-link">
+                        <label class="radio_label" for="in-text-link">In-text Link</label><br>
+                    </div>
+                </div>
+                <div class="checkmarks-block buttons_selector">
+                    <div class="div-block-53 w-clearfix" onclick="switchDesignSamples()">
+                        <input class="radio_button" type="radio" id="in-text-icon-link" name="style"
+                               value="in-text-icon-link">
+                        <label class="radio_label" for="in-text-icon-link">In-text Icon Link</label><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+`);
+          }
+          $(".cta-type").after($ctaSpecs.hide());
+          $ctaSpecs.show(400);
+          switchDesignSamples(selectedType, selectedStyle, selectedWidth);
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+          initializeCtaOptions();
+          let $toCopy = $(".colorsect, .black-block-2");
+          $toCopy.attr("onclick", "copyStringToClipboard(this.innerText)");
+          $toCopy.addClass("grab");
+        });
+      </script>
+  </div>
   <a href="index.html" class="logo w-inline-block">
     <div class="logomb"><img src="images/Logo-png.png" width="32" alt=""></div>
     <div class="logo-text">
@@ -77,7 +352,7 @@
             <div>Molecules</div>
           </a>
           <div class="sub_sublinks-wrapper">
-            <a href="#Call-to-action" class="menu_sub_sublink w-inline-block">
+            <a href="#" class="menu_sub_sublink w-inline-block">
               <div>Call to actions</div>
             </a>
             <a href="#Input-fields" class="menu_sub_sublink w-inline-block">
@@ -127,116 +402,47 @@
   </div>
   <div data-w-id="31c70ec6-254e-bc1d-5cba-7e18e2765602" class="content-sect">
     <div class="contraw icons-section1">
-      <div class="cta-selector">
-        <div id="Call-to-action" class="sectionheader">
-          <div class="call-out big">Call to Actions</div>
-          <div class="body-copy">At the core of the concept is the idea of divisions of two. This can be applied to mos</div>
-        </div>
-        <div class="type-selector-modul">
-          <div class="button-selector_side">
-            <div class="cta-type">
-              <div class="typesel-header-with-toggle">
-                <div class="greyline"></div>
-                <div class="corpo20px">Type</div>
-                <div class="div-block-58">
-                  <div class="toggle _1">
-                    <div class="toggle-dot"></div>
+      <div class="w-embed">
+        <div class="cta-selector">
+          <div class="type-selector-modul" id="cta-selector-module">
+            <div class="button-selector_side">
+              <div class="cta-type">
+                <div>
+                  <div class="typesel-header-with-toggle">
+                    <div class="greyline"></div>
+                    <div class="corpo20px black">Type</div>
+                    <div class="div-block-58">
+                      <label class="switch toggle _1">
+                                            <input type="checkbox" id="mobile-slider" onclick="switchDesignSamples()">
+                                            <span class="slider round"></span>
+                                        </label>
+                      <div class="toggle-image"><img src="images/Mobile.svg" alt=""></div>
+                    </div>
                   </div>
-                  <div class="toggle-image"><img src="images/Mobile.svg" alt="" class="image-28"></div>
-                </div>
-              </div>
-              <div>
-                <div class="checkmarks-wrapper-vertical">
-                  <div class="checkmarks-block buttons_selector">
-                    <div class="div-block-53 w-clearfix">
-                      <div class="radio_button">
-                        <div class="dot"></div>
+                  <div class="checkmarks-wrapper-vertical">
+                    <div class="checkmarks-block buttons_selector">
+                      <div class="div-block-53 w-clearfix" onclick="initializeCtaOptions()">
+                        <input class="radio_button" checked="" type="radio" id="button" name="type" value="button">
+                        <label class="radio_label" for="button">Button</label><br>
                       </div>
-                      <div class="text-block-17">Button</div>
                     </div>
-                  </div>
-                  <div class="checkmarks-block buttons_selector">
-                    <div class="div-block-53 w-clearfix">
-                      <div class="radio_button"></div>
-                      <div class="text-block-17">Text link</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cta-specs">
-              <div class="div-block-69">
-                <div class="buttonsel-header">
-                  <div class="greyline"></div>
-                  <div class="corpo20px black">Style</div>
-                </div>
-                <div class="checkmarks-wrapper-vertical">
-                  <div class="checkmarks-block buttons_selector">
-                    <div class="div-block-53 w-clearfix">
-                      <div class="radio_button">
-                        <div class="dot"></div>
+                    <div class="checkmarks-block buttons_selector">
+                      <div class="div-block-53 w-clearfix" onclick="initializeCtaOptions()">
+                        <input class="radio_button" type="radio" id="text-link" name="type" value="text-link">
+                        <label class="radio_label" for="text-link">Text Link</label><br>
                       </div>
-                      <div class="text-block-17">Primary</div>
-                    </div>
-                  </div>
-                  <div class="checkmarks-block buttons_selector">
-                    <div class="div-block-53 w-clearfix">
-                      <div class="radio_button"></div>
-                      <div class="text-block-17">Secondary</div>
-                    </div>
-                  </div>
-                  <div class="checkmarks-block buttons_selector">
-                    <div class="div-block-53 w-clearfix">
-                      <div class="radio_button"></div>
-                      <div class="text-block-17">Secondary Alt</div>
-                    </div>
-                  </div>
-                  <div class="checkmarks-block buttons_selector">
-                    <div class="div-block-53 w-clearfix">
-                      <div class="radio_button"></div>
-                      <div class="text-block-17">Tertiary</div>
-                    </div>
-                  </div>
-                  <div class="checkmarks-block buttons_selector">
-                    <div class="div-block-53 w-clearfix">
-                      <div class="radio_button"></div>
-                      <div class="text-block-17">AMG</div>
-                    </div>
-                  </div>
-                  <div class="checkmarks-block buttons_selector">
-                    <div class="div-block-53 w-clearfix">
-                      <div class="radio_button"></div>
-                      <div class="text-block-17">Disabled</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div>
-                <div class="buttonsel-header">
-                  <div class="greyline"></div>
-                  <div class="corpo20px">Width</div>
-                </div>
-                <div class="checkmarks-wrapper-vertical">
-                  <div class="checkmarks-block buttons_selector w-clearfix">
-                    <div class="radio_button">
-                      <div class="dot"></div>
-                    </div>
-                    <div class="text-block-17">Default</div>
-                  </div>
-                  <div class="checkmarks-block buttons_selector w-clearfix">
-                    <div class="radio_button"></div>
-                    <div class="text-block-17">Full-width</div>
-                  </div>
-                </div>
+            </div>
+            <div class="div-block-66">
+              <div class="black-wrapper">
+                <div class="greyline transp"></div>
+                <div class="corpo20px white">Design sample<br></div>
               </div>
+              <div class="cta-example-wrapper"><img id="design-sample" src="images/Primary--text-link.jpg" alt=""></div>
             </div>
-          </div>
-          <div class="div-block-66">
-            <div class="black-wrapper">
-              <div class="corpo20px white">Design sample<br></div>
-              <div class="greyline transp"></div>
-            </div>
-            <div class="cta-example-wrapper"><img src="images/Primary--text-link.jpg" srcset="images/Primary--text-link-p-500.jpeg 500w, images/Primary--text-link-p-800.jpeg 800w, images/Primary--text-link.jpg 1000w" sizes="100vw" alt=""></div>
           </div>
         </div>
       </div>
