@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bcaabf09-e1a7-419e-9445-50a87c462c46" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atomic.js" beforeDir="false" afterPath="$PROJECT_DIR$/atomic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/atoms.html" beforeDir="false" afterPath="$PROJECT_DIR$/atoms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typesetting.js" beforeDir="false" afterPath="$PROJECT_DIR$/typesetting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typography.js" beforeDir="false" afterPath="$PROJECT_DIR$/typography.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website-assets.html" beforeDir="false" afterPath="$PROJECT_DIR$/website-assets.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,15 +17,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.39893618">
+    <splitter split-orientation="horizontal" split-proportion="0.28911835">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/colors.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="271">
-                  <caret line="333" selection-start-line="333" selection-end-line="333" />
+                <state relative-caret-position="204">
+                  <caret line="93" selection-start-line="93" selection-end-line="113" />
                   <folding>
+                    <element signature="e#4872#5594#0" />
+                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#1;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -36,12 +42,13 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/typography.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="533">
-                  <caret line="132" column="9" lean-forward="true" selection-start-line="80" selection-start-column="8" selection-end-line="132" selection-end-column="9" />
+                <state relative-caret-position="204">
+                  <caret line="854" column="33" selection-start-line="854" selection-start-column="29" selection-end-line="854" selection-end-column="33" />
                   <folding>
+                    <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -59,6 +66,18 @@
                     <element signature="e#38792#38797#0" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="e#39030#39035#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/atoms.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="186">
+                  <caret line="453" column="66" lean-forward="true" selection-start-line="453" selection-start-column="66" selection-end-line="453" selection-end-column="66" />
+                  <folding>
+                    <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
                   </folding>
                 </state>
               </provider>
@@ -93,11 +112,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/website-assets.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="684">
-                  <caret line="137" column="41" selection-start-line="137" selection-start-column="41" selection-end-line="137" selection-end-column="41" />
+                <state relative-caret-position="551">
+                  <caret line="159" column="77" lean-forward="true" selection-start-line="159" selection-start-column="77" selection-end-line="159" selection-end-column="77" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -118,8 +137,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/typography.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="337">
-                  <caret line="256" column="10" selection-start-line="256" selection-start-column="4" selection-end-line="256" selection-end-column="10" />
+                <state relative-caret-position="339">
+                  <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
                   <folding>
                     <element signature="n#div#2;n#div#0;n#div#0;n#!!top" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -136,8 +155,11 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/atomic.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="860">
-                  <caret line="56" column="77" lean-forward="true" selection-start-line="56" selection-start-column="77" selection-end-line="56" selection-end-column="77" />
+                <state relative-caret-position="630">
+                  <caret line="49" column="37" lean-forward="true" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
+                  <folding>
+                    <element signature="n#!!block;n#copyStringToClipboard#0" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -158,15 +180,6 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/atoms.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="715">
-                  <caret line="287" column="51" lean-forward="true" selection-start-line="287" selection-start-column="51" selection-end-line="287" selection-end-column="51" />
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-second>
     </splitter>
@@ -180,8 +193,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>selectpal</find>
-      <find>icon</find>
       <find>white</find>
       <find>37</find>
       <find>images/Icon_copycode-1.svg</find>
@@ -189,10 +200,8 @@
       <find>doit()</find>
       <find>AMG-RED</find>
       <find>console.log</find>
-      <find>copy</find>
       <find>copystring</find>
       <find>&quot;size&quot;:</find>
-      <find>selectSiz</find>
       <find>images[</find>
       <find>57</find>
       <find>slice</find>
@@ -201,15 +210,19 @@
       <find>design</find>
       <find>500</find>
       <find>selectType</find>
-      <find>stripe</find>
       <find>800</find>
       <find>switch</find>
       <find>type</find>
       <find>text link</find>
-      <find>Type</find>
       <find>toggle</find>
       <find>active</find>
       <find>img</find>
+      <find>selectSiz</find>
+      <find>togglemovi</find>
+      <find>stripe</find>
+      <find>copy</find>
+      <find>copyS</find>
+      <find>Type</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;div class=&quot;div-block-53 w-clearfix&quot; onclick=&quot;initializeCtaOptions()&quot;&gt;</replace>
@@ -218,8 +231,8 @@
       <replace>NAVIGATION ALL CAPS</replace>
       <replace>let</replace>
       <replace>666666</replace>
-      <replace>https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e0629620b1ac55a4df1b955_Icon_copycode%20(1).svg</replace>
       <replace>800</replace>
+      <replace>https://uploads-ssl.webflow.com/5dd45997b98acbf1482572e4/5e0629620b1ac55a4df1b955_Icon_copycode%20(1).svg</replace>
       <replace>1080</replace>
     </replaceStrings>
   </component>
@@ -238,7 +251,6 @@
         <option value="$PROJECT_DIR$/zzzz-main-page.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/atomic-new.html" />
-        <option value="$PROJECT_DIR$/atomic.js" />
         <option value="$PROJECT_DIR$/compliant-colors.js" />
         <option value="$PROJECT_DIR$/css/mbusa-styleguide.webflow.css" />
         <option value="$PROJECT_DIR$/../../jquery.scrollTo-2.1.2/jquery.scrollTo.min.js" />
@@ -248,6 +260,8 @@
         <option value="$PROJECT_DIR$/typography.html" />
         <option value="$PROJECT_DIR$/typesetting.js" />
         <option value="$PROJECT_DIR$/atoms.html" />
+        <option value="$PROJECT_DIR$/atomic.js" />
+        <option value="$PROJECT_DIR$/website-assets.html" />
       </list>
     </option>
   </component>
@@ -614,17 +628,24 @@
       <option name="project" value="LOCAL" />
       <updated>1582751955114</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="add mobile button to CTA selector">
+      <created>1582837602934</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1582837602934</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197975000" />
+    <option name="totallyTimeSpent" value="201698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-640" y="-1200" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.109004736" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.051079515" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -667,7 +688,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update typography module with slider" />
     <MESSAGE value="add specs display to typography" />
     <MESSAGE value="create radio buttons for Atomic page" />
     <MESSAGE value="create json for compliant colors" />
@@ -692,7 +712,8 @@
     <MESSAGE value="fix typography scroll" />
     <MESSAGE value="get images from external source" />
     <MESSAGE value="typography bugs working correctly" />
-    <option name="LAST_COMMIT_MESSAGE" value="typography bugs working correctly" />
+    <MESSAGE value="add mobile button to CTA selector" />
+    <option name="LAST_COMMIT_MESSAGE" value="add mobile button to CTA selector" />
   </component>
   <component name="WindowStateProjectService">
     <state width="202" height="186" key="Git.Branch.Popup" />
@@ -793,6 +814,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/archive-for-parts.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typesetting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2903">
+          <caret line="242" column="18" lean-forward="true" selection-start-line="242" selection-start-column="18" selection-end-line="242" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/mbusa-styleguide.webflow.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1317">
+          <caret line="6274" column="28" selection-start-line="6274" selection-start-column="28" selection-end-line="6274" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/colors.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
@@ -807,35 +845,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/archive-for-parts.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/colors.html">
+    <entry file="file://$PROJECT_DIR$/typography.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="95" column="31" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
+        <state relative-caret-position="339">
+          <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/typesetting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2903">
-          <caret line="242" column="18" lean-forward="true" selection-start-line="242" selection-start-column="18" selection-end-line="242" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/typography.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="132" column="9" lean-forward="true" selection-start-line="80" selection-start-column="8" selection-end-line="132" selection-end-column="9" />
+        <state relative-caret-position="204">
+          <caret line="854" column="33" selection-start-line="854" selection-start-column="29" selection-end-line="854" selection-end-column="33" />
           <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -857,46 +883,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/atomic.js">
+    <entry file="file://$PROJECT_DIR$/colors.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="56" column="77" lean-forward="true" selection-start-line="56" selection-start-column="77" selection-end-line="56" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/typography.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="256" column="10" selection-start-line="256" selection-start-column="4" selection-end-line="256" selection-end-column="10" />
+        <state relative-caret-position="118">
+          <caret line="95" column="31" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
           <folding>
-            <element signature="n#div#2;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/mbusa-styleguide.webflow.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1317">
-          <caret line="6274" column="28" selection-start-line="6274" selection-start-column="28" selection-end-line="6274" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website-assets.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="137" column="41" selection-start-line="137" selection-start-column="41" selection-end-line="137" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/atoms.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="715">
-          <caret line="287" column="51" lean-forward="true" selection-start-line="287" selection-start-column="51" selection-end-line="287" selection-end-column="51" />
+        <state relative-caret-position="186">
+          <caret line="453" column="66" lean-forward="true" selection-start-line="453" selection-start-column="66" selection-end-line="453" selection-end-column="66" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="49" column="37" lean-forward="true" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
+          <folding>
+            <element signature="n#!!block;n#copyStringToClipboard#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-assets.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="159" column="77" lean-forward="true" selection-start-line="159" selection-start-column="77" selection-end-line="159" selection-end-column="77" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
