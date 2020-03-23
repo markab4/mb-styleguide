@@ -2,7 +2,11 @@
 
 This is a streamlined [style guide](http://mbstyleguide.andreybalbekov.com/) for designers working on Mercedes-Benz brands, developed by Mark Abramov (Software Engineer) and Andrey Balbekov (Creative Designer).
 
-By adding custom code to the Webflow CMS, we created interactive tools to bring the Mercedes style guide to life. We aimed to give designers working on websites associated with the Mercedes brand easy but comprehensive tools which would increase the quality and speed of prototyping.
+By adding custom code to the Webflow CMS, we created interactive tools to bring the Mercedes style guide to life. We aimed to give designers working on websites associated with the Mercedes brand easy but comprehensive tools which would increase the quality and speed of prototyping. It was designed for 768×1024 screens as those are most commonly used by our designers, although we do provide support for responsive elements in our styleguide.
+
+Some of the assets are still placeholder as we are still working out and standardizing copy and styles.
+
+Feel free to look through the website to check out the set of tools we created. 
 
 A few examples of these tools are:
 
